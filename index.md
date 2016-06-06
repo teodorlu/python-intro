@@ -61,8 +61,8 @@ alder = 27
 ## Input / output i Python
 
 ```python
-alder = input("Hvor gammel er du?")
-print(alder)
+navn = input("Hvor heter du?")
+print(navn)
 ```
 
 # If
@@ -74,7 +74,8 @@ print(alder)
 
 ## If-setninger i Python
 ```python
-alder = input("Hvor gammel er du?")
+svar = input("Hvor gammel er du?")
+alder = int(svar)
 
 if alder == 20:
     print("Du er 20 år gammel")
