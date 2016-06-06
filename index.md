@@ -163,15 +163,24 @@ print("Tall nummer 1 i rekken er " + str(mangeTall[0]))
 ```python
 for i in range(100):
     print(i)
+```
 
+```python
 mangeTall = [1,2,3,4,5,6,7,8,9]
 for i in mangeTall
     print("Sjekker om " + i + " er et partall")
 
+<<<<<<< HEAD
     if i % 2:
         print(i + " er et partall")
     else:
         print(i + " er et oddetall")
+=======
+    if tall % 2:
+        print(str(tall) + " er et oddetall")
+    else:
+        print(str(tall) + " er et partall")
+>>>>>>> 6580c7e38b710b97ebf08b329c0148e0526b427e
 ```
 
 # Workshop
