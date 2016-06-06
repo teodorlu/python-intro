@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <title></title>
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="reveal.js/css/reveal.css"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
 div.sourceCode { overflow-x: auto; }
@@ -48,15 +48,13 @@ code > span.cv { color: #7f9f7f; font-weight: bold; } /* CommentVar */
 code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
   </style>
   <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
-  <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+  <!-- Printing and PDF exports -->
   <script>
-    if( window.location.search.match( /print-pdf/gi ) ) {
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = 'reveal.js/css/print/pdf.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    }
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
   </script>
   <!--[if lt IE 9]>
   <script src="reveal.js/lib/js/html5shiv.js"></script>
@@ -86,21 +84,20 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
 <li>Maskinlæring: Google TensorFlow anbefaler Python som grensesnitt</li>
 <li>Vitenskaplig og numerisk programmering: SciPy og NumPy</li>
 </ul>
-</section><section id="populære-språk" class="slide level2">
-<h1>Populære språk*</h1>
-<ol type="1">
-<li>JavaScript</li>
-<li>Java</li>
-<li>Ruby</li>
-<li>PHP</li>
-<li><strong>Python</strong></li>
-<li>CSS</li>
-<li>C++</li>
-<li>C#</li>
-<li>C</li>
-<li>HTML</li>
-</ol>
-<p>* Mest brukte på GitHub i 2016.</p>
+<!-- ## Populære språk*
+
+1. JavaScript
+2. Java
+3. Ruby
+4. PHP
+5. **Python**
+6. CSS
+7. C++
+8. C#
+9. C
+10. HTML
+
+\* Mest brukte på GitHub i 2016. -->
 </section></section>
 <section><section id="grunnleggende-programmering" class="titleslide slide level1"><h1>Grunnleggende programmering</h1></section></section>
 <section><section id="variabler" class="titleslide slide level1"><h1>Variabler</h1></section><section id="hva-er-en-variabel" class="slide level2">
@@ -119,6 +116,18 @@ alder <span class="op">=</span> <span class="dv">27</span></code></pre></div>
 <h1>Input / output i Python</h1>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">alder <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Hvor gammel er du?&quot;</span>)
 <span class="bu">print</span>(alder)</code></pre></div>
+</section></section>
+<section><section id="stemningen-i-python" class="titleslide slide level1"><h1>Stemningen i Python</h1></section><section id="navnet" class="slide level2">
+<h1>Navnet?</h1>
+<figure>
+<img src="http://www.anglotopia.net/wp-content/uploads/2015/05/Monty-Python-and-The-Holy-Grail-40th_640.jpg" />
+</figure>
+</section><section class="slide level2">
+
+<figure>
+<img src="http://imgs.xkcd.com/comics/python.png" />
+</figure>
+<p>Fra <a href="http://xkcd.com/353/">XKCD</a>.</p>
 </section></section>
 <section><section id="if" class="titleslide slide level1"><h1>If</h1></section><section id="hva-er-if-setninger" class="slide level2">
 <h1>Hva er if-setninger?</h1>
@@ -147,8 +156,8 @@ alder <span class="op">=</span> <span class="dv">27</span></code></pre></div>
 <ul>
 <li>Null-indeksert liste over verdier</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">masseTall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]
-<span class="bu">print</span>(<span class="st">&quot;Tall nummer 1 i rekken er &quot;</span> <span class="op">+</span> <span class="bu">str</span>(test[<span class="dv">0</span>]))</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">mangeTall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]
+<span class="bu">print</span>(<span class="st">&quot;Tall nummer 1 i rekken er &quot;</span> <span class="op">+</span> <span class="bu">str</span>(mangeTall[<span class="dv">0</span>]))</code></pre></div>
 </section><section id="for-løkker" class="slide level2">
 <h1>For-løkker</h1>
 <ul>
@@ -157,8 +166,8 @@ alder <span class="op">=</span> <span class="dv">27</span></code></pre></div>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">for</span> i <span class="op">in</span> <span class="bu">range</span>(<span class="dv">100</span>):
     <span class="bu">print</span>(i)
 
-masseTall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]
-<span class="cf">for</span> i <span class="op">in</span> masseTall
+mangeTall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]
+<span class="cf">for</span> i <span class="op">in</span> mangeTall
     <span class="bu">print</span>(<span class="st">&quot;Sjekker om &quot;</span> <span class="op">+</span> i <span class="op">+</span> <span class="st">&quot; er et partall&quot;</span>)
 
     <span class="cf">if</span> i <span class="op">%</span> <span class="dv">2</span>:
@@ -169,32 +178,22 @@ masseTall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">
     </div>
   </div>
 
-
   <script src="reveal.js/lib/js/head.min.js"></script>
   <script src="reveal.js/js/reveal.js"></script>
 
   <script>
 
-      // Full list of configuration options available here:
+      // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
-        controls: true,         // Display controls in the bottom right corner
-        progress: true,         // Display a presentation progress bar
-        history: true,          // Push each slide change to the browser history
-        center: true,                       // Vertical centering of slides
-        maxScale: 1.5,                  // Bounds for smallest/largest possible content scale
-        slideNumber: false,                // Display the page number of the current slide
-        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-        // Optional libraries used to extend on reveal.js
+        // Optional reveal.js plugins
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-//          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
-//          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-]});
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
     </script>
     </body>
 </html>

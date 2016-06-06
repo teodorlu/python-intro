@@ -24,7 +24,7 @@ print("Hello, " + name + "! Nice to meet you!")
 * Maskinlæring: Google TensorFlow anbefaler Python som grensesnitt
 * Vitenskaplig og numerisk programmering: SciPy og NumPy
 
-## Populære språk*
+<!-- ## Populære språk*
 
 1. JavaScript
 2. Java
@@ -37,7 +37,7 @@ print("Hello, " + name + "! Nice to meet you!")
 9. C
 10. HTML
 
-\* Mest brukte på GitHub i 2016.
+\* Mest brukte på GitHub i 2016. -->
 
 # Grunnleggende programmering
 
@@ -64,6 +64,18 @@ alder = 27
 navn = input("Hvor heter du?")
 print(navn)
 ```
+
+# Stemningen i Python
+
+## Navnet?
+
+![](http://www.anglotopia.net/wp-content/uploads/2015/05/Monty-Python-and-The-Holy-Grail-40th_640.jpg)
+
+---
+
+![](http://imgs.xkcd.com/comics/python.png)
+
+Fra [XKCD](http://xkcd.com/353/).
 
 # If
 
@@ -101,8 +113,8 @@ else:
 * Null-indeksert liste over verdier
 
 ```python
-masseTall = [1,2,3,4,5,6,7,8,9]
-print("Tall nummer 1 i rekken er " + str(test[0]))
+mangeTall = [1,2,3,4,5,6,7,8,9]
+print("Tall nummer 1 i rekken er " + str(mangeTall[0]))
 ```
 
 ## For-løkker
@@ -113,8 +125,8 @@ print("Tall nummer 1 i rekken er " + str(test[0]))
 for i in range(100):
     print(i)
 
-masseTall = [1,2,3,4,5,6,7,8,9]
-for i in masseTall
+mangeTall = [1,2,3,4,5,6,7,8,9]
+for i in mangeTall
     print("Sjekker om " + i + " er et partall")
 
     if i % 2:
