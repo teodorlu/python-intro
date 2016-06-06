@@ -6,9 +6,7 @@
 
 ![](assets/index-c4edb.png) ![](assets/index-0b0f7.png)
 
-<!-- Perry | Teodor
-------|-------
-Systemutvikler | Sivilingeniør -->
+Perry og Teodor
 
 # Om Python
 
@@ -31,23 +29,6 @@ print("Hello, " + name + "! Nice to meet you!")
 * Instagram, Pinterest og The Washington Times kjører på Python-rammeverket Django
 * Maskinlæring: Google TensorFlow anbefaler Python som grensesnitt
 * Vitenskaplig og numerisk programmering: SciPy og NumPy
-
-<!-- ## Populære språk*
-
-1. JavaScript
-2. Java
-3. Ruby
-4. PHP
-5. **Python**
-6. CSS
-7. C++
-8. C#
-9. C
-10. HTML
-
-\* Mest brukte på GitHub i 2016. -->
-
-# Grunnleggende programmering
 
 # Variabler
 
@@ -152,3 +133,12 @@ for tall in mangeTall
     else:
         print(str(tall) + " er et oddetall")
 ```
+
+# Workshop
+
+## Oppgaver på kodeklubben
+
+[Kodeklubbens nettsider](http://kodeklubben.github.io/python/) har gode oppgaver:
+
+* [Mattespill](http://kodeklubben.github.io/python/mattespill/mattespill.html)
+* [Gjettelek](http://kodeklubben.github.io/python/gjettelek/gjettelek.html)
