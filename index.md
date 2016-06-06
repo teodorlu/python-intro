@@ -105,25 +105,35 @@ else:
     print("Du er " + str(alder) + " år gammel")
 ```
 
-# While
-
-## Hva er while-løkker?
-
-* Kjører et sett med kode så lenge et gitt uttrykk er sant
-
-
-```python
-
-```
-
 ## Lister
 
 * Null-indeksert liste over verdier
 
 ```python
-mangeTall = [1,2,3,4,5,6,7,8,9]
+masseTall = [1,2,3,4,5,6,7,8,9]
 print("Tall nummer 1 i rekken er " + str(mangeTall[0]))
 ```
+
+
+# While
+
+## Hva er while-løkker?
+
+* Kjører en kodesnutt så lenge et gitt uttrykk er sant
+
+
+## While-løkker i Python
+
+```python
+print("Dette er en huskeliste-app")
+huskeliste = []
+
+while True:
+    svar = input("Legg til noe på huskelisten: ")
+    huskeliste.append(svar)
+    print(huskeliste)
+```
+
 
 ## For-løkker
 
@@ -134,11 +144,11 @@ for i in range(100):
     print(i)
 
 mangeTall = [1,2,3,4,5,6,7,8,9]
-for i in mangeTall
-    print("Sjekker om " + i + " er et partall")
+for tall in mangeTall
+    print("Sjekker om " + str(tall) + " er et partall")
 
     if i % 2:
-        print(i + " er et partall")
+        print(str(tall) + " er et partall")
     else:
-        print(i + " er et oddetall")
+        print(str(tall) + " er et oddetall")
 ```
