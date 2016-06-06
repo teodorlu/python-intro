@@ -69,7 +69,7 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
 
 <section><section id="programmering-i-python" class="titleslide slide level1"><h1>Programmering i Python</h1></section><h3 id="lærerkonferanse-oslo-2016">Lærerkonferanse Oslo 2016</h3><section id="oss" class="slide level2">
 <h1>Oss?</h1>
-<p><img src="assets/index-c4edb.png" /> <img src="assets/index-0b0f7.png" /></p>
+<p><img src="assets/index-c4edb.png" alt="" /> <img src="assets/index-0b0f7.png" alt="" /></p>
 <p>Perry og Teodor</p>
 </section></section>
 <section><section id="om-python" class="titleslide slide level1"><h1>Om Python</h1></section><section id="for-begynnere" class="slide level2">
@@ -136,11 +136,14 @@ alder <span class="op">=</span> <span class="bu">int</span>(svar)
     <span class="bu">print</span>(<span class="st">&quot;Du er over 20 år gammel&quot;</span>)
 <span class="cf">else</span>:
     <span class="bu">print</span>(<span class="st">&quot;Du er &quot;</span> <span class="op">+</span> <span class="bu">str</span>(alder) <span class="op">+</span> <span class="st">&quot; år gammel&quot;</span>)</code></pre></div>
-</section><section id="lister" class="slide level2">
-<h1>Lister</h1>
+</section></section>
+<section><section id="lister" class="titleslide slide level1"><h1>Lister</h1></section><section id="hva-er-lister" class="slide level2">
+<h1>Hva er lister?</h1>
 <ul>
 <li>Null-indeksert liste over verdier</li>
 </ul>
+</section><section id="lister-i-python" class="slide level2">
+<h1>Lister i Python</h1>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">masseTall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]
 <span class="bu">print</span>(<span class="st">&quot;Tall nummer 1 i rekken er &quot;</span> <span class="op">+</span> <span class="bu">str</span>(mangeTall[<span class="dv">0</span>]))</code></pre></div>
 </section></section>
@@ -148,6 +151,7 @@ alder <span class="op">=</span> <span class="bu">int</span>(svar)
 <h1>Hva er while-løkker?</h1>
 <ul>
 <li>Kjører en kodesnutt så lenge et gitt uttrykk er sant</li>
+<li>Kan kjøre evig, og avbrytes med break</li>
 </ul>
 </section><section id="while-løkker-i-python" class="slide level2">
 <h1>While-løkker i Python</h1>
@@ -158,11 +162,15 @@ huskeliste <span class="op">=</span> []
     svar <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Legg til noe på huskelisten: &quot;</span>)
     huskeliste.append(svar)
     <span class="bu">print</span>(huskeliste)</code></pre></div>
-</section><section id="for-løkker" class="slide level2">
-<h1>For-løkker</h1>
+</section></section>
+<section><section id="for" class="titleslide slide level1"><h1>For</h1></section><section id="hva-er-for-løkker" class="slide level2">
+<h1>Hva er for-løkker?</h1>
 <ul>
+<li>Kjører en kodesnutt et gitt antall ganger</li>
 <li>Går igjennom (itererer) over en liste med verdier</li>
 </ul>
+</section><section id="for-løkker-i-python" class="slide level2">
+<h1>For-løkker i Python</h1>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">for</span> i <span class="op">in</span> <span class="bu">range</span>(<span class="dv">100</span>):
     <span class="bu">print</span>(i)
 
@@ -170,7 +178,7 @@ mangeTall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">
 <span class="cf">for</span> tall <span class="op">in</span> mangeTall
     <span class="bu">print</span>(<span class="st">&quot;Sjekker om &quot;</span> <span class="op">+</span> <span class="bu">str</span>(tall) <span class="op">+</span> <span class="st">&quot; er et partall&quot;</span>)
 
-    <span class="cf">if</span> i <span class="op">%</span> <span class="dv">2</span>:
+    <span class="cf">if</span> tall <span class="op">%</span> <span class="dv">2</span>:
         <span class="bu">print</span>(<span class="bu">str</span>(tall) <span class="op">+</span> <span class="st">&quot; er et partall&quot;</span>)
     <span class="cf">else</span>:
         <span class="bu">print</span>(<span class="bu">str</span>(tall) <span class="op">+</span> <span class="st">&quot; er et oddetall&quot;</span>)</code></pre></div>

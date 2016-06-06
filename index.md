@@ -86,21 +86,24 @@ else:
     print("Du er " + str(alder) + " år gammel")
 ```
 
-## Lister
+# Lister
+
+## Hva er lister?
 
 * Null-indeksert liste over verdier
 
+## Lister i Python
 ```python
 masseTall = [1,2,3,4,5,6,7,8,9]
 print("Tall nummer 1 i rekken er " + str(mangeTall[0]))
 ```
-
 
 # While
 
 ## Hva er while-løkker?
 
 * Kjører en kodesnutt så lenge et gitt uttrykk er sant
+* Kan kjøre evig, og avbrytes med break
 
 
 ## While-løkker i Python
@@ -115,10 +118,14 @@ while True:
     print(huskeliste)
 ```
 
+# For
 
-## For-løkker
+## Hva er for-løkker?
 
+* Kjører en kodesnutt et gitt antall ganger
 * Går igjennom (itererer) over en liste med verdier
+
+## For-løkker i Python
 
 ```python
 for i in range(100):
@@ -128,7 +135,7 @@ mangeTall = [1,2,3,4,5,6,7,8,9]
 for tall in mangeTall
     print("Sjekker om " + str(tall) + " er et partall")
 
-    if i % 2:
+    if tall % 2:
         print(str(tall) + " er et partall")
     else:
         print(str(tall) + " er et oddetall")
