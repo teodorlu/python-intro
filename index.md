@@ -43,6 +43,19 @@ navn = "Alexander Perry"
 alder = 27
 ```
 
+## Oppgave: familiens alder
+
+* Lagre alderen til 3 familiemedlemmer i variabler
+*
+
+```python
+tim_age = 18
+# ... og så videre
+```
+
+* Lagre summen av alderene i en variabel
+* Lagre gjenomsnittet av alderene i en variabel
+
 # Input / output
 
 ## Hva er input / output?
@@ -53,6 +66,38 @@ alder = 27
 navn = input("Hvor heter du?")
 print(navn)
 ```
+
+## Å lese inn tall
+
+* Funksjonen `input()` gir ut *tekst*
+* Funksjonen `int()` konverterer tekst til tall
+
+```python
+age_text = input("How old are you? ")
+age = int(age_text)
+```
+
+## Å skrive ut tall
+
+* Funksjonen `str()` konverterer tall til tekst
+
+```python
+age_text = input("How old are you? ")
+age = int(age_text)
+# Obs: "in five " + "years" blir "in five years"!
+print("In five years, you are " + str(age + 5) + " years old!")
+```
+
+## Oppgave: familiens alder 2
+
+Nå skal vi utvide oppgaven fra tidligere. I stedet for å lagre alderen til familiemedlemmer i programmet, spør brukeren! Skriv så ut gjennomsnitt og total alder.
+
+Funksjoner vi har brukt:
+
+* `input()` spør brukeren
+* `int()` konverterer fra tekst til tall
+* `str()` konverterer fra tall til tekst
+* `print()` forteller brukeren noe
 
 # Stemningen i Python
 
@@ -86,39 +131,27 @@ else:
     print("Du er " + str(alder) + " år gammel")
 ```
 
-# Lister
-
-## Hva er lister?
-
-* Null-indeksert liste over verdier
-
-## Lister i Python
-```python
-masseTall = [1,2,3,4,5,6,7,8,9]
-print("Tall nummer 1 i rekken er " + str(mangeTall[0]))
-```
-
 # While
 
 ## Hva er while-løkker?
 
-* Kjører en kodesnutt så lenge et gitt uttrykk er sant
-* Kan kjøre evig, og avbrytes med break
+* Kjører et sett med kode så lenge et gitt uttrykk er sant
 
-
-## While-løkker i Python
 
 ```python
-print("Dette er en huskeliste-app")
-huskeliste = []
 
-while True:
-    svar = input("Legg til noe på huskelisten: ")
-    huskeliste.append(svar)
-    print(huskeliste)
 ```
 
-# For
+## Lister
+
+* Null-indeksert liste over verdier
+
+```python
+mangeTall = [1,2,3,4,5,6,7,8,9]
+print("Tall nummer 1 i rekken er " + str(mangeTall[0]))
+```
+
+## For-løkker
 
 ## Hva er for-løkker?
 
@@ -132,13 +165,13 @@ for i in range(100):
     print(i)
 
 mangeTall = [1,2,3,4,5,6,7,8,9]
-for tall in mangeTall
-    print("Sjekker om " + str(tall) + " er et partall")
+for i in mangeTall
+    print("Sjekker om " + i + " er et partall")
 
-    if tall % 2:
-        print(str(tall) + " er et partall")
+    if i % 2:
+        print(i + " er et partall")
     else:
-        print(str(tall) + " er et oddetall")
+        print(i + " er et oddetall")
 ```
 
 # Workshop

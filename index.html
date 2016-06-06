@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <title></title>
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="reveal.js/css/reveal.css"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
 div.sourceCode { overflow-x: auto; }
@@ -48,15 +48,13 @@ code > span.cv { color: #7f9f7f; font-weight: bold; } /* CommentVar */
 code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
   </style>
   <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
-  <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+  <!-- Printing and PDF exports -->
   <script>
-    if( window.location.search.match( /print-pdf/gi ) ) {
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = 'reveal.js/css/print/pdf.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    }
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
   </script>
   <!--[if lt IE 9]>
   <script src="reveal.js/lib/js/html5shiv.js"></script>
@@ -69,7 +67,7 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
 
 <section><section id="programmering-i-python" class="titleslide slide level1"><h1>Programmering i Python</h1></section><h3 id="lærerkonferanse-oslo-2016">Lærerkonferanse Oslo 2016</h3><section id="oss" class="slide level2">
 <h1>Oss?</h1>
-<p><img src="assets/index-c4edb.png" alt="" /> <img src="assets/index-0b0f7.png" alt="" /></p>
+<p><img src="assets/index-c4edb.png" /> <img src="assets/index-0b0f7.png" /></p>
 <p>Perry og Teodor</p>
 </section></section>
 <section><section id="om-python" class="titleslide slide level1"><h1>Om Python</h1></section><section id="for-begynnere" class="slide level2">
@@ -100,6 +98,18 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
 <h1>Variabler i Python</h1>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">navn <span class="op">=</span> <span class="st">&quot;Alexander Perry&quot;</span>
 alder <span class="op">=</span> <span class="dv">27</span></code></pre></div>
+</section><section id="oppgave-familiens-alder" class="slide level2">
+<h1>Oppgave: familiens alder</h1>
+<ul>
+<li>Lagre alderen til 3 familiemedlemmer i variabler</li>
+<li></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">tim_age <span class="op">=</span> <span class="dv">18</span>
+<span class="co"># ... og så videre</span></code></pre></div>
+<ul>
+<li>Lagre summen av alderene i en variabel</li>
+<li>Lagre gjenomsnittet av alderene i en variabel</li>
+</ul>
 </section></section>
 <section><section id="input-output" class="titleslide slide level1"><h1>Input / output</h1></section><section id="hva-er-input-output" class="slide level2">
 <h1>Hva er input / output?</h1>
@@ -107,16 +117,43 @@ alder <span class="op">=</span> <span class="dv">27</span></code></pre></div>
 <h1>Input / output i Python</h1>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">navn <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Hvor heter du?&quot;</span>)
 <span class="bu">print</span>(navn)</code></pre></div>
+</section><section id="å-lese-inn-tall" class="slide level2">
+<h1>Å lese inn tall</h1>
+<ul>
+<li>Funksjonen <code>input()</code> gir ut <em>tekst</em></li>
+<li>Funksjonen <code>int()</code> konverterer tekst til tall</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">age_text <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;How old are you? &quot;</span>)
+age <span class="op">=</span> <span class="bu">int</span>(age_text)</code></pre></div>
+</section><section id="å-skrive-ut-tall" class="slide level2">
+<h1>Å skrive ut tall</h1>
+<ul>
+<li>Funksjonen <code>str()</code> konverterer tall til tekst</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">age_text <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;How old are you? &quot;</span>)
+age <span class="op">=</span> <span class="bu">int</span>(age_text)
+<span class="co"># Obs: &quot;in five &quot; + &quot;years&quot; blir &quot;in five years&quot;!</span>
+<span class="bu">print</span>(<span class="st">&quot;In five years, you are &quot;</span> <span class="op">+</span> <span class="bu">str</span>(age <span class="op">+</span> <span class="dv">5</span>) <span class="op">+</span> <span class="st">&quot; years old!&quot;</span>)</code></pre></div>
+</section><section id="oppgave-familiens-alder-2" class="slide level2">
+<h1>Oppgave: familiens alder 2</h1>
+<p>Nå skal vi utvide oppgaven fra tidligere. I stedet for å lagre alderen til familiemedlemmer i programmet, spør brukeren! Skriv så ut gjennomsnitt og total alder.</p>
+<p>Funksjoner vi har brukt:</p>
+<ul>
+<li><code>input()</code> spør brukeren</li>
+<li><code>int()</code> konverterer fra tekst til tall</li>
+<li><code>str()</code> konverterer fra tall til tekst</li>
+<li><code>print()</code> forteller brukeren noe</li>
+</ul>
 </section></section>
 <section><section id="stemningen-i-python" class="titleslide slide level1"><h1>Stemningen i Python</h1></section><section id="navnet" class="slide level2">
 <h1>Navnet?</h1>
 <figure>
-<img src="http://www.anglotopia.net/wp-content/uploads/2015/05/Monty-Python-and-The-Holy-Grail-40th_640.jpg" alt="" />
+<img src="http://www.anglotopia.net/wp-content/uploads/2015/05/Monty-Python-and-The-Holy-Grail-40th_640.jpg" />
 </figure>
 </section><section class="slide level2">
 
 <figure>
-<img src="http://imgs.xkcd.com/comics/python.png" alt="" />
+<img src="http://imgs.xkcd.com/comics/python.png" />
 </figure>
 <p>Fra <a href="http://xkcd.com/353/">XKCD</a>.</p>
 </section></section>
@@ -137,33 +174,22 @@ alder <span class="op">=</span> <span class="bu">int</span>(svar)
 <span class="cf">else</span>:
     <span class="bu">print</span>(<span class="st">&quot;Du er &quot;</span> <span class="op">+</span> <span class="bu">str</span>(alder) <span class="op">+</span> <span class="st">&quot; år gammel&quot;</span>)</code></pre></div>
 </section></section>
-<section><section id="lister" class="titleslide slide level1"><h1>Lister</h1></section><section id="hva-er-lister" class="slide level2">
-<h1>Hva er lister?</h1>
-<ul>
-<li>Null-indeksert liste over verdier</li>
-</ul>
-</section><section id="lister-i-python" class="slide level2">
-<h1>Lister i Python</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">masseTall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]
-<span class="bu">print</span>(<span class="st">&quot;Tall nummer 1 i rekken er &quot;</span> <span class="op">+</span> <span class="bu">str</span>(mangeTall[<span class="dv">0</span>]))</code></pre></div>
-</section></section>
 <section><section id="while" class="titleslide slide level1"><h1>While</h1></section><section id="hva-er-while-løkker" class="slide level2">
 <h1>Hva er while-løkker?</h1>
 <ul>
-<li>Kjører en kodesnutt så lenge et gitt uttrykk er sant</li>
-<li>Kan kjøre evig, og avbrytes med break</li>
+<li>Kjører et sett med kode så lenge et gitt uttrykk er sant</li>
 </ul>
-</section><section id="while-løkker-i-python" class="slide level2">
-<h1>While-løkker i Python</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">print</span>(<span class="st">&quot;Dette er en huskeliste-app&quot;</span>)
-huskeliste <span class="op">=</span> []
-
-<span class="cf">while</span> <span class="va">True</span>:
-    svar <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Legg til noe på huskelisten: &quot;</span>)
-    huskeliste.append(svar)
-    <span class="bu">print</span>(huskeliste)</code></pre></div>
-</section></section>
-<section><section id="for" class="titleslide slide level1"><h1>For</h1></section><section id="hva-er-for-løkker" class="slide level2">
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</section><section id="lister" class="slide level2">
+<h1>Lister</h1>
+<ul>
+<li>Null-indeksert liste over verdier</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">mangeTall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]
+<span class="bu">print</span>(<span class="st">&quot;Tall nummer 1 i rekken er &quot;</span> <span class="op">+</span> <span class="bu">str</span>(mangeTall[<span class="dv">0</span>]))</code></pre></div>
+</section><section id="for-løkker" class="slide level2">
+<h1>For-løkker</h1>
+</section><section id="hva-er-for-løkker" class="slide level2">
 <h1>Hva er for-løkker?</h1>
 <ul>
 <li>Kjører en kodesnutt et gitt antall ganger</li>
@@ -175,13 +201,13 @@ huskeliste <span class="op">=</span> []
     <span class="bu">print</span>(i)
 
 mangeTall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]
-<span class="cf">for</span> tall <span class="op">in</span> mangeTall
-    <span class="bu">print</span>(<span class="st">&quot;Sjekker om &quot;</span> <span class="op">+</span> <span class="bu">str</span>(tall) <span class="op">+</span> <span class="st">&quot; er et partall&quot;</span>)
+<span class="cf">for</span> i <span class="op">in</span> mangeTall
+    <span class="bu">print</span>(<span class="st">&quot;Sjekker om &quot;</span> <span class="op">+</span> i <span class="op">+</span> <span class="st">&quot; er et partall&quot;</span>)
 
-    <span class="cf">if</span> tall <span class="op">%</span> <span class="dv">2</span>:
-        <span class="bu">print</span>(<span class="bu">str</span>(tall) <span class="op">+</span> <span class="st">&quot; er et partall&quot;</span>)
+    <span class="cf">if</span> i <span class="op">%</span> <span class="dv">2</span>:
+        <span class="bu">print</span>(i <span class="op">+</span> <span class="st">&quot; er et partall&quot;</span>)
     <span class="cf">else</span>:
-        <span class="bu">print</span>(<span class="bu">str</span>(tall) <span class="op">+</span> <span class="st">&quot; er et oddetall&quot;</span>)</code></pre></div>
+        <span class="bu">print</span>(i <span class="op">+</span> <span class="st">&quot; er et oddetall&quot;</span>)</code></pre></div>
 </section></section>
 <section><section id="workshop" class="titleslide slide level1"><h1>Workshop</h1></section><section id="oppgaver-på-kodeklubben" class="slide level2">
 <h1>Oppgaver på kodeklubben</h1>
@@ -194,32 +220,22 @@ mangeTall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">
     </div>
   </div>
 
-
   <script src="reveal.js/lib/js/head.min.js"></script>
   <script src="reveal.js/js/reveal.js"></script>
 
   <script>
 
-      // Full list of configuration options available here:
+      // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
-        controls: true,         // Display controls in the bottom right corner
-        progress: true,         // Display a presentation progress bar
-        history: true,          // Push each slide change to the browser history
-        center: true,                       // Vertical centering of slides
-        maxScale: 1.5,                  // Bounds for smallest/largest possible content scale
-        slideNumber: false,                // Display the page number of the current slide
-        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-        // Optional libraries used to extend on reveal.js
+        // Optional reveal.js plugins
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-//          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
-//          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-]});
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
     </script>
     </body>
 </html>
