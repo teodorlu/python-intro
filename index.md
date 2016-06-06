@@ -130,15 +130,17 @@ while True:
 ```python
 for i in range(100):
     print(i)
+```
 
+```python
 mangeTall = [1,2,3,4,5,6,7,8,9]
 for tall in mangeTall
     print("Sjekker om " + str(tall) + " er et partall")
 
     if tall % 2:
-        print(str(tall) + " er et partall")
-    else:
         print(str(tall) + " er et oddetall")
+    else:
+        print(str(tall) + " er et partall")
 ```
 
 # Workshop
