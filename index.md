@@ -156,6 +156,14 @@ masseTall = [1,2,3,4,5,6,7,8,9]
 print("Tall nummer 1 i rekken er " + str(mangeTall[0]))
 ```
 
+## Oppgave: elementer fra liste
+
+* Lag en liste som inneholder 5 tall
+* Skriv ut første tall
+* Skriv ut nest siste tall
+
+Tips: `list[-3]` henter element 3 *bakfra*!
+
 # While
 
 ## Hva er while-løkker?
