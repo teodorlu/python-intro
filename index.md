@@ -30,8 +30,6 @@ print("Hello, " + name + "! Nice to meet you!")
 * Maskinlæring: Google TensorFlow anbefaler Python som grensesnitt
 * Vitenskaplig og numerisk programmering: SciPy og NumPy
 
----
-
 # Variabler
 
 ## Hva er en variabel?
