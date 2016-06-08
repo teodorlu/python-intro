@@ -183,9 +183,21 @@ while True:
     print(huskeliste)
 ```
 
-## Oppgave
+## Oppgave: mattespill!
 
-Lag et program som skriver ut en verdi til programmet stoppes
+Lag et multiplikasjonsspill!
+
+1. Be brukeren gange to tall
+2. Sjekk svaret!
+3. Gjør dette mange ganger ... `while`?
+
+Tilfeldige tall:
+
+```python
+from random import randint
+
+x = randint(0, 6) # gir x = 0, x = 1, ..., eller x = 5
+```
 
 # For
 
