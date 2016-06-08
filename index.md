@@ -230,6 +230,11 @@ for tall in mangeTall
         print(str(tall) + " er et partall")
 ```
 
+## Oppgave: mattespill 2!
+
+* Bruk mattespillet du allerede har laget
+* I stedet for *uendelig* mange oppgaver, gi brukeren 5 oppgaver!
+
 # Workshop
 
 ## Oppgaver på kodeklubben
