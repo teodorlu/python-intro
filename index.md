@@ -30,6 +30,8 @@ print("Hello, " + name + "! Nice to meet you!")
 * Maskinlæring: Google TensorFlow anbefaler Python som grensesnitt
 * Vitenskaplig og numerisk programmering: SciPy og NumPy
 
+---
+
 # Variabler
 
 ## Hva er en variabel?
@@ -43,11 +45,60 @@ navn = "Alexander Perry"
 alder = 27
 ```
 
+## Oppgave: familiens alder
+
+* Lagre alderen til 3 familiemedlemmer i variabler
+
+```python
+tim_age = 18
+# ... og så videre
+```
+
+* Lagre summen av alderene i en variabel
+* Lagre gjenomsnittet av alderene i en variabel
+
 # Input / output
 
 ## Hva er input / output?
 
 ## Input / output i Python
+
+```python
+navn = input("Hvor heter du?")
+print(navn)
+```
+
+## Å lese inn tall
+
+* Funksjonen `input()` gir ut *tekst*
+* Funksjonen `int()` konverterer tekst til tall
+
+```python
+age_text = input("How old are you? ")
+age = int(age_text)
+```
+
+## Å skrive ut tall
+
+* Funksjonen `str()` konverterer tall til tekst
+
+```python
+age_text = input("How old are you? ")
+age = int(age_text)
+# Obs: "in five " + "years" blir "in five years"!
+print("In five years, you are " + str(age + 5) + " years old!")
+```
+
+## Oppgave: familiens alder 2
+
+Nå skal vi utvide oppgaven fra tidligere. I stedet for å lagre alderen til familiemedlemmer i programmet, spør brukeren! Skriv så ut gjennomsnitt og total alder.
+
+Funksjoner vi har brukt:
+
+* `input()` spør brukeren
+* `int()` konverterer fra tekst til tall
+* `str()` konverterer fra tall til tekst
+* `print()` forteller brukeren noe
 
 ```python
 navn = input("Hvor heter du?")
@@ -86,10 +137,12 @@ else:
     print("Du er " + str(alder) + " år gammel")
 ```
 
-## Oppgave
+## Oppgave: Gammel nok?
 
-Lag et program som skriver ut 'Du er ikke gammel nok'
-hvis brukeren er under 18 år gammel
+Lag et program som
+
+* Leser inn brukerens alder
+* Skriver ut "Du er ikke gammel nok" dersom brukeren er under 18 år
 
 # Lister
 
