@@ -171,7 +171,6 @@ Tips: `list[-3]` henter element 3 *bakfra*!
 * Kjører en kodesnutt så lenge et gitt uttrykk er sant
 * Kan kjøre evig, og avbrytes med break
 
-
 ## While-løkker i Python
 
 ```python
@@ -201,6 +200,12 @@ Lag et program som skriver ut en verdi til programmet stoppes
 for i in range(100):
     print(i)
 ```
+
+* `range(4)` gir `[0, 1, 2, 3]`
+* `range(10)` gir `[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]`
+* `range(n)` gir *n* elementer!
+
+## Flere for-løkker i Python
 
 ```python
 mangeTall = [1,2,3,4,5,6,7,8,9]
