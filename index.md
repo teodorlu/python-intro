@@ -1,12 +1,10 @@
 # Programmering i Python
 
-### Lærerkonferanse Oslo 2016
+### Kodeklubben Oslo 2016
 
 ## Oss?
 
-![](assets/index-c4edb.png) ![](assets/index-0b0f7.png)
-
-Perry og Teodor
+Fransis og Teodor
 
 # Om Python
 

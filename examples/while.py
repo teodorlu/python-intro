@@ -1,3 +1,5 @@
+#! /usr/bin/env python3
+
 name = input("Hi! I'm Python. Who are you? ")
 
 print("Name some things you like!")
