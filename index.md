@@ -379,6 +379,54 @@ def bigger():
 
 Gratulerer, dere har nå implementert et binærsøk!
 
+# Input / output
+
+## Hva er input / output?
+
+## Input / output i Python
+
+```python
+navn = input("Hvor heter du?")
+print(navn)
+```
+
+## Å lese inn tall
+
+* Funksjonen `input()` gir ut *tekst*
+* Funksjonen `int()` konverterer tekst til tall
+
+```python
+age_text = input("How old are you? ")
+age = int(age_text)
+```
+
+## Å skrive ut tall
+
+* Funksjonen `str()` konverterer tall til tekst
+
+```python
+age_text = input("How old are you? ")
+age = int(age_text)
+# Obs: "in five " + "years" blir "in five years"!
+print("In five years, you are " + str(age + 5) + " years old!")
+```
+
+## Oppgave: familiens alder 2
+
+Nå skal vi utvide oppgaven fra tidligere. I stedet for å lagre alderen til familiemedlemmer i programmet, spør brukeren! Skriv så ut gjennomsnitt og total alder.
+
+Funksjoner vi har brukt:
+
+* `input()` spør brukeren
+* `int()` konverterer fra tekst til tall
+* `str()` konverterer fra tall til tekst
+* `print()` forteller brukeren noe
+
+```python
+navn = input("Hvor heter du?")
+print(navn)
+```
+
 # Lister
 
 ## Hva er lister?
