@@ -97,7 +97,7 @@ Funksjoner vi har brukt:
 * `print()` forteller brukeren noe
 
 ```python
-navn = input("Hvor heter du?")
+navn = input("Hva heter du?")
 print(navn)
 ```
 
