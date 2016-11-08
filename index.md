@@ -222,6 +222,17 @@ Fra [XKCD](http://xkcd.com/353/).
 'Du er under 20 år gammel'
 ```
 
+## If-setninger i Python
+```python
+>>> alder = 30
+>>> if alder == 20:
+>>>     svar = "Du er 20 år gammel"
+>>> else:
+>>>     svar = "Du er ikke 20 år gammel"
+>>> svar
+'Du er ikke 20 år gammel'
+```
+
 ## Oppgave: Gammel nok?
 
 Lag et program som
