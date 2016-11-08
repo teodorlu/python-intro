@@ -471,11 +471,16 @@ for tall in mangeTall
 * Bruk mattespillet du allerede har laget
 * I stedet for *uendelig* mange oppgaver, gi brukeren 5 oppgaver!
 
-# Workshop
+# Veien videre
 
-## Oppgaver på kodeklubben
+## Lykke til!
 
-[Kodeklubbens nettsider](http://kodeklubben.github.io/python/) har gode oppgaver:
+Dere gjør en viktig oppgave!
 
-* [Mattespill](http://kodeklubben.github.io/python/mattespill/mattespill.html)
-* [Gjettelek](http://kodeklubben.github.io/python/gjettelek/gjettelek.html)
+## Videre ressursser
+
+* Disse sidene ligger på `http://teodorlu.github.io/python-intro/`, og blir her.
+* [Kodeklubbens nettsider](http://kodeklubben.github.io/python/) har mange gode oppgaer på norsk. To spennende spill:
+    * [Mattespill](http://kodeklubben.github.io/python/mattespill/mattespill.html)
+    * [Gjettelek](http://kodeklubben.github.io/python/gjettelek/gjettelek.html)
+* [Learn Python the Hard Way](https://learnpythonthehardway.org/book/) er dybtgående, grundig og lærerik.
