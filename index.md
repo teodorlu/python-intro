@@ -237,8 +237,9 @@ Lag et program som
 
 ## Lister i Python
 ```python
-masseTall = [1,2,3,4,5,6,7,8,9]
-print("Tall nummer 1 i rekken er " + str(mangeTall[0]))
+>>> masseTall = [1,2,3,4,5,6,7,8,9]
+>>> masseTall[0]
+1
 ```
 
 ## Oppgave: elementer fra liste
