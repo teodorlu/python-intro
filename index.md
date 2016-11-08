@@ -143,62 +143,39 @@ Først lagrer vi filen der vi vil ha den, og kaller den `hello.py` ...
 * Lagre alderen til 3 familiemedlemmer i variabler
 
 ```python
-tim_age = 18
+>>> tim_age = 18
 # ... og så videre
 ```
 
 * Lagre summen av alderene i en variabel
 * Lagre gjenomsnittet av alderene i en variabel
 
-# Input / output
-
-## Hva er input / output?
-
-## Input / output i Python
+## Tekstmanipulering
 
 ```python
-navn = input("Hva heter du?")
-print(navn)
+>>> navn1 = "Alexander"
+>>> navn2 = "Teodor"
+>>> navn1 + navn2
 ```
 
-## Å lese inn tall
-
-* Funksjonen `input()` gir ut *tekst*
-* Funksjonen `int()` konverterer tekst til tall
+## Tekstmanipulering
 
 ```python
-age_text = input("How old are you? ")
-age = int(age_text)
+>>> navn1 = "Alexander"
+>>> navn2 = "Teodor"
+>>> navn1 + navn2
+'AlexanderTeodor'
 ```
 
-## Å skrive ut tall
-
-* Funksjonen `str()` konverterer tall til tekst
+## Tekstmanipulering
 
 ```python
-age_text = input("How old are you? ")
-age = int(age_text)
-# Obs: "in five " + "years" blir "in five years"!
-print("In five years, you are " + str(age + 5) + " years old!")
+>>> navn1 = "Alexander"
+>>> navn2 = "Teodor"
+>>> navn1 + " " + navn2
+'Alexander Teodor'
 ```
 
-## Oppgave: familiens alder 2
-
-Nå skal vi utvide oppgaven fra tidligere. I stedet for å lagre alderen til familiemedlemmer i programmet, spør brukeren! Skriv så ut gjennomsnitt og total alder.
-
-Funksjoner vi har brukt:
-
-```python
-input() # spør brukeren
-int()   # konverterer fra tekst til tall
-str()   # konverterer fra tall til tekst
-print() # forteller brukeren noe
-```
-
-```python
-navn = input("Hva heter du?")
-print(navn)
-```
 
 # Stemningen i Python
 
