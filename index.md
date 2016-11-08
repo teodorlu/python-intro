@@ -145,6 +145,8 @@ Først lagrer vi filen der vi vil ha den, og kaller den `hello.py` ...
 ```python
 >>> tim_age = 18
 # ... og så videre
+# Dette er en kommentar. Python ignorerer alt som kommer etter
+# en hash (#)
 ```
 
 * Lagre summen av alderene i en variabel
@@ -269,8 +271,6 @@ Gitt at vi har en øvre og nedre grense, kan vi gjette at tallet ligger midt i m
 
 ```python
 # Gjettespill!
-# Dette er en kommentar. Python ignorerer alt som kommer etter
-# en hash (#)
 
 low = 0
 high = 100
