@@ -189,10 +189,10 @@ Nå skal vi utvide oppgaven fra tidligere. I stedet for å lagre alderen til fam
 Funksjoner vi har brukt:
 
 ```python
- input() # spør brukeren
- int() # konverterer fra tekst til tall
- str() # konverterer fra tall til tekst
- print() # forteller brukeren noe
+input() # spør brukeren
+int()   # konverterer fra tekst til tall
+str()   # konverterer fra tall til tekst
+print() # forteller brukeren noe
 ```
 
 ```python
@@ -217,7 +217,6 @@ Fra [XKCD](http://xkcd.com/353/).
 ## Hva er if-setninger?
 
 * Sjekker om et uttrykk er sant, og kjører så en gitt kodesnutt
-
 
 ## If-setninger i Python
 ```python
