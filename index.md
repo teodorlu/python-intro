@@ -197,23 +197,37 @@ Fra [XKCD](http://xkcd.com/353/).
 
 ## If-setninger i Python
 ```python
-svar = input("Hvor gammel er du?")
-alder = int(svar)
+>>> alder = 20
+>>> if alder == 20:
+>>>     svar = "Du er 20 år gammel"
+>>> svar
+'Du er 20 år gammel'
+```
 
-if alder == 20:
-    print("Du er 20 år gammel")
-elif alder > 20:
-    print("Du er over 20 år gammel")
-else:
-    print("Du er " + str(alder) + " år gammel")
+## If-setninger i Python
+```python
+>>> alder = 30
+>>> if alder > 20:
+>>>     svar = "Du er over 20 år gammel"
+>>> svar
+'Du er over 20 år gammel'
+```
+
+## If-setninger i Python
+```python
+>>> alder = 10
+>>> if alder < 20:
+>>>     svar = "Du er under 20 år gammel"
+>>> svar
+'Du er under 20 år gammel'
 ```
 
 ## Oppgave: Gammel nok?
 
 Lag et program som
 
-* Leser inn brukerens alder
-* Skriver ut "Du er ikke gammel nok" dersom brukeren er under 18 år
+* Lagrer en alder i en variabel
+* Skriver ut "Du er ikke gammel nok" dersom alderen er under 18 år
 
 # Lister
 
