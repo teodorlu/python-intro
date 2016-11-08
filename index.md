@@ -4,7 +4,15 @@
 
 ## Oss?
 
-Perry og Teodor
+Teodor Heggelund
+
+![](http://www.norconsult.com/Images/Logos/logo_norconsult_200x200.jpg)
+
+---
+
+Alexander Perry
+
+![](http://kampanje.com/contentassets/ef767832064f4b5b853db52dee9ca940/logo_bouvet_222x222px.png)
 
 # Om Python
 
