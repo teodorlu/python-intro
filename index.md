@@ -1,6 +1,6 @@
 # Programmering i Python
 
-### Kodeklubben Oslo 2016
+### Lærerkonferanse Oslo 2016
 
 ## Oss?
 
@@ -60,7 +60,7 @@ tim_age = 18
 ## Input / output i Python
 
 ```python
-navn = input("Hvor heter du?")
+navn = input("Hva heter du?")
 print(navn)
 ```
 
