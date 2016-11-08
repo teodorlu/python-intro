@@ -91,10 +91,12 @@ Nå skal vi utvide oppgaven fra tidligere. I stedet for å lagre alderen til fam
 
 Funksjoner vi har brukt:
 
-* `input()` spør brukeren
-* `int()` konverterer fra tekst til tall
-* `str()` konverterer fra tall til tekst
-* `print()` forteller brukeren noe
+```python
+ input() # spør brukeren
+ int() # konverterer fra tekst til tall
+ str() # konverterer fra tall til tekst
+ print() # forteller brukeren noe
+```
 
 ```python
 navn = input("Hva heter du?")
