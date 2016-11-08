@@ -65,8 +65,12 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
     <div class="slides">
 
 
-<section><section id="programmering-i-python" class="titleslide slide level1"><h1>Programmering i Python</h1></section><h3 id="lærerkonferanse-oslo-2016">Lærerkonferanse Oslo 2016</h3><section id="oss" class="slide level2">
-<h1>Oss?</h1>
+<section><section id="programmering-i-python" class="titleslide slide level1"><h1>Programmering i Python</h1></section><h3 id="lærerkonferanse-oslo-2016">Lærerkonferanse Oslo 2016</h3><section id="hva-ser-jeg-nå" class="slide level2">
+<h1>Hva ser jeg nå?</h1>
+<p>Nettleseren Chromium som viser nettsiden <code>http://teodorlu.github.io/python-intro/</code> i fullskjerm.</p>
+<p>Gå inn her på egen maskin! Da kan du se tidligere lysbilder, og er ikke avhengig av hvor vi er.</p>
+</section><section id="hvem-er-vi" class="slide level2">
+<h1>Hvem er vi?</h1>
 <p>Teodor Heggelund</p>
 <figure>
 <img src="http://www.norconsult.com/Images/Logos/logo_norconsult_200x200.jpg" />
@@ -78,24 +82,98 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
 <img src="http://kampanje.com/contentassets/ef767832064f4b5b853db52dee9ca940/logo_bouvet_222x222px.png" />
 </figure>
 </section></section>
-<section><section id="om-python" class="titleslide slide level1"><h1>Om Python</h1></section><section id="for-begynnere" class="slide level2">
+<section><section id="hvorfor-python" class="titleslide slide level1"><h1>Hvorfor Python?</h1></section><section id="for-begynnere" class="slide level2">
 <h1>For begynnere</h1>
 <p>Forståelig syntaks med lite støy:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">name <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Hi! I&#39;m Python. Who are you? &quot;</span>)
-<span class="bu">print</span>(<span class="st">&quot;Hello, &quot;</span> <span class="op">+</span> name <span class="op">+</span> <span class="st">&quot;! Nice to meet you!&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> navn <span class="op">=</span> <span class="st">&quot;Teodor&quot;</span>
+<span class="op">&gt;&gt;&gt;</span> navn
+<span class="co">&#39;Teodor&#39;</span>
+<span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;Hei! Jeg heter &quot;</span> <span class="op">+</span> navn
+<span class="co">&#39;Hei! Jeg heter Teodor&#39;</span></code></pre></div>
 </section><section id="og-viderekommende" class="slide level2">
 <h1><em>og</em> viderekommende</h1>
 <ul>
 <li>Støtter imperativ, objektorientert og funksjonell programmering</li>
 <li>Knallgodt standardbibliotek</li>
 </ul>
-</section><section id="eksempler-på-bruk" class="slide level2">
-<h1>Eksempler på bruk</h1>
+</section><section id="driver-new-york-times" class="slide level2">
+<h1>Driver New York Times</h1>
+<figure>
+<img src="http://www.slate.com/content/dam/slate/articles/life/culturebox/2014/01/140108_CBOX_NYTimesRedesign.jpg.CROP.promo-mediumlarge.jpg" />
+</figure>
+</section><section id="brukes-av-nasa" class="slide level2">
+<h1>Brukes av NASA</h1>
+<figure>
+<img src="http://www.nasa.gov/sites/default/files/thumbnails/image/ocs_iss_0.jpg" />
+</figure>
+</section><section id="brukes-av-google" class="slide level2">
+<h1>Brukes av Google</h1>
+<figure>
+<img src="https://www.google.com/selfdrivingcar/images/home-where.jpg" />
+</figure>
+</section><section id="driver-beregninger" class="slide level2">
+<h1>Driver beregninger</h1>
+<p>Troll II, 1995</p>
+<figure>
+<img src="http://www.norskpetroleum.no/wp-content/uploads/Troll-A-platform-Photo-%C3%98yvind-Hagen-Statoil.jpg" />
+</figure>
+</section></section>
+<section><section id="verktøy" class="titleslide slide level1"><h1>Verktøy</h1></section><section id="hva-trenger-vi" class="slide level2">
+<h1>Hva trenger vi?</h1>
+<p>Når vi utvikler Python, trenger vi to verktøy:</p>
 <ul>
-<li>Instagram, Pinterest og The Washington Times kjører på Python-rammeverket Django</li>
-<li>Maskinlæring: Google TensorFlow anbefaler Python som grensesnitt</li>
-<li>Vitenskaplig og numerisk programmering: SciPy og NumPy</li>
+<li>Et skall</li>
+<li>En teksteditor</li>
 </ul>
+<p>Når vi installerer programmeringsspråket Python, følger miljøet IDLE med. IDLE gir oss et skall og en teksteditor.</p>
+</section><section id="last-ned-python" class="slide level2">
+<h1>Last ned Python</h1>
+<ol type="1">
+<li>Gå til <a href="https://www.python.org/downloads/">python.org/downloads</a></li>
+<li>Last ned og installer nyeste Python (<code>3.x.x</code>)</li>
+</ol>
+</section><section id="python-skallet-i-idle" class="slide level2">
+<h1>Python-skallet i IDLE</h1>
+<p>Et skall lar oss skrive en linje og tolke den.</p>
+<figure>
+<img src="assets/idle-shell.png" />
+</figure>
+</section><section id="python-skallet-i-idle-1" class="slide level2">
+<h1>Python-skallet i IDLE</h1>
+<p>Tre piler (<code>&gt;&gt;&gt;</code>) dukker automatisk opp i skallet. Når vi skriver tre piler her:</p>
+<pre><code>&gt;&gt;&gt; 4 + 4
+8</code></pre>
+<p>skal du skrive <code>4 + 4</code> og trykke enter.</p>
+</section><section id="teksteditoren-i-idle" class="slide level2">
+<h1>Teksteditoren i IDLE</h1>
+<figure>
+<img src="assets/idle-new-file.png" />
+</figure>
+</section><section id="teksteditoren-i-idle-1" class="slide level2">
+<h1>Teksteditoren i IDLE</h1>
+<p>Vi åpner teksteditoren ved å lage en ny fil fra Python-skallet:</p>
+<p><code>File</code> --&gt; <code>New file</code> (<code>Ctrl+N</code>) gir oss en tom fil:</p>
+<figure>
+<img src="assets/idle-empty-file.png" />
+</figure>
+</section><section id="teksteditoren-i-idle-2" class="slide level2">
+<h1>Teksteditoren i IDLE</h1>
+<p>Først lagrer vi filen der vi vil ha den, og kaller den <code>hello.py</code> ...</p>
+<figure>
+<img src="assets/idle-save-as.png" />
+</figure>
+</section><section id="teksteditoren-i-idle-3" class="slide level2">
+<h1>Teksteditoren i IDLE</h1>
+<p>... så kjører vi den for å se at alt er i orden ...</p>
+<figure>
+<img src="assets/idle-run-module.png" />
+</figure>
+</section><section id="teksteditoren-i-idle-4" class="slide level2">
+<h1>Teksteditoren i IDLE</h1>
+<p>... og en tom fil gjør ... ingenting.</p>
+<figure>
+<img src="assets/idle-nothing-happened.png" />
+</figure>
 </section></section>
 <section><section id="variabler" class="titleslide slide level1"><h1>Variabler</h1></section><section id="hva-er-en-variabel" class="slide level2">
 <h1>Hva er en variabel?</h1>
@@ -104,8 +182,12 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
 </ul>
 </section><section id="variabler-i-python" class="slide level2">
 <h1>Variabler i Python</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">navn <span class="op">=</span> <span class="st">&quot;Alexander Perry&quot;</span>
-alder <span class="op">=</span> <span class="dv">27</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> navn <span class="op">=</span> <span class="st">&quot;Alexander Perry&quot;</span>
+<span class="op">&gt;&gt;&gt;</span> navn
+<span class="co">&#39;Alexander Perry&#39;</span>
+<span class="op">&gt;&gt;&gt;</span> alder <span class="op">=</span> <span class="dv">27</span>
+<span class="op">&gt;&gt;&gt;</span> alder
+<span class="dv">27</span></code></pre></div>
 </section><section id="oppgave-familiens-alder" class="slide level2">
 <h1>Oppgave: familiens alder</h1>
 <ul>

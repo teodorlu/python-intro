@@ -2,7 +2,13 @@
 
 ### Lærerkonferanse Oslo 2016
 
-## Oss?
+## Hva ser jeg nå?
+
+Nettleseren Chromium som viser nettsiden `http://teodorlu.github.io/python-intro/` i fullskjerm.
+
+Gå inn her på egen maskin! Da kan du se tidligere lysbilder, og er ikke avhengig av hvor vi er.
+
+## Hvem er vi?
 
 Teodor Heggelund
 
@@ -14,15 +20,18 @@ Alexander Perry
 
 ![](http://kampanje.com/contentassets/ef767832064f4b5b853db52dee9ca940/logo_bouvet_222x222px.png)
 
-# Om Python
+# Hvorfor Python?
 
 ## For begynnere
 
 Forståelig syntaks med lite støy:
 
 ```python
-name = input("Hi! I'm Python. Who are you? ")
-print("Hello, " + name + "! Nice to meet you!")
+>>> navn = "Teodor"
+>>> navn
+'Teodor'
+>>> "Hei! Jeg heter " + navn
+'Hei! Jeg heter Teodor'
 ```
 
 ## *og* viderekommende
@@ -30,11 +39,87 @@ print("Hello, " + name + "! Nice to meet you!")
 * Støtter imperativ, objektorientert og funksjonell programmering
 * Knallgodt standardbibliotek
 
-## Eksempler på bruk
+## Driver New York Times
 
-* Instagram, Pinterest og The Washington Times kjører på Python-rammeverket Django
-* Maskinlæring: Google TensorFlow anbefaler Python som grensesnitt
-* Vitenskaplig og numerisk programmering: SciPy og NumPy
+![](http://www.slate.com/content/dam/slate/articles/life/culturebox/2014/01/140108_CBOX_NYTimesRedesign.jpg.CROP.promo-mediumlarge.jpg)
+
+## Brukes av NASA
+
+![](http://www.nasa.gov/sites/default/files/thumbnails/image/ocs_iss_0.jpg)
+
+## Brukes av Google
+
+![](https://www.google.com/selfdrivingcar/images/home-where.jpg)
+
+## Driver beregninger
+
+Troll II, 1995
+
+![](http://www.norskpetroleum.no/wp-content/uploads/Troll-A-platform-Photo-%C3%98yvind-Hagen-Statoil.jpg)
+
+# Verktøy
+
+## Hva trenger vi?
+
+Når vi utvikler Python, trenger vi to verktøy:
+
+* Et skall
+* En teksteditor
+
+Når vi installerer programmeringsspråket Python, følger miljøet IDLE med.
+IDLE gir oss et skall og en teksteditor.
+
+## Last ned Python
+
+1. Gå til [python.org/downloads](https://www.python.org/downloads/)
+2. Last ned og installer nyeste Python (`3.x.x`)
+
+## Python-skallet i IDLE
+
+Et skall lar oss skrive en linje og tolke den.
+
+![](assets/idle-shell.png)
+
+## Python-skallet i IDLE
+
+Tre piler (`>>>`) dukker automatisk opp i skallet. Når vi skriver tre piler her:
+
+```
+>>> 4 + 4
+8
+```
+
+skal du skrive `4 + 4` og trykke enter.
+
+## Teksteditoren i IDLE
+
+![](assets/idle-new-file.png)
+
+## Teksteditoren i IDLE
+
+Vi åpner teksteditoren ved å lage en ny fil fra Python-skallet:
+
+`File` --> `New file` (`Ctrl+N`) gir oss en tom fil:
+
+![](assets/idle-empty-file.png)
+
+## Teksteditoren i IDLE
+
+Først lagrer vi filen der vi vil ha den, og kaller den `hello.py` ...
+
+![](assets/idle-save-as.png)
+
+## Teksteditoren i IDLE
+
+... så kjører vi den for å se at alt er i orden ...
+
+![](assets/idle-run-module.png)
+
+## Teksteditoren i IDLE
+
+... og en tom fil gjør ... ingenting.
+
+![](assets/idle-nothing-happened.png)
 
 # Variabler
 
@@ -45,8 +130,12 @@ print("Hello, " + name + "! Nice to meet you!")
 ## Variabler i Python
 
 ```python
-navn = "Alexander Perry"
-alder = 27
+>>> navn = "Alexander Perry"
+>>> navn
+'Alexander Perry'
+>>> alder = 27
+>>> alder
+27
 ```
 
 ## Oppgave: familiens alder
