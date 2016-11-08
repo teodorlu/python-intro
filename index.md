@@ -291,7 +291,7 @@ Hvordan fungere denne? Vi kjører modulen i IDLE, så vi kan leke med verdiene.
 <function guess at 0x7fee85ff9840>
 ```
 
-Wops, guess var en funsjon. Vi trenger paranterser for å *kalle* en funksjon:
+Wops, guess var en funksjon. Vi trenger paranterser for å *kalle* en funksjon:
 
 ```python
 >>> guess()
