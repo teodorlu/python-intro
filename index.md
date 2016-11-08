@@ -480,7 +480,7 @@ Dere gjør en viktig oppgave!
 ## Videre ressursser
 
 * Disse sidene ligger på `http://teodorlu.github.io/python-intro/`, og blir her.
-* [Kodeklubbens nettsider](http://kodeklubben.github.io/python/) har mange gode oppgaer på norsk. To spennende spill:
+* [Kodeklubbens nettsider](http://kodeklubben.github.io/python/) har mange gode oppgaver på norsk. To spennende spill:
     * [Mattespill](http://kodeklubben.github.io/python/mattespill/mattespill.html)
     * [Gjettelek](http://kodeklubben.github.io/python/gjettelek/gjettelek.html)
-* [Learn Python the Hard Way](https://learnpythonthehardway.org/book/) er dybtgående, grundig og lærerik.
+* [Learn Python the Hard Way](https://learnpythonthehardway.org/book/) er dyptgående, grundig og lærerik.
