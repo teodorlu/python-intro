@@ -240,6 +240,145 @@ Lag et program som
 * Lagrer en alder i en variabel
 * Skriver ut "Du er ikke gammel nok" dersom alderen er under 18 år
 
+# Programmer ditt eget gjettespill!
+
+## Hø?
+
+![](assets/guess_my_number_illustration.png)
+
+## Attributter
+
+Spill og illustrasjon er hentet fra den strålende boka "Land of Lisp" av Conrad Barski, og tilpasset Python.
+
+Musikkvideo:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HM1Zb3xmvMc" frameborder="0" allowfullscreen></iframe>
+
+## Demo
+
+Slik kan det fungere ...
+
+Sider under beskriver hvordan gjettespillet kan implementeres. Prøv først selv,
+og gå videre nedover om du trenger et tips!
+
+## Gjettefunksjon
+
+Gitt at vi har en øvre og nedre grense, kan vi gjette at tallet ligger midt i mellom:
+
+<!-- ![](assets/guess_my_number_1.png) -->
+
+```python
+# Gjettespill!
+# Dette er en kommentar. Python ignorerer alt som kommer etter
+# en hash (#)
+
+low = 0
+high = 100
+
+def guess():
+    total = high + low          # f.eks 75 + 50 = 125
+    average = total / 2         # 125/2 = 62.5
+    next_guess = int(average)   # int(62.5) = 62
+    return next_guess
+```
+
+## Prøve gjettefunksjon
+
+Hvordan fungere denne? Vi kjører modulen i IDLE, så vi kan leke med verdiene.
+
+```python
+>>> guess
+<function guess at 0x7fee85ff9840>
+```
+
+Wops, guess var en funsjon. Vi trenger paranterser for å *kalle* en funksjon:
+
+```python
+>>> guess()
+50
+```
+
+## Prøve gjettefunksjon
+
+```python
+>>> high
+100
+>>> low
+0
+```
+
+... så low starter på 0, og high på 100. Hva om vi endrer på dette?
+
+```python
+>>> low = 75
+>>> guess()
+87
+```
+
+## Lavere? Høyere?
+
+```python
+>>> # Hemmelig tall er 42!
+>>> guess()
+50
+>>> lower()
+24
+>>> higher()
+37
+>>> higher()
+43
+>>> lower()
+40
+>>> higher()
+41
+>>> higher()
+42
+```
+
+## Lavere? Høyere?
+
+Vi svarer datamaskinen ved å kalle funksjonen `lower()` eller `higher()`:
+
+```python
+def lower():
+    # global lar oss endre en global variabel
+    # inne i en funksjon
+    global high
+    high = guess() - 1
+    return guess()
+
+def bigger():
+    global low
+    low = guess() + 1
+    return guess()
+```
+
+## Hva når vi vinner?
+
+```python
+>>> # Guessing 77
+>>> guess()
+50
+>>> higher()
+75
+>>> higher()
+88
+>>> lower()
+81
+>>> lower()
+78
+>>> lower()
+76
+>>> higher()
+77
+>>> correct()
+'Yippie!!!'
+```
+
+## "Binærsøk"
+
+Gratulerer, dere har nå implementert et binærsøk!
+
 # Lister
 
 ## Hva er lister?

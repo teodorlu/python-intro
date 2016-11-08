@@ -274,6 +274,109 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
 <li>Skriver ut &quot;Du er ikke gammel nok&quot; dersom alderen er under 18 år</li>
 </ul>
 </section></section>
+<section><section id="programmer-ditt-eget-gjettespill" class="titleslide slide level1"><h1>Programmer ditt eget gjettespill!</h1></section><section id="hø" class="slide level2">
+<h1>Hø?</h1>
+<figure>
+<img src="assets/guess_my_number_illustration.png" />
+</figure>
+</section><section id="attributter" class="slide level2">
+<h1>Attributter</h1>
+<p>Spill og illustrasjon er hentet fra den strålende boka &quot;Land of Lisp&quot; av Conrad Barski, og tilpasset Python.</p>
+<p>Musikkvideo:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HM1Zb3xmvMc" frameborder="0" allowfullscreen>
+</iframe>
+</section><section id="demo" class="slide level2">
+<h1>Demo</h1>
+<p>Slik kan det fungere ...</p>
+<p>Sider under beskriver hvordan gjettespillet kan implementeres. Prøv først selv, og gå videre nedover om du trenger et tips!</p>
+</section><section id="gjettefunksjon" class="slide level2">
+<h1>Gjettefunksjon</h1>
+<p>Gitt at vi har en øvre og nedre grense, kan vi gjette at tallet ligger midt i mellom:</p>
+<!-- ![](assets/guess_my_number_1.png) -->
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># Gjettespill!</span>
+<span class="co"># Dette er en kommentar. Python ignorerer alt som kommer etter</span>
+<span class="co"># en hash (#)</span>
+
+low <span class="op">=</span> <span class="dv">0</span>
+high <span class="op">=</span> <span class="dv">100</span>
+
+<span class="kw">def</span> guess():
+    total <span class="op">=</span> high <span class="op">+</span> low          <span class="co"># f.eks 75 + 50 = 125</span>
+    average <span class="op">=</span> total <span class="op">/</span> <span class="dv">2</span>         <span class="co"># 125/2 = 62.5</span>
+    next_guess <span class="op">=</span> <span class="bu">int</span>(average)   <span class="co"># int(62.5) = 62</span>
+    <span class="cf">return</span> next_guess</code></pre></div>
+</section><section id="prøve-gjettefunksjon" class="slide level2">
+<h1>Prøve gjettefunksjon</h1>
+<p>Hvordan fungere denne? Vi kjører modulen i IDLE, så vi kan leke med verdiene.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> guess
+<span class="op">&lt;</span>function guess at <span class="bn">0x7fee85ff9840</span><span class="op">&gt;</span></code></pre></div>
+<p>Wops, guess var en funsjon. Vi trenger paranterser for å <em>kalle</em> en funksjon:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> guess()
+<span class="dv">50</span></code></pre></div>
+</section><section id="prøve-gjettefunksjon-1" class="slide level2">
+<h1>Prøve gjettefunksjon</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> high
+<span class="dv">100</span>
+<span class="op">&gt;&gt;&gt;</span> low
+<span class="dv">0</span></code></pre></div>
+<p>... så low starter på 0, og high på 100. Hva om vi endrer på dette?</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> low <span class="op">=</span> <span class="dv">75</span>
+<span class="op">&gt;&gt;&gt;</span> guess()
+<span class="dv">87</span></code></pre></div>
+</section><section id="lavere-høyere" class="slide level2">
+<h1>Lavere? Høyere?</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> <span class="co"># Hemmelig tall er 42!</span>
+<span class="op">&gt;&gt;&gt;</span> guess()
+<span class="dv">50</span>
+<span class="op">&gt;&gt;&gt;</span> lower()
+<span class="dv">24</span>
+<span class="op">&gt;&gt;&gt;</span> higher()
+<span class="dv">37</span>
+<span class="op">&gt;&gt;&gt;</span> higher()
+<span class="dv">43</span>
+<span class="op">&gt;&gt;&gt;</span> lower()
+<span class="dv">40</span>
+<span class="op">&gt;&gt;&gt;</span> higher()
+<span class="dv">41</span>
+<span class="op">&gt;&gt;&gt;</span> higher()
+<span class="dv">42</span></code></pre></div>
+</section><section id="lavere-høyere-1" class="slide level2">
+<h1>Lavere? Høyere?</h1>
+<p>Vi svarer datamaskinen ved å kalle funksjonen <code>lower()</code> eller <code>higher()</code>:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> lower():
+    <span class="co"># global lar oss endre en global variabel</span>
+    <span class="co"># inne i en funksjon</span>
+    <span class="kw">global</span> high
+    high <span class="op">=</span> guess() <span class="op">-</span> <span class="dv">1</span>
+    <span class="cf">return</span> guess()
+
+<span class="kw">def</span> bigger():
+    <span class="kw">global</span> low
+    low <span class="op">=</span> guess() <span class="op">+</span> <span class="dv">1</span>
+    <span class="cf">return</span> guess()</code></pre></div>
+</section><section id="hva-når-vi-vinner" class="slide level2">
+<h1>Hva når vi vinner?</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> <span class="co"># Guessing 77</span>
+<span class="op">&gt;&gt;&gt;</span> guess()
+<span class="dv">50</span>
+<span class="op">&gt;&gt;&gt;</span> higher()
+<span class="dv">75</span>
+<span class="op">&gt;&gt;&gt;</span> higher()
+<span class="dv">88</span>
+<span class="op">&gt;&gt;&gt;</span> lower()
+<span class="dv">81</span>
+<span class="op">&gt;&gt;&gt;</span> lower()
+<span class="dv">78</span>
+<span class="op">&gt;&gt;&gt;</span> lower()
+<span class="dv">76</span>
+<span class="op">&gt;&gt;&gt;</span> higher()
+<span class="dv">77</span>
+<span class="op">&gt;&gt;&gt;</span> correct()
+<span class="co">&#39;Yippie!!!&#39;</span></code></pre></div>
+</section><section id="binærsøk" class="slide level2">
+<h1>&quot;Binærsøk&quot;</h1>
+<p>Gratulerer, dere har nå implementert et binærsøk!</p>
+</section></section>
 <section><section id="lister" class="titleslide slide level1"><h1>Lister</h1></section><section id="hva-er-lister" class="slide level2">
 <h1>Hva er lister?</h1>
 <ul>
