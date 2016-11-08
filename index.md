@@ -284,7 +284,7 @@ def guess():
 
 ## Prøve gjettefunksjon
 
-Hvordan fungere denne? Vi kjører modulen i IDLE, så vi kan leke med verdiene.
+Hvordan fungerer denne? Vi kjører modulen i IDLE, så vi kan leke med verdiene.
 
 ```python
 >>> guess
