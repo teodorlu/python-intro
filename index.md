@@ -4,7 +4,7 @@
 
 ## Oss?
 
-Fransis (er her) og Teodor (kommer snart!)
+Perry og Teodor
 
 # Om Python
 
