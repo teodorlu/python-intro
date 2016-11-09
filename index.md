@@ -242,6 +242,72 @@ Lag et program som
 * Lagrer en alder i en variabel
 * Skriver ut "Du er ikke gammel nok" dersom alderen er under 18 år
 
+# Funksjoner
+
+## Funksjoner i Python
+
+```python
+def hei(): # Definer en funksjon med navnet 'hei'
+    return "Hei" # Funksjonen returnerer teksten "Hei"
+```
+
+## Funksjoner i Python
+
+```python
+>>> hei()
+'Hei'
+```
+
+## Parametre
+
+```python
+def hei(navn):
+    return "Hei " + navn
+```
+
+## Parametre
+
+```python
+>>> hei("Teodor")
+'Hei Teodor'
+```
+
+## Myndig
+```python
+def er_myndig(alder):
+    if alder > 17:
+        return "Du er myndig!"
+    else:
+        return "Du er ikke myndig :("
+```
+
+## Myndig
+```python
+>>> er_myndig(18)
+'Du er myndig!'
+```
+
+## Kalkulator
+
+```python
+def addition(tall1, tall2):
+    return tall1 + tall2
+```
+
+## Kalkulator
+
+```python
+>>> addition(2, 3)
+5
+```
+
+## Oppgave
+
+* Lag en kalkulator som tar inn to tall og en operator, og som returnerer svaret
+* Prøv med operatorene +, -, \* og \\
+
+Tips: Bruk if-setninger!
+
 # Input / output
 
 ## Hva er input / output?
