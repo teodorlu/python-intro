@@ -383,6 +383,9 @@ Gratulerer, dere har nå implementert et binærsøk!
 
 ## Hva er input / output?
 
+* Kommunikasjon med verden uten å bruke IDLE
+* ... Når andre enn du skal bruke programmet ditt!
+
 ## Input / output i Python
 
 ```python
@@ -417,10 +420,10 @@ Nå skal vi utvide oppgaven fra tidligere. I stedet for å lagre alderen til fam
 
 Funksjoner vi har brukt:
 ```python
-input() #spør brukeren
-int() #konverterer fra tekst til tall
-str() #konverterer fra tall til tekst
-print() #forteller brukeren noe
+input() # Spør brukeren
+int()   # Konverterer fra tekst til tall
+str()   # Konverterer fra tall til tekst
+print() # Forteller brukeren noe
 ```
 
 ```python

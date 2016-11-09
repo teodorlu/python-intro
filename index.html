@@ -377,9 +377,13 @@ high <span class="op">=</span> <span class="dv">100</span>
 </section></section>
 <section><section id="input-output" class="titleslide slide level1"><h1>Input / output</h1></section><section id="hva-er-input-output" class="slide level2">
 <h1>Hva er input / output?</h1>
+<ul>
+<li>Kommunikasjon med verden uten å bruke IDLE</li>
+<li>... Når andre enn du skal bruke programmet ditt!</li>
+</ul>
 </section><section id="input-output-i-python" class="slide level2">
 <h1>Input / output i Python</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">navn <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Hvor heter du?&quot;</span>)
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">navn <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Hva heter du?&quot;</span>)
 <span class="bu">print</span>(navn)</code></pre></div>
 </section><section id="å-lese-inn-tall" class="slide level2">
 <h1>Å lese inn tall</h1>
@@ -402,13 +406,11 @@ age <span class="op">=</span> <span class="bu">int</span>(age_text)
 <h1>Oppgave: familiens alder 2</h1>
 <p>Nå skal vi utvide oppgaven fra tidligere. I stedet for å lagre alderen til familiemedlemmer i programmet, spør brukeren! Skriv så ut gjennomsnitt og total alder.</p>
 <p>Funksjoner vi har brukt:</p>
-<ul>
-<li><code>input()</code> spør brukeren</li>
-<li><code>int()</code> konverterer fra tekst til tall</li>
-<li><code>str()</code> konverterer fra tall til tekst</li>
-<li><code>print()</code> forteller brukeren noe</li>
-</ul>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">navn <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Hvor heter du?&quot;</span>)
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">input</span>() <span class="co"># Spør brukeren</span>
+<span class="bu">int</span>()   <span class="co"># Konverterer fra tekst til tall</span>
+<span class="bu">str</span>()   <span class="co"># Konverterer fra tall til tekst</span>
+<span class="bu">print</span>() <span class="co"># Forteller brukeren noe</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">navn <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Hva heter du?&quot;</span>)
 <span class="bu">print</span>(navn)</code></pre></div>
 </section></section>
 <section><section id="lister" class="titleslide slide level1"><h1>Lister</h1></section><section id="hva-er-lister" class="slide level2">
