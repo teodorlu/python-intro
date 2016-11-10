@@ -308,6 +308,11 @@ def addition(tall1, tall2):
 
 Tips: Bruk if-setninger!
 
+```python
+>>> kalkulator("*", 3, 4)
+12
+```
+
 # Input / output
 
 ## Hva er input / output?
