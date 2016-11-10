@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <title></title>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css"/>
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
 div.sourceCode { overflow-x: auto; }
@@ -48,13 +48,15 @@ code > span.cv { color: #7f9f7f; font-weight: bold; } /* CommentVar */
 code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
   </style>
   <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
-  <!-- Printing and PDF exports -->
+  <!-- If the query includes 'print-pdf', include the PDF print sheet -->
   <script>
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
+    if( window.location.search.match( /print-pdf/gi ) ) {
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = 'reveal.js/css/print/pdf.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
   </script>
   <!--[if lt IE 9]>
   <script src="reveal.js/lib/js/html5shiv.js"></script>
@@ -73,13 +75,13 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
 <h1>Hvem er vi?</h1>
 <p>Teodor Heggelund</p>
 <figure>
-<img src="http://www.norconsult.com/Images/Logos/logo_norconsult_200x200.jpg" />
+<img src="http://www.norconsult.com/Images/Logos/logo_norconsult_200x200.jpg" alt="" />
 </figure>
 </section><section class="slide level2">
 
 <p>Alexander Perry</p>
 <figure>
-<img src="http://kampanje.com/contentassets/ef767832064f4b5b853db52dee9ca940/logo_bouvet_222x222px.png" />
+<img src="http://kampanje.com/contentassets/ef767832064f4b5b853db52dee9ca940/logo_bouvet_222x222px.png" alt="" />
 </figure>
 </section></section>
 <section><section id="hvorfor-python" class="titleslide slide level1"><h1>Hvorfor Python?</h1></section><section id="for-begynnere" class="slide level2">
@@ -99,23 +101,23 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
 </section><section id="driver-new-york-times" class="slide level2">
 <h1>Driver New York Times</h1>
 <figure>
-<img src="http://www.slate.com/content/dam/slate/articles/life/culturebox/2014/01/140108_CBOX_NYTimesRedesign.jpg.CROP.promo-mediumlarge.jpg" />
+<img src="http://www.slate.com/content/dam/slate/articles/life/culturebox/2014/01/140108_CBOX_NYTimesRedesign.jpg.CROP.promo-mediumlarge.jpg" alt="" />
 </figure>
 </section><section id="brukes-av-nasa" class="slide level2">
 <h1>Brukes av NASA</h1>
 <figure>
-<img src="http://www.nasa.gov/sites/default/files/thumbnails/image/ocs_iss_0.jpg" />
+<img src="http://www.nasa.gov/sites/default/files/thumbnails/image/ocs_iss_0.jpg" alt="" />
 </figure>
 </section><section id="brukes-av-google" class="slide level2">
 <h1>Brukes av Google</h1>
 <figure>
-<img src="https://www.google.com/selfdrivingcar/images/home-where.jpg" />
+<img src="https://www.google.com/selfdrivingcar/images/home-where.jpg" alt="" />
 </figure>
 </section><section id="driver-beregninger" class="slide level2">
 <h1>Driver beregninger</h1>
 <p>Troll II, 1995</p>
 <figure>
-<img src="http://www.norskpetroleum.no/wp-content/uploads/Troll-A-platform-Photo-%C3%98yvind-Hagen-Statoil.jpg" />
+<img src="http://www.norskpetroleum.no/wp-content/uploads/Troll-A-platform-Photo-%C3%98yvind-Hagen-Statoil.jpg" alt="" />
 </figure>
 </section></section>
 <section><section id="verktøy" class="titleslide slide level1"><h1>Verktøy</h1></section><section id="hva-trenger-vi" class="slide level2">
@@ -136,7 +138,7 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
 <h1>Python-skallet i IDLE</h1>
 <p>Et skall lar oss skrive en linje og tolke den.</p>
 <figure>
-<img src="assets/idle-shell.png" />
+<img src="assets/idle-shell.png" alt="" />
 </figure>
 </section><section id="python-skallet-i-idle-1" class="slide level2">
 <h1>Python-skallet i IDLE</h1>
@@ -147,32 +149,32 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
 </section><section id="teksteditoren-i-idle" class="slide level2">
 <h1>Teksteditoren i IDLE</h1>
 <figure>
-<img src="assets/idle-new-file.png" />
+<img src="assets/idle-new-file.png" alt="" />
 </figure>
 </section><section id="teksteditoren-i-idle-1" class="slide level2">
 <h1>Teksteditoren i IDLE</h1>
 <p>Vi åpner teksteditoren ved å lage en ny fil fra Python-skallet:</p>
 <p><code>File</code> --&gt; <code>New file</code> (<code>Ctrl+N</code>) gir oss en tom fil:</p>
 <figure>
-<img src="assets/idle-empty-file.png" />
+<img src="assets/idle-empty-file.png" alt="" />
 </figure>
 </section><section id="teksteditoren-i-idle-2" class="slide level2">
 <h1>Teksteditoren i IDLE</h1>
 <p>Først lagrer vi filen der vi vil ha den, og kaller den <code>hello.py</code> ...</p>
 <figure>
-<img src="assets/idle-save-as.png" />
+<img src="assets/idle-save-as.png" alt="" />
 </figure>
 </section><section id="teksteditoren-i-idle-3" class="slide level2">
 <h1>Teksteditoren i IDLE</h1>
 <p>... så kjører vi den for å se at alt er i orden ...</p>
 <figure>
-<img src="assets/idle-run-module.png" />
+<img src="assets/idle-run-module.png" alt="" />
 </figure>
 </section><section id="teksteditoren-i-idle-4" class="slide level2">
 <h1>Teksteditoren i IDLE</h1>
 <p>... og en tom fil gjør ... ingenting.</p>
 <figure>
-<img src="assets/idle-nothing-happened.png" />
+<img src="assets/idle-nothing-happened.png" alt="" />
 </figure>
 </section></section>
 <section><section id="variabler" class="titleslide slide level1"><h1>Variabler</h1></section><section id="hva-er-en-variabel" class="slide level2">
@@ -222,12 +224,12 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
 <section><section id="stemningen-i-python" class="titleslide slide level1"><h1>Stemningen i Python</h1></section><section id="navnet" class="slide level2">
 <h1>Navnet?</h1>
 <figure>
-<img src="http://www.anglotopia.net/wp-content/uploads/2015/05/Monty-Python-and-The-Holy-Grail-40th_640.jpg" />
+<img src="http://www.anglotopia.net/wp-content/uploads/2015/05/Monty-Python-and-The-Holy-Grail-40th_640.jpg" alt="" />
 </figure>
 </section><section class="slide level2">
 
 <figure>
-<img src="http://imgs.xkcd.com/comics/python.png" />
+<img src="http://imgs.xkcd.com/comics/python.png" alt="" />
 </figure>
 <p>Fra <a href="http://xkcd.com/353/">XKCD</a>.</p>
 </section></section>
@@ -274,106 +276,48 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
 <li>Skriver ut &quot;Du er ikke gammel nok&quot; dersom alderen er under 18 år</li>
 </ul>
 </section></section>
-<section><section id="programmer-ditt-eget-gjettespill" class="titleslide slide level1"><h1>Programmer ditt eget gjettespill!</h1></section><section id="hø" class="slide level2">
-<h1>Hø?</h1>
-<figure>
-<img src="assets/guess_my_number_illustration.png" />
-</figure>
-</section><section id="attributter" class="slide level2">
-<h1>Attributter</h1>
-<p>Spill og illustrasjon er hentet fra den strålende boka &quot;Land of Lisp&quot; av Conrad Barski, og tilpasset Python.</p>
-<p>Musikkvideo:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HM1Zb3xmvMc" frameborder="0" allowfullscreen>
-</iframe>
-</section><section id="demo" class="slide level2">
-<h1>Demo</h1>
-<p>Slik kan det fungere ...</p>
-<p>Sider under beskriver hvordan gjettespillet kan implementeres. Prøv først selv, og gå videre nedover om du trenger et tips!</p>
-</section><section id="gjettefunksjon" class="slide level2">
-<h1>Gjettefunksjon</h1>
-<p>Gitt at vi har en øvre og nedre grense, kan vi gjette at tallet ligger midt i mellom:</p>
-<!-- ![](assets/guess_my_number_1.png) -->
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># Gjettespill!</span>
-
-low <span class="op">=</span> <span class="dv">0</span>
-high <span class="op">=</span> <span class="dv">100</span>
-
-<span class="kw">def</span> guess():
-    total <span class="op">=</span> high <span class="op">+</span> low          <span class="co"># f.eks 75 + 50 = 125</span>
-    average <span class="op">=</span> total <span class="op">/</span> <span class="dv">2</span>         <span class="co"># 125/2 = 62.5</span>
-    next_guess <span class="op">=</span> <span class="bu">int</span>(average)   <span class="co"># int(62.5) = 62</span>
-    <span class="cf">return</span> next_guess</code></pre></div>
-</section><section id="prøve-gjettefunksjon" class="slide level2">
-<h1>Prøve gjettefunksjon</h1>
-<p>Hvordan fungerer denne? Vi kjører modulen i IDLE, så vi kan leke med verdiene.</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> guess
-<span class="op">&lt;</span>function guess at <span class="bn">0x7fee85ff9840</span><span class="op">&gt;</span></code></pre></div>
-<p>Wops, guess var en funksjon. Vi trenger paranterser for å <em>kalle</em> en funksjon:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> guess()
-<span class="dv">50</span></code></pre></div>
-</section><section id="prøve-gjettefunksjon-1" class="slide level2">
-<h1>Prøve gjettefunksjon</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> high
-<span class="dv">100</span>
-<span class="op">&gt;&gt;&gt;</span> low
-<span class="dv">0</span></code></pre></div>
-<p>... så low starter på 0, og high på 100. Hva om vi endrer på dette?</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> low <span class="op">=</span> <span class="dv">75</span>
-<span class="op">&gt;&gt;&gt;</span> guess()
-<span class="dv">87</span></code></pre></div>
-</section><section id="lavere-høyere" class="slide level2">
-<h1>Lavere? Høyere?</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> <span class="co"># Hemmelig tall er 42!</span>
-<span class="op">&gt;&gt;&gt;</span> guess()
-<span class="dv">50</span>
-<span class="op">&gt;&gt;&gt;</span> lower()
-<span class="dv">24</span>
-<span class="op">&gt;&gt;&gt;</span> higher()
-<span class="dv">37</span>
-<span class="op">&gt;&gt;&gt;</span> higher()
-<span class="dv">43</span>
-<span class="op">&gt;&gt;&gt;</span> lower()
-<span class="dv">40</span>
-<span class="op">&gt;&gt;&gt;</span> higher()
-<span class="dv">41</span>
-<span class="op">&gt;&gt;&gt;</span> higher()
-<span class="dv">42</span></code></pre></div>
-</section><section id="lavere-høyere-1" class="slide level2">
-<h1>Lavere? Høyere?</h1>
-<p>Vi svarer datamaskinen ved å kalle funksjonen <code>lower()</code> eller <code>higher()</code>:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> lower():
-    <span class="co"># global lar oss endre en global variabel</span>
-    <span class="co"># inne i en funksjon</span>
-    <span class="kw">global</span> high
-    high <span class="op">=</span> guess() <span class="op">-</span> <span class="dv">1</span>
-    <span class="cf">return</span> guess()
-
-<span class="kw">def</span> bigger():
-    <span class="kw">global</span> low
-    low <span class="op">=</span> guess() <span class="op">+</span> <span class="dv">1</span>
-    <span class="cf">return</span> guess()</code></pre></div>
-</section><section id="hva-når-vi-vinner" class="slide level2">
-<h1>Hva når vi vinner?</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> <span class="co"># Guessing 77</span>
-<span class="op">&gt;&gt;&gt;</span> guess()
-<span class="dv">50</span>
-<span class="op">&gt;&gt;&gt;</span> higher()
-<span class="dv">75</span>
-<span class="op">&gt;&gt;&gt;</span> higher()
-<span class="dv">88</span>
-<span class="op">&gt;&gt;&gt;</span> lower()
-<span class="dv">81</span>
-<span class="op">&gt;&gt;&gt;</span> lower()
-<span class="dv">78</span>
-<span class="op">&gt;&gt;&gt;</span> lower()
-<span class="dv">76</span>
-<span class="op">&gt;&gt;&gt;</span> higher()
-<span class="dv">77</span>
-<span class="op">&gt;&gt;&gt;</span> correct()
-<span class="co">&#39;Yippie!!!&#39;</span></code></pre></div>
-</section><section id="binærsøk" class="slide level2">
-<h1>&quot;Binærsøk&quot;</h1>
-<p>Gratulerer, dere har nå implementert et binærsøk!</p>
+<section><section id="funksjoner" class="titleslide slide level1"><h1>Funksjoner</h1></section><section id="funksjoner-i-python" class="slide level2">
+<h1>Funksjoner i Python</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> hei(): <span class="co"># Definer en funksjon med navnet &#39;hei&#39;</span>
+    <span class="cf">return</span> <span class="st">&quot;Hei&quot;</span> <span class="co"># Funksjonen returnerer teksten &quot;Hei&quot;</span></code></pre></div>
+</section><section id="funksjoner-i-python-1" class="slide level2">
+<h1>Funksjoner i Python</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> hei()
+<span class="co">&#39;Hei&#39;</span></code></pre></div>
+</section><section id="parametre" class="slide level2">
+<h1>Parametre</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> hei(navn):
+    <span class="cf">return</span> <span class="st">&quot;Hei &quot;</span> <span class="op">+</span> navn</code></pre></div>
+</section><section id="parametre-1" class="slide level2">
+<h1>Parametre</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> hei(<span class="st">&quot;Teodor&quot;</span>)
+<span class="co">&#39;Hei Teodor&#39;</span></code></pre></div>
+</section><section id="myndig" class="slide level2">
+<h1>Myndig</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> er_myndig(alder):
+    <span class="cf">if</span> alder <span class="op">&gt;</span> <span class="dv">17</span>:
+        <span class="cf">return</span> <span class="st">&quot;Du er myndig!&quot;</span>
+    <span class="cf">else</span>:
+        <span class="cf">return</span> <span class="st">&quot;Du er ikke myndig :(&quot;</span></code></pre></div>
+</section><section id="myndig-1" class="slide level2">
+<h1>Myndig</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> er_myndig(<span class="dv">18</span>)
+<span class="co">&#39;Du er myndig!&#39;</span></code></pre></div>
+</section><section id="kalkulator" class="slide level2">
+<h1>Kalkulator</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> addition(tall1, tall2):
+    <span class="cf">return</span> tall1 <span class="op">+</span> tall2</code></pre></div>
+</section><section id="kalkulator-1" class="slide level2">
+<h1>Kalkulator</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> addition(<span class="dv">2</span>, <span class="dv">3</span>)
+<span class="dv">5</span></code></pre></div>
+</section><section id="oppgave" class="slide level2">
+<h1>Oppgave</h1>
+<ul>
+<li>Lag en kalkulator som tar inn to tall og en operator, og som returnerer svaret</li>
+<li>Prøv med operatorene +, -, * og \</li>
+</ul>
+<p>Tips: Bruk if-setninger!</p>
 </section></section>
 <section><section id="input-output" class="titleslide slide level1"><h1>Input / output</h1></section><section id="hva-er-input-output" class="slide level2">
 <h1>Hva er input / output?</h1>
@@ -492,6 +436,107 @@ x <span class="op">=</span> randint(<span class="dv">0</span>, <span class="dv">
 <li>I stedet for <em>uendelig</em> mange oppgaver, gi brukeren 5 oppgaver!</li>
 </ul>
 </section></section>
+<section><section id="programmer-ditt-eget-gjettespill" class="titleslide slide level1"><h1>Programmer ditt eget gjettespill!</h1></section><section id="hø" class="slide level2">
+<h1>Hø?</h1>
+<figure>
+<img src="assets/guess_my_number_illustration.png" alt="" />
+</figure>
+</section><section id="attributter" class="slide level2">
+<h1>Attributter</h1>
+<p>Spill og illustrasjon er hentet fra den strålende boka &quot;Land of Lisp&quot; av Conrad Barski, og tilpasset Python.</p>
+<p>Musikkvideo:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HM1Zb3xmvMc" frameborder="0" allowfullscreen>
+</iframe>
+</section><section id="demo" class="slide level2">
+<h1>Demo</h1>
+<p>Slik kan det fungere ...</p>
+<p>Sider under beskriver hvordan gjettespillet kan implementeres. Prøv først selv, og gå videre nedover om du trenger et tips!</p>
+</section><section id="gjettefunksjon" class="slide level2">
+<h1>Gjettefunksjon</h1>
+<p>Gitt at vi har en øvre og nedre grense, kan vi gjette at tallet ligger midt i mellom:</p>
+<!-- ![](assets/guess_my_number_1.png) -->
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># Gjettespill!</span>
+
+low <span class="op">=</span> <span class="dv">0</span>
+high <span class="op">=</span> <span class="dv">100</span>
+
+<span class="kw">def</span> guess():
+    total <span class="op">=</span> high <span class="op">+</span> low          <span class="co"># f.eks 75 + 50 = 125</span>
+    average <span class="op">=</span> total <span class="op">/</span> <span class="dv">2</span>         <span class="co"># 125/2 = 62.5</span>
+    next_guess <span class="op">=</span> <span class="bu">int</span>(average)   <span class="co"># int(62.5) = 62</span>
+    <span class="cf">return</span> next_guess</code></pre></div>
+</section><section id="prøve-gjettefunksjon" class="slide level2">
+<h1>Prøve gjettefunksjon</h1>
+<p>Hvordan fungerer denne? Vi kjører modulen i IDLE, så vi kan leke med verdiene.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> guess
+<span class="op">&lt;</span>function guess at <span class="bn">0x7fee85ff9840</span><span class="op">&gt;</span></code></pre></div>
+<p>Wops, guess var en funksjon. Vi trenger paranterser for å <em>kalle</em> en funksjon:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> guess()
+<span class="dv">50</span></code></pre></div>
+</section><section id="prøve-gjettefunksjon-1" class="slide level2">
+<h1>Prøve gjettefunksjon</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> high
+<span class="dv">100</span>
+<span class="op">&gt;&gt;&gt;</span> low
+<span class="dv">0</span></code></pre></div>
+<p>... så low starter på 0, og high på 100. Hva om vi endrer på dette?</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> low <span class="op">=</span> <span class="dv">75</span>
+<span class="op">&gt;&gt;&gt;</span> guess()
+<span class="dv">87</span></code></pre></div>
+</section><section id="lavere-høyere" class="slide level2">
+<h1>Lavere? Høyere?</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> <span class="co"># Hemmelig tall er 42!</span>
+<span class="op">&gt;&gt;&gt;</span> guess()
+<span class="dv">50</span>
+<span class="op">&gt;&gt;&gt;</span> lower()
+<span class="dv">24</span>
+<span class="op">&gt;&gt;&gt;</span> higher()
+<span class="dv">37</span>
+<span class="op">&gt;&gt;&gt;</span> higher()
+<span class="dv">43</span>
+<span class="op">&gt;&gt;&gt;</span> lower()
+<span class="dv">40</span>
+<span class="op">&gt;&gt;&gt;</span> higher()
+<span class="dv">41</span>
+<span class="op">&gt;&gt;&gt;</span> higher()
+<span class="dv">42</span></code></pre></div>
+</section><section id="lavere-høyere-1" class="slide level2">
+<h1>Lavere? Høyere?</h1>
+<p>Vi svarer datamaskinen ved å kalle funksjonen <code>lower()</code> eller <code>higher()</code>:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> lower():
+    <span class="co"># global lar oss endre en global variabel</span>
+    <span class="co"># inne i en funksjon</span>
+    <span class="kw">global</span> high
+    high <span class="op">=</span> guess() <span class="op">-</span> <span class="dv">1</span>
+    <span class="cf">return</span> guess()
+
+<span class="kw">def</span> bigger():
+    <span class="kw">global</span> low
+    low <span class="op">=</span> guess() <span class="op">+</span> <span class="dv">1</span>
+    <span class="cf">return</span> guess()</code></pre></div>
+</section><section id="hva-når-vi-vinner" class="slide level2">
+<h1>Hva når vi vinner?</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> <span class="co"># Guessing 77</span>
+<span class="op">&gt;&gt;&gt;</span> guess()
+<span class="dv">50</span>
+<span class="op">&gt;&gt;&gt;</span> higher()
+<span class="dv">75</span>
+<span class="op">&gt;&gt;&gt;</span> higher()
+<span class="dv">88</span>
+<span class="op">&gt;&gt;&gt;</span> lower()
+<span class="dv">81</span>
+<span class="op">&gt;&gt;&gt;</span> lower()
+<span class="dv">78</span>
+<span class="op">&gt;&gt;&gt;</span> lower()
+<span class="dv">76</span>
+<span class="op">&gt;&gt;&gt;</span> higher()
+<span class="dv">77</span>
+<span class="op">&gt;&gt;&gt;</span> correct()
+<span class="co">&#39;Yippie!!!&#39;</span></code></pre></div>
+</section><section id="binærsøk" class="slide level2">
+<h1>&quot;Binærsøk&quot;</h1>
+<p>Gratulerer, dere har nå implementert et binærsøk!</p>
+</section></section>
 <section><section id="veien-videre" class="titleslide slide level1"><h1>Veien videre</h1></section><section id="lykke-til" class="slide level2">
 <h1>Lykke til!</h1>
 <p>Dere gjør en viktig oppgave!</p>
@@ -510,22 +555,32 @@ x <span class="op">=</span> randint(<span class="dv">0</span>, <span class="dv">
     </div>
   </div>
 
+
   <script src="reveal.js/lib/js/head.min.js"></script>
   <script src="reveal.js/js/reveal.js"></script>
 
   <script>
 
-      // Full list of configuration options available at:
+      // Full list of configuration options available here:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
+        controls: true,         // Display controls in the bottom right corner
+        progress: true,         // Display a presentation progress bar
+        history: true,          // Push each slide change to the browser history
+        center: true,                       // Vertical centering of slides
+        maxScale: 1.5,                  // Bounds for smallest/largest possible content scale
+        slideNumber: false,                // Display the page number of the current slide
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-        // Optional reveal.js plugins
+        // Optional libraries used to extend on reveal.js
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true }
-        ]
-      });
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+//          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
+//          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+]});
     </script>
     </body>
 </html>
