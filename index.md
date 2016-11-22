@@ -1,12 +1,22 @@
 # Programmering i Python
 
-### Lærerkonferanse Oslo 2016
+### Norconsult - Sandvika 2016
 
 ## Hva ser jeg nå?
 
 Nettleseren Chromium som viser nettsiden `http://teodorlu.github.io/python-intro/` i fullskjerm.
 
 Gå inn her på egen maskin! Da kan du se tidligere lysbilder, og er ikke avhengig av hvor vi er.
+
+## Hva gjør jeg nå?
+
+Du er på Python-kurs! Kurs med fartstid:
+
+- [Lærerkonferanse Teknologihuset, juni 2016](http://kidsakoder.no/konferanser/juni2016/)
+- Kodeklubben høsten 2016
+- [Lærerkonferanse Teknologihuset, november 2016](http://kidsakoder.no/konferanser/oslo2016/)
+- Lærerkonferanse Gardermoen, november 2016
+- Internkurs Norconsult, Sandvika, november 2016
 
 ## Hvem er vi?
 
@@ -51,11 +61,11 @@ Forståelig syntaks med lite støy:
 
 ![](https://www.google.com/selfdrivingcar/images/home-where.jpg)
 
-## Driver beregninger
+<!-- ## Driver beregninger
 
 Troll II, 1995
 
-![](http://www.norskpetroleum.no/wp-content/uploads/Troll-A-platform-Photo-%C3%98yvind-Hagen-Statoil.jpg)
+![](http://www.norskpetroleum.no/wp-content/uploads/Troll-A-platform-Photo-%C3%98yvind-Hagen-Statoil.jpg) -->
 
 # Verktøy
 
@@ -463,7 +473,7 @@ for tall in mangeTall
 
 ![](assets/guess_my_number_illustration.png)
 
-## Attributter
+## Takk til Barski
 
 Spill og illustrasjon er hentet fra den strålende boka "Land of Lisp" av Conrad Barski, og tilpasset Python.
 
@@ -592,13 +602,160 @@ def bigger():
 
 ## "Binærsøk"
 
-Gratulerer, dere har nå implementert et binærsøk!
+Gratulerer, dere har nå implementert et binærsøk! Binærsøk er en av grunnene til at Google-søk er raske.
+
+# Python og Abaqus
+
+## Skallet i Abaqus
+
+## Kjøre filer i Abaqus
+
+## Oppgave A: Abaqus
+
+Parametrisering av plate:
+
+__Sett inn bilde.__
+
+## Oppgave del A1
+
+__Modeller fritt opplagt plate i Abaqus: `plate.cae`__
+
+- Størrelse: 4m x 6m x 200 mm.
+- Dekke: 0.2 m betong, E=30e9 Pa, ν=0.2
+- Dimensjonerende last: 10 kN/m2
+
+## Oppgave del A2
+
+__Gjør om til script__
+
+- Kopier journal (`plate.jnl`) til `generate-plates.py`.
+- Endre koden til å generere 2 modeller:
+  - `plate_4_6_200_10` som før
+  - `plate_4_6_260_20` med tykkelse 300 mm og last 20 kN/m2
+
+## Oppgave del A3
+
+__Parametriser over tykkelse og kraft__
+
+- Trekk ut tykkelse og kraft som variabler
+- Generer 9 parts i samme modell:
+    - Tykkelse 150 mm, 200 mm eller 260 mm
+    - Kraft 7 kN/m2, 10 kN/m2 eller 20 kN/m2
+- Lag navn fra parametre:
+
+```
+plate_4_6_160_7
+plate_4_6_160_10
+plate_4_6_160_10
+plate_4_6_200_7
+plate_4_6_200_10
+...
+```
+
+## Ferdig alt?
+
+__Len deg tilbake og nyt hva du har fått til.__
+
+Mulig vei videre:
+- Generer jobb for hver modell
+- Kjør jobber
+- Åpne ODB og sammenlikne!
+
+## Ressurser for Python og Abaqus
+
+![](assets/abaqus-documentation.png)
+
+## Ressurser for Python og Abaqus
+
+* [Abaqus Scripting User's Guide](http://50.16.225.63/v2016/books/cmd/default.htm) går gjennom hvordan hvordan du gjør ting som å generere CAE-modeller og manipulere view i en ODB
+* [Abaqus Scripting Reference Guide](http://50.16.225.63/v2016/books/ker/default.htm) lister opp alle funksjoner og klasser for programmering av CAE og ODB-modulene og definerer hva de gjør
+
+## Ressurser for Python og Abaqus
+
+* [Abaqus GUI Toolkit User's Guide](http://50.16.225.63/v2016/books/cus/default.htm) går gjennom hvordan hvordan du kan lage grafiske grensesnitt som ANDIM og PROCESS-PLUGIN
+* [Abaqus GUI Toolkit Reference Guide](http://50.16.225.63/v2016/books/gui/default.htm) lister opp alle funksjoner og klasser for programmering av grafikk
+
+# Python og Dynamo
+
+## Input til Python i Dynamo
+
+... TODO. Bilde.
+
+## Output fra Python i Dynamo
+
+... TODO. Bilde.
+
+## Oppgave D: Dynamo
+
+Betongbjelke med varierende tverrsnitt.
+
+## Oppgave del D1
+
+Definer en momentdiagrammet matematisk for en fritt opplagt bjelke med jevnt fordelt last.
+
+- Bjelkelengde: L [m]
+- Linjelast: q [N/m]
+- Avstand fra venstre opplegg: x [m]
+
+M(L,q,x) = ...
+
+Hva er M(8,30000,3)?
+
+## Oppgave del D2
+
+- Implementer `M(L,q,x)` i Python:
+
+```python
+def M(L,q,x):
+  # Regn ut moment!
+  moment = # ... unngår å bruke navnet på funksjonen (M)
+  return moment
+```
+
+- Hva beregner funksjonen din for `M(8,30000,3)`?
+
+## Oppgave del D3
+
+Tegn momentdiagrammet streker i Dynamo. Velg passe skala. 50 kNm <--> 1 m OK?
+
+## Oppgave del D4
+
+Nå skal vi velge høyde på bjelken. Dette gjør vi enkelt:
+
+1. Regner ut nødvendig indre momentarm `d`
+2. Legger på `100 mm` for å få ca nødvendig høyde
+
+Vi neglisjerer effekt fra skjærkrefter.
+
+Definer en matematisk funksjon for berening av nødvendig høyde.
+
+- Armeringsmengde As [m2]
+
+h(L,q,As,x) = ...
+
+- Hva er h(8,30000,3,0.00164)?
+
+## Oppgave del D5
+
+- Implementer `h(L,q,As,x)` i Python:
+
+```python
+def h(L,q,As,x):
+  moment = M(L,q,x)
+  height = # ... unngår å bruke navnet på funksjonen (h)
+  return height
+```
+
+- Hva beregner funksjonen din for `h(8,30000,3,0.00164)`?
+
+## Tegn bjelke!
 
 # Veien videre
 
 ## Lykke til!
 
-Dere gjør en viktig oppgave!
+- Spis elefanten én bit av gangen
+- Du må selv skrive kode om du skal lære programmering
 
 ## Videre ressursser
 

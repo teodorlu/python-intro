@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <title></title>
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="reveal.js/css/reveal.css"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
 div.sourceCode { overflow-x: auto; }
@@ -48,15 +48,13 @@ code > span.cv { color: #7f9f7f; font-weight: bold; } /* CommentVar */
 code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
   </style>
   <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
-  <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+  <!-- Printing and PDF exports -->
   <script>
-    if( window.location.search.match( /print-pdf/gi ) ) {
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = 'reveal.js/css/print/pdf.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    }
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
   </script>
   <!--[if lt IE 9]>
   <script src="reveal.js/lib/js/html5shiv.js"></script>
@@ -67,21 +65,31 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
     <div class="slides">
 
 
-<section><section id="programmering-i-python" class="titleslide slide level1"><h1>Programmering i Python</h1></section><h3 id="lærerkonferanse-oslo-2016">Lærerkonferanse Oslo 2016</h3><section id="hva-ser-jeg-nå" class="slide level2">
+<section><section id="programmering-i-python" class="titleslide slide level1"><h1>Programmering i Python</h1></section><h3 id="norconsult---sandvika-2016">Norconsult - Sandvika 2016</h3><section id="hva-ser-jeg-nå" class="slide level2">
 <h1>Hva ser jeg nå?</h1>
 <p>Nettleseren Chromium som viser nettsiden <code>http://teodorlu.github.io/python-intro/</code> i fullskjerm.</p>
 <p>Gå inn her på egen maskin! Da kan du se tidligere lysbilder, og er ikke avhengig av hvor vi er.</p>
+</section><section id="hva-gjør-jeg-nå" class="slide level2">
+<h1>Hva gjør jeg nå?</h1>
+<p>Du er på Python-kurs! Kurs med fartstid:</p>
+<ul>
+<li><a href="http://kidsakoder.no/konferanser/juni2016/">Lærerkonferanse Teknologihuset, juni 2016</a></li>
+<li>Kodeklubben høsten 2016</li>
+<li><a href="http://kidsakoder.no/konferanser/oslo2016/">Lærerkonferanse Teknologihuset, november 2016</a></li>
+<li>Lærerkonferanse Gardermoen, november 2016</li>
+<li>Internkurs Norconsult, Sandvika, november 2016</li>
+</ul>
 </section><section id="hvem-er-vi" class="slide level2">
 <h1>Hvem er vi?</h1>
 <p>Teodor Heggelund</p>
 <figure>
-<img src="http://www.norconsult.com/Images/Logos/logo_norconsult_200x200.jpg" alt="" />
+<img src="http://www.norconsult.com/Images/Logos/logo_norconsult_200x200.jpg" />
 </figure>
 </section><section class="slide level2">
 
 <p>Alexander Perry</p>
 <figure>
-<img src="http://kampanje.com/contentassets/ef767832064f4b5b853db52dee9ca940/logo_bouvet_222x222px.png" alt="" />
+<img src="http://kampanje.com/contentassets/ef767832064f4b5b853db52dee9ca940/logo_bouvet_222x222px.png" />
 </figure>
 </section></section>
 <section><section id="hvorfor-python" class="titleslide slide level1"><h1>Hvorfor Python?</h1></section><section id="for-begynnere" class="slide level2">
@@ -101,24 +109,23 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
 </section><section id="driver-new-york-times" class="slide level2">
 <h1>Driver New York Times</h1>
 <figure>
-<img src="http://www.slate.com/content/dam/slate/articles/life/culturebox/2014/01/140108_CBOX_NYTimesRedesign.jpg.CROP.promo-mediumlarge.jpg" alt="" />
+<img src="http://www.slate.com/content/dam/slate/articles/life/culturebox/2014/01/140108_CBOX_NYTimesRedesign.jpg.CROP.promo-mediumlarge.jpg" />
 </figure>
 </section><section id="brukes-av-nasa" class="slide level2">
 <h1>Brukes av NASA</h1>
 <figure>
-<img src="http://www.nasa.gov/sites/default/files/thumbnails/image/ocs_iss_0.jpg" alt="" />
+<img src="http://www.nasa.gov/sites/default/files/thumbnails/image/ocs_iss_0.jpg" />
 </figure>
 </section><section id="brukes-av-google" class="slide level2">
 <h1>Brukes av Google</h1>
 <figure>
-<img src="https://www.google.com/selfdrivingcar/images/home-where.jpg" alt="" />
+<img src="https://www.google.com/selfdrivingcar/images/home-where.jpg" />
 </figure>
-</section><section id="driver-beregninger" class="slide level2">
-<h1>Driver beregninger</h1>
-<p>Troll II, 1995</p>
-<figure>
-<img src="http://www.norskpetroleum.no/wp-content/uploads/Troll-A-platform-Photo-%C3%98yvind-Hagen-Statoil.jpg" alt="" />
-</figure>
+<!-- ## Driver beregninger
+
+Troll II, 1995
+
+![](http://www.norskpetroleum.no/wp-content/uploads/Troll-A-platform-Photo-%C3%98yvind-Hagen-Statoil.jpg) -->
 </section></section>
 <section><section id="verktøy" class="titleslide slide level1"><h1>Verktøy</h1></section><section id="hva-trenger-vi" class="slide level2">
 <h1>Hva trenger vi?</h1>
@@ -138,7 +145,7 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
 <h1>Python-skallet i IDLE</h1>
 <p>Et skall lar oss skrive en linje og tolke den.</p>
 <figure>
-<img src="assets/idle-shell.png" alt="" />
+<img src="assets/idle-shell.png" />
 </figure>
 </section><section id="python-skallet-i-idle-1" class="slide level2">
 <h1>Python-skallet i IDLE</h1>
@@ -149,32 +156,32 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
 </section><section id="teksteditoren-i-idle" class="slide level2">
 <h1>Teksteditoren i IDLE</h1>
 <figure>
-<img src="assets/idle-new-file.png" alt="" />
+<img src="assets/idle-new-file.png" />
 </figure>
 </section><section id="teksteditoren-i-idle-1" class="slide level2">
 <h1>Teksteditoren i IDLE</h1>
 <p>Vi åpner teksteditoren ved å lage en ny fil fra Python-skallet:</p>
 <p><code>File</code> --&gt; <code>New file</code> (<code>Ctrl+N</code>) gir oss en tom fil:</p>
 <figure>
-<img src="assets/idle-empty-file.png" alt="" />
+<img src="assets/idle-empty-file.png" />
 </figure>
 </section><section id="teksteditoren-i-idle-2" class="slide level2">
 <h1>Teksteditoren i IDLE</h1>
 <p>Først lagrer vi filen der vi vil ha den, og kaller den <code>hello.py</code> ...</p>
 <figure>
-<img src="assets/idle-save-as.png" alt="" />
+<img src="assets/idle-save-as.png" />
 </figure>
 </section><section id="teksteditoren-i-idle-3" class="slide level2">
 <h1>Teksteditoren i IDLE</h1>
 <p>... så kjører vi den for å se at alt er i orden ...</p>
 <figure>
-<img src="assets/idle-run-module.png" alt="" />
+<img src="assets/idle-run-module.png" />
 </figure>
 </section><section id="teksteditoren-i-idle-4" class="slide level2">
 <h1>Teksteditoren i IDLE</h1>
 <p>... og en tom fil gjør ... ingenting.</p>
 <figure>
-<img src="assets/idle-nothing-happened.png" alt="" />
+<img src="assets/idle-nothing-happened.png" />
 </figure>
 </section></section>
 <section><section id="variabler" class="titleslide slide level1"><h1>Variabler</h1></section><section id="hva-er-en-variabel" class="slide level2">
@@ -224,12 +231,12 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
 <section><section id="stemningen-i-python" class="titleslide slide level1"><h1>Stemningen i Python</h1></section><section id="navnet" class="slide level2">
 <h1>Navnet?</h1>
 <figure>
-<img src="http://www.anglotopia.net/wp-content/uploads/2015/05/Monty-Python-and-The-Holy-Grail-40th_640.jpg" alt="" />
+<img src="http://www.anglotopia.net/wp-content/uploads/2015/05/Monty-Python-and-The-Holy-Grail-40th_640.jpg" />
 </figure>
 </section><section class="slide level2">
 
 <figure>
-<img src="http://imgs.xkcd.com/comics/python.png" alt="" />
+<img src="http://imgs.xkcd.com/comics/python.png" />
 </figure>
 <p>Fra <a href="http://xkcd.com/353/">XKCD</a>.</p>
 </section></section>
@@ -414,7 +421,7 @@ x <span class="op">=</span> randint(<span class="dv">0</span>, <span class="dv">
 </ul>
 </section><section id="for-løkker-i-python" class="slide level2">
 <h1>For-løkker i Python</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">for</span> i <span class="op">in</span> <span class="bu">range</span>(<span class="dv">100</span>):
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>):
     <span class="bu">print</span>(i)</code></pre></div>
 <ul>
 <li><code>range(4)</code> gir <code>[0, 1, 2, 3]</code></li>
@@ -424,7 +431,7 @@ x <span class="op">=</span> randint(<span class="dv">0</span>, <span class="dv">
 </section><section id="flere-for-løkker-i-python" class="slide level2">
 <h1>Flere for-løkker i Python</h1>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">mangeTall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]
-<span class="cf">for</span> tall <span class="op">in</span> mangeTall
+<span class="cf">for</span> tall <span class="kw">in</span> mangeTall
     <span class="bu">print</span>(<span class="st">&quot;Sjekker om &quot;</span> <span class="op">+</span> <span class="bu">str</span>(tall) <span class="op">+</span> <span class="st">&quot; er et partall&quot;</span>)
 
     <span class="cf">if</span> tall <span class="op">%</span> <span class="dv">2</span>:
@@ -441,10 +448,10 @@ x <span class="op">=</span> randint(<span class="dv">0</span>, <span class="dv">
 <section><section id="programmer-ditt-eget-gjettespill" class="titleslide slide level1"><h1>Programmer ditt eget gjettespill!</h1></section><section id="hø" class="slide level2">
 <h1>Hø?</h1>
 <figure>
-<img src="assets/guess_my_number_illustration.png" alt="" />
+<img src="assets/guess_my_number_illustration.png" />
 </figure>
-</section><section id="attributter" class="slide level2">
-<h1>Attributter</h1>
+</section><section id="takk-til-barski" class="slide level2">
+<h1>Takk til Barski</h1>
 <p>Spill og illustrasjon er hentet fra den strålende boka &quot;Land of Lisp&quot; av Conrad Barski, og tilpasset Python.</p>
 <p>Musikkvideo:</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HM1Zb3xmvMc" frameborder="0" allowfullscreen>
@@ -537,11 +544,144 @@ high <span class="op">=</span> <span class="dv">100</span>
 <span class="co">&#39;Yippie!!!&#39;</span></code></pre></div>
 </section><section id="binærsøk" class="slide level2">
 <h1>&quot;Binærsøk&quot;</h1>
-<p>Gratulerer, dere har nå implementert et binærsøk!</p>
+<p>Gratulerer, dere har nå implementert et binærsøk! Binærsøk er en av grunnene til at Google-søk er raske.</p>
+</section></section>
+<section><section id="python-og-abaqus" class="titleslide slide level1"><h1>Python og Abaqus</h1></section><section id="skallet-i-abaqus" class="slide level2">
+<h1>Skallet i Abaqus</h1>
+</section><section id="kjøre-filer-i-abaqus" class="slide level2">
+<h1>Kjøre filer i Abaqus</h1>
+</section><section id="oppgave-a-abaqus" class="slide level2">
+<h1>Oppgave A: Abaqus</h1>
+<p>Parametrisering av plate:</p>
+<p><strong>Sett inn bilde.</strong></p>
+</section><section id="oppgave-del-a1" class="slide level2">
+<h1>Oppgave del A1</h1>
+<p><strong>Modeller fritt opplagt plate i Abaqus: <code>plate.cae</code></strong></p>
+<ul>
+<li>Størrelse: 4m x 6m x 200 mm.</li>
+<li>Dekke: 0.2 m betong, E=30e9 Pa, ν=0.2</li>
+<li>Dimensjonerende last: 10 kN/m2</li>
+</ul>
+</section><section id="oppgave-del-a2" class="slide level2">
+<h1>Oppgave del A2</h1>
+<p><strong>Gjør om til script</strong></p>
+<ul>
+<li>Kopier journal (<code>plate.jnl</code>) til <code>generate-plates.py</code>.</li>
+<li>Endre koden til å generere 2 modeller:</li>
+<li><code>plate_4_6_200_10</code> som før</li>
+<li><code>plate_4_6_260_20</code> med tykkelse 300 mm og last 20 kN/m2</li>
+</ul>
+</section><section id="oppgave-del-a3" class="slide level2">
+<h1>Oppgave del A3</h1>
+<p><strong>Parametriser over tykkelse og kraft</strong></p>
+<ul>
+<li>Trekk ut tykkelse og kraft som variabler</li>
+<li>Generer 9 parts i samme modell:
+<ul>
+<li>Tykkelse 150 mm, 200 mm eller 260 mm</li>
+<li>Kraft 7 kN/m2, 10 kN/m2 eller 20 kN/m2</li>
+</ul></li>
+<li>Lag navn fra parametre:</li>
+</ul>
+<pre><code>plate_4_6_160_7
+plate_4_6_160_10
+plate_4_6_160_10
+plate_4_6_200_7
+plate_4_6_200_10
+...</code></pre>
+</section><section id="ferdig-alt" class="slide level2">
+<h1>Ferdig alt?</h1>
+<p><strong>Len deg tilbake og nyt hva du har fått til.</strong></p>
+<p>Mulig vei videre: - Generer jobb for hver modell - Kjør jobber - Åpne ODB og sammenlikne!</p>
+</section><section id="ressurser-for-python-og-abaqus" class="slide level2">
+<h1>Ressurser for Python og Abaqus</h1>
+<figure>
+<img src="assets/abaqus-documentation.png" />
+</figure>
+</section><section id="ressurser-for-python-og-abaqus-1" class="slide level2">
+<h1>Ressurser for Python og Abaqus</h1>
+<ul>
+<li><a href="http://50.16.225.63/v2016/books/cmd/default.htm">Abaqus Scripting User's Guide</a> går gjennom hvordan hvordan du gjør ting som å generere CAE-modeller og manipulere view i en ODB</li>
+<li><a href="http://50.16.225.63/v2016/books/ker/default.htm">Abaqus Scripting Reference Guide</a> lister opp alle funksjoner og klasser for programmering av CAE og ODB-modulene og definerer hva de gjør</li>
+</ul>
+</section><section id="ressurser-for-python-og-abaqus-2" class="slide level2">
+<h1>Ressurser for Python og Abaqus</h1>
+<ul>
+<li><a href="http://50.16.225.63/v2016/books/cus/default.htm">Abaqus GUI Toolkit User's Guide</a> går gjennom hvordan hvordan du kan lage grafiske grensesnitt som ANDIM og PROCESS-PLUGIN</li>
+<li><a href="http://50.16.225.63/v2016/books/gui/default.htm">Abaqus GUI Toolkit Reference Guide</a> lister opp alle funksjoner og klasser for programmering av grafikk</li>
+</ul>
+</section></section>
+<section><section id="python-og-dynamo" class="titleslide slide level1"><h1>Python og Dynamo</h1></section><section id="input-til-python-i-dynamo" class="slide level2">
+<h1>Input til Python i Dynamo</h1>
+<p>... TODO. Bilde.</p>
+</section><section id="output-fra-python-i-dynamo" class="slide level2">
+<h1>Output fra Python i Dynamo</h1>
+<p>... TODO. Bilde.</p>
+</section><section id="oppgave-d-dynamo" class="slide level2">
+<h1>Oppgave D: Dynamo</h1>
+<p>Betongbjelke med varierende tverrsnitt.</p>
+</section><section id="oppgave-del-d1" class="slide level2">
+<h1>Oppgave del D1</h1>
+<p>Definer en momentdiagrammet matematisk for en fritt opplagt bjelke med jevnt fordelt last.</p>
+<ul>
+<li>Bjelkelengde: L [m]</li>
+<li>Linjelast: q [N/m]</li>
+<li>Avstand fra venstre opplegg: x [m]</li>
+</ul>
+<p>M(L,q,x) = ...</p>
+<p>Hva er M(8,30000,3)?</p>
+</section><section id="oppgave-del-d2" class="slide level2">
+<h1>Oppgave del D2</h1>
+<ul>
+<li>Implementer <code>M(L,q,x)</code> i Python:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> M(L,q,x):
+  <span class="co"># Regn ut moment!</span>
+  moment <span class="op">=</span> <span class="co"># ... unngår å bruke navnet på funksjonen (M)</span>
+  <span class="cf">return</span> moment</code></pre></div>
+<ul>
+<li>Hva beregner funksjonen din for <code>M(8,30000,3)</code>?</li>
+</ul>
+</section><section id="oppgave-del-d3" class="slide level2">
+<h1>Oppgave del D3</h1>
+<p>Tegn momentdiagrammet streker i Dynamo. Velg passe skala. 50 kNm &lt;--&gt; 1 m OK?</p>
+</section><section id="oppgave-del-d4" class="slide level2">
+<h1>Oppgave del D4</h1>
+<p>Nå skal vi velge høyde på bjelken. Dette gjør vi enkelt:</p>
+<ol type="1">
+<li>Regner ut nødvendig indre momentarm <code>d</code></li>
+<li>Legger på <code>100 mm</code> for å få ca nødvendig høyde</li>
+</ol>
+<p>Vi neglisjerer effekt fra skjærkrefter.</p>
+<p>Definer en matematisk funksjon for berening av nødvendig høyde.</p>
+<ul>
+<li>Armeringsmengde As [m2]</li>
+</ul>
+<p>h(L,q,As,x) = ...</p>
+<ul>
+<li>Hva er h(8,30000,3,0.00164)?</li>
+</ul>
+</section><section id="oppgave-del-d5" class="slide level2">
+<h1>Oppgave del D5</h1>
+<ul>
+<li>Implementer <code>h(L,q,As,x)</code> i Python:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> h(L,q,As,x):
+  moment <span class="op">=</span> M(L,q,x)
+  height <span class="op">=</span> <span class="co"># ... unngår å bruke navnet på funksjonen (h)</span>
+  <span class="cf">return</span> height</code></pre></div>
+<ul>
+<li>Hva beregner funksjonen din for <code>h(8,30000,3,0.00164)</code>?</li>
+</ul>
+</section><section id="tegn-bjelke" class="slide level2">
+<h1>Tegn bjelke!</h1>
 </section></section>
 <section><section id="veien-videre" class="titleslide slide level1"><h1>Veien videre</h1></section><section id="lykke-til" class="slide level2">
 <h1>Lykke til!</h1>
-<p>Dere gjør en viktig oppgave!</p>
+<ul>
+<li>Spis elefanten én bit av gangen</li>
+<li>Du må selv skrive kode om du skal lære programmering</li>
+</ul>
 </section><section id="videre-ressursser" class="slide level2">
 <h1>Videre ressursser</h1>
 <ul>
@@ -557,32 +697,22 @@ high <span class="op">=</span> <span class="dv">100</span>
     </div>
   </div>
 
-
   <script src="reveal.js/lib/js/head.min.js"></script>
   <script src="reveal.js/js/reveal.js"></script>
 
   <script>
 
-      // Full list of configuration options available here:
+      // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
-        controls: true,         // Display controls in the bottom right corner
-        progress: true,         // Display a presentation progress bar
-        history: true,          // Push each slide change to the browser history
-        center: true,                       // Vertical centering of slides
-        maxScale: 1.5,                  // Bounds for smallest/largest possible content scale
-        slideNumber: false,                // Display the page number of the current slide
-        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-        // Optional libraries used to extend on reveal.js
+        // Optional reveal.js plugins
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-//          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
-//          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-]});
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
     </script>
     </body>
 </html>
