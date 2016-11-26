@@ -18,6 +18,12 @@ Du er på Python-kurs! Kurs med fartstid:
 - Lærerkonferanse Gardermoen, november 2016
 - Internkurs Norconsult, Sandvika, november 2016
 
+## Intensjon for presentasjon
+
+- Ryddig første vei inn i Python-programmering
+
+- Referanse til videre bruk.
+
 ## Hvem er vi?
 
 Teodor Heggelund
@@ -379,20 +385,55 @@ print(navn)
 
 ## Hva er lister?
 
-* Null-indeksert liste over verdier
+- Lister lar oss samle mange verdier
+- Google gir oss en liste av søkeresultater
+- Facebook har lister over e-postadresser
 
 ## Lister i Python
+
 ```python
->>> masseTall = [1,2,3,4,5,6,7,8,9]
->>> masseTall[0]
+>>> mine_tall = [1,2,3,42,1337,-55]
+>>> mine_tall
+[1, 2, 3, 42, 1337, -55]
+>>> mine_tall[0]
 1
+>>> mine_tall[-1]
+-55
+>>> mine_tall[-3]
+42
+>>> len(mine_tall)
+6
+>>> mine_tall[6-1]
+-55
+```
+
+## Lister i Python 2
+
+```python
+>>> mine_tall = [1,2,3,42,1337,-55]  # Samme som før
+>>> mine_tall[6]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+>>> mine_tall
+[1, 2, 3, 42, 1337, -55]
+>>> mine_tall[2:]
+[3, 42, 1337, -55]
+>>> mine_tall[:2]
+[1, 2]
+>>> mine_tall[2]
+3
+>>> [1, 2, 3] + [10, 11, 12]
+[1, 2, 3, 10, 11, 12]
 ```
 
 ## Oppgave: elementer fra liste
 
+Gjør følgende i Python-skallet:
+
 * Lag en liste som inneholder 5 tall
-* Skriv ut første tall
-* Skriv ut nest siste tall
+* Hent første tall
+* Hent nest siste tall
 
 Tips: `list[-3]` henter element 3 *bakfra*!
 
@@ -680,10 +721,12 @@ __Modeller fritt opplagt plate i Abaqus: `plate.cae`__
 
 __Gjør om til script__
 
-- Kopier journal (`plate.jnl`) til `generate-plates.py`.
-- Endre koden til å generere 2 modeller:
-  - `plate_4_6_200_10` som før
-  - `plate_4_6_260_20` med tykkelse 300 mm og last 20 kN/m2
+Kopier journal (`plate.jnl`) til `generate-plates.py`.
+Endre koden til å generere en annen modell:
+
+- Modellnavn `plate_4_6_260_20`
+- Tykkelse 260 mm
+- Last 20 kN/m2
 
 ## Oppgave del A3
 
@@ -708,7 +751,8 @@ plate_4_6_200_10
 
 __Len deg tilbake og nyt hva du har fått til.__
 
-Mulig vei videre:
+Muligheter videre:
+
 - Generer jobb for hver modell
 - Kjør jobber
 - Åpne ODB og sammenlikne!
@@ -719,10 +763,14 @@ Mulig vei videre:
 
 ## Ressurser for Python og Abaqus
 
+"Scripting" er grunnleggende funksjonalitet. Nyttig til små og store prosjekter.
+
 * [Abaqus Scripting User's Guide](http://50.16.225.63/v2016/books/cmd/default.htm) går gjennom hvordan hvordan du gjør ting som å generere CAE-modeller og manipulere view i en ODB
 * [Abaqus Scripting Reference Guide](http://50.16.225.63/v2016/books/ker/default.htm) lister opp alle funksjoner og klasser for programmering av CAE og ODB-modulene og definerer hva de gjør
 
 ## Ressurser for Python og Abaqus
+
+"GUI" er grafikk til større programmer.
 
 * [Abaqus GUI Toolkit User's Guide](http://50.16.225.63/v2016/books/cus/default.htm) går gjennom hvordan hvordan du kan lage grafiske grensesnitt som ANDIM og PROCESS-PLUGIN
 * [Abaqus GUI Toolkit Reference Guide](http://50.16.225.63/v2016/books/gui/default.htm) lister opp alle funksjoner og klasser for programmering av grafikk
@@ -858,10 +906,10 @@ def h(L,q,As,x):
 
 ## Videre verktøy
 
-* ![Github Atom](https://atom.io/) er en meget god teksteditor til Python.
+* [Github Atom](https://atom.io/) er en meget god teksteditor til Python.
 
-  En teksteditor er et godt valg for å redigere én fil. Jeg bruker Atom til nesten alt jeg skriver av Python-kode.
+    En teksteditor er et godt valg for å redigere én fil. Jeg bruker Atom til nesten alt jeg skriver av Python-kode.
 
-* ![Pycharm](https://www.jetbrains.com/pycharm/) er et godt IDE til Python.
+* [PyCharm](https://www.jetbrains.com/pycharm/) er et godt IDE til Python.
 
-  IDE-er er større og mer kompliserte enn teksteditorer. Pycharm kan være et godt valg til større prosjekter. Jeg bruker delvis Pycharm når jeg utvikler på ANDIM.
+    IDE-er er større og mer kompliserte enn teksteditorer. PyCharm kan være et godt valg til større prosjekter. Jeg bruker delvis PyCharm når jeg utvikler på ANDIM.

@@ -79,6 +79,12 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
 <li>Lærerkonferanse Gardermoen, november 2016</li>
 <li>Internkurs Norconsult, Sandvika, november 2016</li>
 </ul>
+</section><section id="intensjon-for-presentasjon" class="slide level2">
+<h1>Intensjon for presentasjon</h1>
+<ul>
+<li><p>Ryddig første vei inn i Python-programmering</p></li>
+<li><p>Referanse til videre bruk.</p></li>
+</ul>
 </section><section id="hvem-er-vi" class="slide level2">
 <h1>Hvem er vi?</h1>
 <p>Teodor Heggelund</p>
@@ -369,19 +375,49 @@ age <span class="op">=</span> <span class="bu">int</span>(age_text)
 <section><section id="lister" class="titleslide slide level1"><h1>Lister</h1></section><section id="hva-er-lister" class="slide level2">
 <h1>Hva er lister?</h1>
 <ul>
-<li>Null-indeksert liste over verdier</li>
+<li>Lister lar oss samle mange verdier</li>
+<li>Google gir oss en liste av søkeresultater</li>
+<li>Facebook har lister over e-postadresser</li>
 </ul>
 </section><section id="lister-i-python" class="slide level2">
 <h1>Lister i Python</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> masseTall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]
-<span class="op">&gt;&gt;&gt;</span> masseTall[<span class="dv">0</span>]
-<span class="dv">1</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> mine_tall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">42</span>,<span class="dv">1337</span>,<span class="op">-</span><span class="dv">55</span>]
+<span class="op">&gt;&gt;&gt;</span> mine_tall
+[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">42</span>, <span class="dv">1337</span>, <span class="op">-</span><span class="dv">55</span>]
+<span class="op">&gt;&gt;&gt;</span> mine_tall[<span class="dv">0</span>]
+<span class="dv">1</span>
+<span class="op">&gt;&gt;&gt;</span> mine_tall[<span class="op">-</span><span class="dv">1</span>]
+<span class="op">-</span><span class="dv">55</span>
+<span class="op">&gt;&gt;&gt;</span> mine_tall[<span class="op">-</span><span class="dv">3</span>]
+<span class="dv">42</span>
+<span class="op">&gt;&gt;&gt;</span> <span class="bu">len</span>(mine_tall)
+<span class="dv">6</span>
+<span class="op">&gt;&gt;&gt;</span> mine_tall[<span class="dv">6-1</span>]
+<span class="op">-</span><span class="dv">55</span></code></pre></div>
+</section><section id="lister-i-python-2" class="slide level2">
+<h1>Lister i Python 2</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> mine_tall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">42</span>,<span class="dv">1337</span>,<span class="op">-</span><span class="dv">55</span>]  <span class="co"># Samme som før</span>
+<span class="op">&gt;&gt;&gt;</span> mine_tall[<span class="dv">6</span>]
+Traceback (most recent call last):
+  File <span class="st">&quot;&lt;stdin&gt;&quot;</span>, line <span class="dv">1</span>, <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span>
+<span class="pp">IndexError</span>: <span class="bu">list</span> index out of <span class="bu">range</span>
+<span class="op">&gt;&gt;&gt;</span> mine_tall
+[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">42</span>, <span class="dv">1337</span>, <span class="op">-</span><span class="dv">55</span>]
+<span class="op">&gt;&gt;&gt;</span> mine_tall[<span class="dv">2</span>:]
+[<span class="dv">3</span>, <span class="dv">42</span>, <span class="dv">1337</span>, <span class="op">-</span><span class="dv">55</span>]
+<span class="op">&gt;&gt;&gt;</span> mine_tall[:<span class="dv">2</span>]
+[<span class="dv">1</span>, <span class="dv">2</span>]
+<span class="op">&gt;&gt;&gt;</span> mine_tall[<span class="dv">2</span>]
+<span class="dv">3</span>
+<span class="op">&gt;&gt;&gt;</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>] <span class="op">+</span> [<span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>]
+[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>]</code></pre></div>
 </section><section id="oppgave-elementer-fra-liste" class="slide level2">
 <h1>Oppgave: elementer fra liste</h1>
+<p>Gjør følgende i Python-skallet:</p>
 <ul>
 <li>Lag en liste som inneholder 5 tall</li>
-<li>Skriv ut første tall</li>
-<li>Skriv ut nest siste tall</li>
+<li>Hent første tall</li>
+<li>Hent nest siste tall</li>
 </ul>
 <p>Tips: <code>list[-3]</code> henter element 3 <em>bakfra</em>!</p>
 </section></section>
@@ -617,11 +653,11 @@ high <span class="op">=</span> <span class="dv">100</span>
 </section><section id="oppgave-del-a2" class="slide level2">
 <h1>Oppgave del A2</h1>
 <p><strong>Gjør om til script</strong></p>
+<p>Kopier journal (<code>plate.jnl</code>) til <code>generate-plates.py</code>. Endre koden til å generere en annen modell:</p>
 <ul>
-<li>Kopier journal (<code>plate.jnl</code>) til <code>generate-plates.py</code>.</li>
-<li>Endre koden til å generere 2 modeller:</li>
-<li><code>plate_4_6_200_10</code> som før</li>
-<li><code>plate_4_6_260_20</code> med tykkelse 300 mm og last 20 kN/m2</li>
+<li>Modellnavn <code>plate_4_6_260_20</code></li>
+<li>Tykkelse 260 mm</li>
+<li>Last 20 kN/m2</li>
 </ul>
 </section><section id="oppgave-del-a3" class="slide level2">
 <h1>Oppgave del A3</h1>
@@ -644,7 +680,12 @@ plate_4_6_200_10
 </section><section id="ferdig-alt" class="slide level2">
 <h1>Ferdig alt?</h1>
 <p><strong>Len deg tilbake og nyt hva du har fått til.</strong></p>
-<p>Mulig vei videre: - Generer jobb for hver modell - Kjør jobber - Åpne ODB og sammenlikne!</p>
+<p>Muligheter videre:</p>
+<ul>
+<li>Generer jobb for hver modell</li>
+<li>Kjør jobber</li>
+<li>Åpne ODB og sammenlikne!</li>
+</ul>
 </section><section id="ressurser-for-python-og-abaqus" class="slide level2">
 <h1>Ressurser for Python og Abaqus</h1>
 <figure>
@@ -652,12 +693,14 @@ plate_4_6_200_10
 </figure>
 </section><section id="ressurser-for-python-og-abaqus-1" class="slide level2">
 <h1>Ressurser for Python og Abaqus</h1>
+<p>&quot;Scripting&quot; er grunnleggende funksjonalitet. Nyttig til små og store prosjekter.</p>
 <ul>
 <li><a href="http://50.16.225.63/v2016/books/cmd/default.htm">Abaqus Scripting User's Guide</a> går gjennom hvordan hvordan du gjør ting som å generere CAE-modeller og manipulere view i en ODB</li>
 <li><a href="http://50.16.225.63/v2016/books/ker/default.htm">Abaqus Scripting Reference Guide</a> lister opp alle funksjoner og klasser for programmering av CAE og ODB-modulene og definerer hva de gjør</li>
 </ul>
 </section><section id="ressurser-for-python-og-abaqus-2" class="slide level2">
 <h1>Ressurser for Python og Abaqus</h1>
+<p>&quot;GUI&quot; er grafikk til større programmer.</p>
 <ul>
 <li><a href="http://50.16.225.63/v2016/books/cus/default.htm">Abaqus GUI Toolkit User's Guide</a> går gjennom hvordan hvordan du kan lage grafiske grensesnitt som ANDIM og PROCESS-PLUGIN</li>
 <li><a href="http://50.16.225.63/v2016/books/gui/default.htm">Abaqus GUI Toolkit Reference Guide</a> lister opp alle funksjoner og klasser for programmering av grafikk</li>
@@ -783,13 +826,11 @@ plate_4_6_200_10
 </section><section id="videre-verktøy" class="slide level2">
 <h1>Videre verktøy</h1>
 <ul>
-<li><img src="https://atom.io/" alt="Github Atom" /> er en meget god teksteditor til Python.</li>
+<li><p><a href="https://atom.io/">Github Atom</a> er en meget god teksteditor til Python.</p>
+<p>En teksteditor er et godt valg for å redigere én fil. Jeg bruker Atom til nesten alt jeg skriver av Python-kode.</p></li>
+<li><p><a href="https://www.jetbrains.com/pycharm/">PyCharm</a> er et godt IDE til Python.</p>
+<p>IDE-er er større og mer kompliserte enn teksteditorer. PyCharm kan være et godt valg til større prosjekter. Jeg bruker delvis PyCharm når jeg utvikler på ANDIM.</p></li>
 </ul>
-<p>En teksteditor er et godt valg for å redigere én fil. Jeg bruker Atom til nesten alt jeg skriver av Python-kode.</p>
-<ul>
-<li><img src="https://www.jetbrains.com/pycharm/" alt="Pycharm" /> er et godt IDE til Python.</li>
-</ul>
-<p>IDE-er er større og mer kompliserte enn teksteditorer. Pycharm kan være et godt valg til større prosjekter. Jeg bruker delvis Pycharm når jeg utvikler på ANDIM.</p>
 </section></section>
     </div>
   </div>
