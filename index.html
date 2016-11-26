@@ -546,10 +546,62 @@ high <span class="op">=</span> <span class="dv">100</span>
 <h1>&quot;Binærsøk&quot;</h1>
 <p>Gratulerer, dere har nå implementert et binærsøk! Binærsøk er en av grunnene til at Google-søk er raske.</p>
 </section></section>
-<section><section id="python-og-abaqus" class="titleslide slide level1"><h1>Python og Abaqus</h1></section><section id="skallet-i-abaqus" class="slide level2">
-<h1>Skallet i Abaqus</h1>
-</section><section id="kjøre-filer-i-abaqus" class="slide level2">
-<h1>Kjøre filer i Abaqus</h1>
+<section><section id="python-og-abaqus" class="titleslide slide level1"><h1>Python og Abaqus</h1></section><section id="arkitektur-1" class="slide level2">
+<h1>Arkitektur 1</h1>
+<figure>
+<img src="assets-no/abaqus-python-how-it-works.png" />
+</figure>
+</section><section id="arkitektur-2" class="slide level2">
+<h1>Arkitektur 2</h1>
+<ul>
+<li><p>På min maskin ligger Abaqus' Python på <code>C:\SIMULIA\CAE\2016\win_b64</code> <code>\code\bin\python.exe</code></p></li>
+<li><p>Store deler av Abaqus CAE er skrevet i Python, og kjører på en tilpasset Python-plattform.</p></li>
+<li><p>Når vi kjører kode på Abaqus' Python-plattform, får vi tilgang til å lage bokser, endre en CAE-modell og hente ut data fra ODB-er.</p></li>
+</ul>
+</section><section id="abaqus-python-i-cae" class="slide level2">
+<h1>Abaqus Python i CAE</h1>
+<p>Du har allerede en Python-tolker! <code>&gt;&gt;&gt;</code> tyder på at du kan skrive Python.</p>
+<figure>
+<img src="assets-no/abaqus-python-cae.png" />
+</figure>
+</section><section id="abaqus-python-i-cmd" class="slide level2">
+<h1>Abaqus Python i CMD</h1>
+<figure>
+<img src="assets-no/abaqus-python-cmd.png" />
+</figure>
+</section><section id="kjøre-filer-i-abaqus-1" class="slide level2">
+<h1>Kjøre filer i Abaqus 1</h1>
+<p>Lag en ny Python-fil på valgfri måte</p>
+<figure>
+<img src="assets-no/abaqus_defining_gx_in.png" />
+</figure>
+</section><section id="kjøre-filer-i-abaqus-2" class="slide level2">
+<h1>Kjøre filer i Abaqus 2</h1>
+<p>Trykk <code>Run Script</code></p>
+<figure>
+<img src="assets-no/abaqus-cae-run-script.png" />
+</figure>
+</section><section id="kjøre-filer-i-abaqus-3" class="slide level2">
+<h1>Kjøre filer i Abaqus 3</h1>
+<p>og og velg scriptet ditt:</p>
+<figure>
+<img src="assets-no/abaqus-cae-choose-my_function.png" />
+</figure>
+</section><section id="kjøre-filer-i-abaqus-4" class="slide level2">
+<h1>Kjøre filer i Abaqus 4</h1>
+<p>Hva du skriver ut med <code>print</code> dukker opp her:</p>
+<figure>
+<img src="assets-no/abaqus-cae-print-goes-here.png" />
+</figure>
+</section><section id="kjøre-filer-i-abaqus-5" class="slide level2">
+<h1>Kjøre filer i Abaqus 5</h1>
+<p>og ting du definerer i filen blir tilgjengelig fra skallet:</p>
+<figure>
+<img src="assets-no/abaqus-cae-use-functions-here.png" />
+</figure>
+</section><section id="alternativ-python-editor" class="slide level2">
+<h1>Alternativ Python-editor</h1>
+<p>Jeg bruker <a href="http://atom.io">Github Atom</a>. Denne er god.</p>
 </section><section id="oppgave-a-abaqus" class="slide level2">
 <h1>Oppgave A: Abaqus</h1>
 <p>Parametrisering av plate:</p>
@@ -611,12 +663,47 @@ plate_4_6_200_10
 <li><a href="http://50.16.225.63/v2016/books/gui/default.htm">Abaqus GUI Toolkit Reference Guide</a> lister opp alle funksjoner og klasser for programmering av grafikk</li>
 </ul>
 </section></section>
-<section><section id="python-og-dynamo" class="titleslide slide level1"><h1>Python og Dynamo</h1></section><section id="input-til-python-i-dynamo" class="slide level2">
-<h1>Input til Python i Dynamo</h1>
-<p>... TODO. Bilde.</p>
-</section><section id="output-fra-python-i-dynamo" class="slide level2">
-<h1>Output fra Python i Dynamo</h1>
-<p>... TODO. Bilde.</p>
+<section><section id="python-og-dynamo" class="titleslide slide level1"><h1>Python og Dynamo</h1></section><section id="arkitektur" class="slide level2">
+<h1>Arkitektur</h1>
+<p>Dynamo bruker et bibliotek som heter <strong>IronPython</strong>. IronPython er en python-implementasjon som kjører på .NET. Det vil typisk si at Dynamo inneholder en fil som heter <code>python.dll</code>, som kan tolke Python-script.</p>
+<p>Script du skriver kjøres i et modifisert miljø, der variabelen <code>IN</code> automagisk inneholder hva du kobler til scriptet ditt på venstre side og variabelen <code>OUT</code> hva du vil sende ut på høyre side.</p>
+<p>Python-script lagres inne i Dynamo-filer (<code>.dyn</code>).</p>
+</section><section id="starte-dynamo" class="slide level2">
+<h1>Starte Dynamo</h1>
+<p><img src="assets-no/dynamo-run-with-revit-from-here.png" /> <img src="assets-no/dynamo-run-without-revit-from-here.png" /></p>
+</section><section id="python-noden" class="slide level2">
+<h1>Python-noden</h1>
+<p>Fra høyreklikk:</p>
+<figure>
+<img src="assets-no/dynamo-python-1.png" />
+</figure>
+</section><section id="python-noden-1" class="slide level2">
+<h1>Python-noden</h1>
+<p>Fra funksjonslisten:</p>
+<figure>
+<img src="assets-no/dynamo-python-2.png" />
+</figure>
+</section><section id="redigere-script" class="slide level2">
+<h1>Redigere script</h1>
+<p>Dobbeltklikk &quot;nede&quot; i boksen:</p>
+<figure>
+<img src="assets-no/dynamo-python-edit.png" />
+</figure>
+</section><section id="in-og-out" class="slide level2">
+<h1><code>IN</code> og <code>OUT</code></h1>
+<p>Hva kommer inn, hva går ut?</p>
+<figure>
+<img src="assets-no/dynamo-python-script-def.png" />
+</figure>
+</section><section id="teste-script" class="slide level2">
+<h1>Teste script</h1>
+<p>Kobler på en <code>Number Slider</code>:</p>
+<figure>
+<img src="assets-no/dynamo-python-testing-inputs.gif" />
+</figure>
+</section><section id="alternativ-python-editor-1" class="slide level2">
+<h1>Alternativ Python-editor</h1>
+<p>Jeg bruker <a href="http://atom.io">Github Atom</a>. Denne er god.</p>
 </section><section id="oppgave-d-dynamo" class="slide level2">
 <h1>Oppgave D: Dynamo</h1>
 <p>Betongbjelke med varierende tverrsnitt.</p>
@@ -693,6 +780,16 @@ plate_4_6_200_10
 </ul></li>
 <li><a href="https://learnpythonthehardway.org/book/">Learn Python the Hard Way</a> er dyptgående, grundig og lærerik.</li>
 </ul>
+</section><section id="videre-verktøy" class="slide level2">
+<h1>Videre verktøy</h1>
+<ul>
+<li><img src="https://atom.io/" alt="Github Atom" /> er en meget god teksteditor til Python.</li>
+</ul>
+<p>En teksteditor er et godt valg for å redigere én fil. Jeg bruker Atom til nesten alt jeg skriver av Python-kode.</p>
+<ul>
+<li><img src="https://www.jetbrains.com/pycharm/" alt="Pycharm" /> er et godt IDE til Python.</li>
+</ul>
+<p>IDE-er er større og mer kompliserte enn teksteditorer. Pycharm kan være et godt valg til større prosjekter. Jeg bruker delvis Pycharm når jeg utvikler på ANDIM.</p>
 </section></section>
     </div>
   </div>

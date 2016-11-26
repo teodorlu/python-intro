@@ -606,9 +606,61 @@ Gratulerer, dere har nå implementert et binærsøk! Binærsøk er en av grunnen
 
 # Python og Abaqus
 
-## Skallet i Abaqus
+## Arkitektur 1
 
-## Kjøre filer i Abaqus
+![](assets-no/abaqus-python-how-it-works.png)
+
+## Arkitektur 2
+
+- På min maskin ligger Abaqus' Python på `C:\SIMULIA\CAE\2016\win_b64` `\code\bin\python.exe`
+
+- Store deler av Abaqus CAE er skrevet i Python, og kjører på en tilpasset Python-plattform.
+
+- Når vi kjører kode på Abaqus' Python-plattform, får vi tilgang til å lage bokser, endre en CAE-modell og hente ut data fra ODB-er.
+
+## Abaqus Python i CAE
+
+Du har allerede en Python-tolker! `>>>` tyder på at du kan skrive Python.
+
+![](assets-no/abaqus-python-cae.png)
+
+## Abaqus Python i CMD
+
+![](assets-no/abaqus-python-cmd.png)
+
+## Kjøre filer i Abaqus 1
+
+Lag en ny Python-fil på valgfri måte
+
+![](assets-no/abaqus_defining_gx_in.png)
+
+## Kjøre filer i Abaqus 2
+
+Trykk `Run Script`
+
+![](assets-no/abaqus-cae-run-script.png)
+
+## Kjøre filer i Abaqus 3
+
+og og velg scriptet ditt:
+
+![](assets-no/abaqus-cae-choose-my_function.png)
+
+## Kjøre filer i Abaqus 4
+
+Hva du skriver ut med `print` dukker opp her:
+
+![](assets-no/abaqus-cae-print-goes-here.png)
+
+## Kjøre filer i Abaqus 5
+
+og ting du definerer i filen blir tilgjengelig fra skallet:
+
+![](assets-no/abaqus-cae-use-functions-here.png)
+
+## Alternativ Python-editor
+
+Jeg bruker [Github Atom](http://atom.io). Denne er god.
 
 ## Oppgave A: Abaqus
 
@@ -677,13 +729,52 @@ Mulig vei videre:
 
 # Python og Dynamo
 
-## Input til Python i Dynamo
+## Arkitektur
 
-... TODO. Bilde.
+Dynamo bruker et bibliotek som heter **IronPython**. IronPython er en python-implementasjon som kjører på .NET. Det vil typisk si at Dynamo inneholder en fil som heter `python.dll`, som kan tolke Python-script.
 
-## Output fra Python i Dynamo
+Script du skriver kjøres i et modifisert miljø, der variabelen `IN` automagisk inneholder hva du kobler til scriptet ditt på venstre side og variabelen `OUT` hva du vil sende ut på høyre side.
 
-... TODO. Bilde.
+Python-script lagres inne i Dynamo-filer (`.dyn`).
+
+## Starte Dynamo
+
+![](assets-no/dynamo-run-with-revit-from-here.png)
+![](assets-no/dynamo-run-without-revit-from-here.png)
+
+## Python-noden
+
+Fra høyreklikk:
+
+![](assets-no/dynamo-python-1.png)
+
+## Python-noden
+
+Fra funksjonslisten:
+
+![](assets-no/dynamo-python-2.png)
+
+## Redigere script
+
+Dobbeltklikk "nede" i boksen:
+
+![](assets-no/dynamo-python-edit.png)
+
+## `IN` og `OUT`
+
+Hva kommer inn, hva går ut?
+
+![](assets-no/dynamo-python-script-def.png)
+
+## Teste script
+
+Kobler på en `Number Slider`:
+
+![](assets-no/dynamo-python-testing-inputs.gif)
+
+## Alternativ Python-editor
+
+Jeg bruker [Github Atom](http://atom.io). Denne er god.
 
 ## Oppgave D: Dynamo
 
@@ -764,3 +855,13 @@ def h(L,q,As,x):
     * [Mattespill](http://kodeklubben.github.io/python/mattespill/mattespill.html)
     * [Gjettelek](http://kodeklubben.github.io/python/gjettelek/gjettelek.html)
 * [Learn Python the Hard Way](https://learnpythonthehardway.org/book/) er dyptgående, grundig og lærerik.
+
+## Videre verktøy
+
+* ![Github Atom](https://atom.io/) er en meget god teksteditor til Python.
+
+  En teksteditor er et godt valg for å redigere én fil. Jeg bruker Atom til nesten alt jeg skriver av Python-kode.
+
+* ![Pycharm](https://www.jetbrains.com/pycharm/) er et godt IDE til Python.
+
+  IDE-er er større og mer kompliserte enn teksteditorer. Pycharm kan være et godt valg til større prosjekter. Jeg bruker delvis Pycharm når jeg utvikler på ANDIM.
