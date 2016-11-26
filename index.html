@@ -246,41 +246,45 @@ Troll II, 1995
 </figure>
 <p>Fra <a href="http://xkcd.com/353/">XKCD</a>.</p>
 </section></section>
-<section><section id="if" class="titleslide slide level1"><h1>If</h1></section><section id="hva-er-if-setninger" class="slide level2">
-<h1>Hva er if-setninger?</h1>
-<ul>
-<li>Sjekker om et uttrykk er sant, og kjører så en gitt kodesnutt</li>
-</ul>
-</section><section id="if-setninger-i-python" class="slide level2">
-<h1>If-setninger i Python</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> alder <span class="op">=</span> <span class="dv">20</span>
-<span class="op">&gt;&gt;&gt;</span> <span class="cf">if</span> alder <span class="op">==</span> <span class="dv">20</span>:
-<span class="op">&gt;&gt;&gt;</span>     svar <span class="op">=</span> <span class="st">&quot;Du er 20 år gammel&quot;</span>
-<span class="op">&gt;&gt;&gt;</span> svar
-<span class="co">&#39;Du er 20 år gammel&#39;</span></code></pre></div>
-</section><section id="if-setninger-i-python-1" class="slide level2">
-<h1>If-setninger i Python</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> alder <span class="op">=</span> <span class="dv">30</span>
-<span class="op">&gt;&gt;&gt;</span> <span class="cf">if</span> alder <span class="op">&gt;</span> <span class="dv">20</span>:
-<span class="op">&gt;&gt;&gt;</span>     svar <span class="op">=</span> <span class="st">&quot;Du er over 20 år gammel&quot;</span>
-<span class="op">&gt;&gt;&gt;</span> svar
-<span class="co">&#39;Du er over 20 år gammel&#39;</span></code></pre></div>
-</section><section id="if-setninger-i-python-2" class="slide level2">
-<h1>If-setninger i Python</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> alder <span class="op">=</span> <span class="dv">10</span>
-<span class="op">&gt;&gt;&gt;</span> <span class="cf">if</span> alder <span class="op">&lt;</span> <span class="dv">20</span>:
-<span class="op">&gt;&gt;&gt;</span>     svar <span class="op">=</span> <span class="st">&quot;Du er under 20 år gammel&quot;</span>
-<span class="op">&gt;&gt;&gt;</span> svar
-<span class="co">&#39;Du er under 20 år gammel&#39;</span></code></pre></div>
-</section><section id="if-setninger-i-python-3" class="slide level2">
-<h1>If-setninger i Python</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> alder <span class="op">=</span> <span class="dv">30</span>
-<span class="op">&gt;&gt;&gt;</span> <span class="cf">if</span> alder <span class="op">==</span> <span class="dv">20</span>:
-     svar <span class="op">=</span> <span class="st">&quot;Du er 20 år gammel&quot;</span>
+<section><section id="if" class="titleslide slide level1"><h1>If</h1></section><section id="hvis-sant-..." class="slide level2">
+<h1>Hvis sant, ...</h1>
+<p><em>Hvis <code>x</code>, gjør <code>y</code></em>.</p>
+<p>Følgende i fil:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">aar <span class="op">=</span> <span class="dv">2001</span>  <span class="co"># Bruker ikke norske bokstaver</span>
+<span class="bu">print</span>(<span class="st">&quot;Over if&quot;</span>)
+<span class="cf">if</span> aar <span class="op">&gt;</span> <span class="dv">2000</span>:
+    <span class="bu">print</span>(<span class="st">&quot;Over 2000!&quot;</span>)
+<span class="bu">print</span>(<span class="st">&quot;Under if&quot;</span>)</code></pre></div>
+<p>gir følgende ut:</p>
+<pre><code>Over if
+Over 2000!
+Under if</code></pre>
+</section><section id="hvis-usant-..." class="slide level2">
+<h1>Hvis usant, ...</h1>
+<p><em>Hvis ikke <code>x</code>, gjør ingenting</em>.</p>
+<p>Følgende i fil:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">aar <span class="op">=</span> <span class="dv">1999</span>  <span class="co"># Bruker ikke norske bokstaver</span>
+<span class="bu">print</span>(<span class="st">&quot;Over if&quot;</span>)
+<span class="cf">if</span> aar <span class="op">&gt;</span> <span class="dv">2000</span>:
+    <span class="bu">print</span>(<span class="st">&quot;Over 2000!&quot;</span>)
+<span class="bu">print</span>(<span class="st">&quot;Under if&quot;</span>)</code></pre></div>
+<p>gir følgende ut:</p>
+<pre><code>Over if
+Under if</code></pre>
+</section><section id="ellers" class="slide level2">
+<h1>... ellers</h1>
+<p>Følgende i fil:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">aar <span class="op">=</span> <span class="dv">1999</span>  <span class="co"># Bruker ikke norske bokstaver</span>
+<span class="bu">print</span>(<span class="st">&quot;Over if&quot;</span>)
+<span class="cf">if</span> aar <span class="op">&gt;</span> <span class="dv">2000</span>:
+  <span class="bu">print</span>(<span class="st">&quot;Over 2000!&quot;</span>)
 <span class="cf">else</span>:
-     svar <span class="op">=</span> <span class="st">&quot;Du er ikke 20 år gammel&quot;</span>
-<span class="op">&gt;&gt;&gt;</span> svar
-<span class="co">&#39;Du er ikke 20 år gammel&#39;</span></code></pre></div>
+  <span class="bu">print</span>(<span class="st">&quot;Under 2000!&quot;</span>)
+<span class="bu">print</span>(<span class="st">&quot;Under if&quot;</span>)</code></pre></div>
+<p>gir følgende ut:</p>
+<pre><code>Over if
+Under 2000
+Under if</code></pre>
 </section><section id="oppgave-gammel-nok" class="slide level2">
 <h1>Oppgave: Gammel nok?</h1>
 <p>Lag et program som</p>

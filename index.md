@@ -209,46 +209,70 @@ Fra [XKCD](http://xkcd.com/353/).
 
 # If
 
-## Hva er if-setninger?
+## Hvis sant, ...
 
-* Sjekker om et uttrykk er sant, og kjører så en gitt kodesnutt
+_Hvis `x`, gjør `y`_.
 
-## If-setninger i Python
+Følgende i fil:
+
 ```python
->>> alder = 20
->>> if alder == 20:
->>>     svar = "Du er 20 år gammel"
->>> svar
-'Du er 20 år gammel'
+aar = 2001  # Bruker ikke norske bokstaver
+print("Over if")
+if aar > 2000:
+    print("Over 2000!")
+print("Under if")
 ```
 
-## If-setninger i Python
-```python
->>> alder = 30
->>> if alder > 20:
->>>     svar = "Du er over 20 år gammel"
->>> svar
-'Du er over 20 år gammel'
+gir følgende ut:
+
+```
+Over if
+Over 2000!
+Under if
 ```
 
-## If-setninger i Python
+## Hvis usant, ...
+
+_Hvis ikke `x`, gjør ingenting_.
+
+Følgende i fil:
+
 ```python
->>> alder = 10
->>> if alder < 20:
->>>     svar = "Du er under 20 år gammel"
->>> svar
-'Du er under 20 år gammel'
+aar = 1999  # Bruker ikke norske bokstaver
+print("Over if")
+if aar > 2000:
+    print("Over 2000!")
+print("Under if")
 ```
 
-## If-setninger i Python
+gir følgende ut:
+
+```
+Over if
+Under if
+```
+
+## ... ellers
+
+Følgende i fil:
+
 ```python
->>> alder = 30
->>> if alder == 20:
-     svar = "Du er 20 år gammel"
+aar = 1999  # Bruker ikke norske bokstaver
+print("Over if")
+if aar > 2000:
+  print("Over 2000!")
 else:
-     svar = "Du er ikke 20 år gammel"
->>> svar
-'Du er ikke 20 år gammel'
+  print("Under 2000!")
+print("Under if")
+
+```
+
+gir følgende ut:
+
+```
+Over if
+Under 2000
+Under if
 ```
 
 ## Oppgave: Gammel nok?
