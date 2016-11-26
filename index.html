@@ -289,22 +289,62 @@ Troll II, 1995
 <li>Skriver ut &quot;Du er ikke gammel nok&quot; dersom alderen er under 18 år</li>
 </ul>
 </section></section>
-<section><section id="funksjoner" class="titleslide slide level1"><h1>Funksjoner</h1></section><section id="funksjoner-i-python" class="slide level2">
-<h1>Funksjoner i Python</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> hei(): <span class="co"># Definer en funksjon med navnet &#39;hei&#39;</span>
-    <span class="cf">return</span> <span class="st">&quot;Hei&quot;</span> <span class="co"># Funksjonen returnerer teksten &quot;Hei&quot;</span></code></pre></div>
-</section><section id="funksjoner-i-python-1" class="slide level2">
-<h1>Funksjoner i Python</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> hei()
-<span class="co">&#39;Hei&#39;</span></code></pre></div>
-</section><section id="parametre" class="slide level2">
-<h1>Parametre</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> hei(navn):
-    <span class="cf">return</span> <span class="st">&quot;Hei &quot;</span> <span class="op">+</span> navn</code></pre></div>
-</section><section id="parametre-1" class="slide level2">
-<h1>Parametre</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> hei(<span class="st">&quot;Teodor&quot;</span>)
-<span class="co">&#39;Hei Teodor&#39;</span></code></pre></div>
+<section><section id="funksjoner" class="titleslide slide level1"><h1>Funksjoner</h1></section><section id="en-python-funksjon" class="slide level2">
+<h1>En Python-funksjon</h1>
+<p><em>Den viktigste byggeblokken i programmene vi skriver.</em></p>
+<p>Definér <code>hei()</code> i en fil:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> hei():
+  <span class="cf">return</span> <span class="st">&quot;Hei!&quot;</span></code></pre></div>
+<p>og test den i skallet:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> hei
+<span class="op">&lt;</span>function hei at <span class="bn">0x7f8c0f5005f0</span><span class="op">&gt;</span>
+<span class="op">&gt;&gt;&gt;</span> hei()
+<span class="co">&#39;Hei!&#39;</span></code></pre></div>
+</section><section id="en-funksjon-til" class="slide level2">
+<h1>En funksjon til</h1>
+<p><em>fordi funksjoner er viktig.</em></p>
+<p>Definerer i fil:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> tusen():
+  t <span class="op">=</span> <span class="dv">10</span> <span class="op">*</span> <span class="dv">1000</span>
+  <span class="cf">return</span> t</code></pre></div>
+<p>Vi bruker variabler i funksjoner for å splitte arbeidet i mindre biter.</p>
+<p>... og tester i skallet:</p>
+<pre><code>&gt;&gt;&gt; tusen
+&lt;function tusen at 0x7f8c0f500668&gt;
+&gt;&gt;&gt; tusen()
+1000</code></pre>
+</section><section id="parameter" class="slide level2">
+<h1>Parameter</h1>
+<ul>
+<li>En <em>parameter</em> er et navn som &quot;sendes&quot; inn i funksjonen:
+<ul>
+<li>Funksjonen <code>f</code> i <code>f(x)</code> har <code>x</code> som parameter</li>
+<li>Funksjonen <code>g</code> i <code>g(x,y)</code> har <code>x</code> og <code>y</code> som parametre</li>
+</ul></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> f(x):
+  <span class="cf">return</span> x <span class="op">+</span> <span class="dv">1</span>
+
+<span class="kw">def</span> g(x,y):
+  <span class="cf">return</span> (x <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> y</code></pre></div>
+</section><section id="parametrisering" class="slide level2">
+<h1>Parametrisering</h1>
+<ul>
+<li>Å <em>parametrisere</em> er å endre kode til å bruke funksjoner og parametre.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># Ikke parametrisert kode</span>
+a <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> (<span class="dv">10</span> <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> (<span class="dv">10</span> <span class="op">+</span> <span class="dv">2</span>)
+b <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> (<span class="dv">11</span> <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> (<span class="dv">11</span> <span class="op">+</span> <span class="dv">2</span>)
+a <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> (<span class="dv">12</span> <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> (<span class="dv">12</span> <span class="op">+</span> <span class="dv">2</span>)
+a <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> (<span class="dv">14</span> <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> (<span class="dv">14</span> <span class="op">+</span> <span class="dv">2</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># Parametrisert kode</span>
+<span class="kw">def</span> f(x):
+  <span class="cf">return</span> <span class="dv">3</span> <span class="op">*</span> (x <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> (x <span class="op">+</span> <span class="dv">2</span>)
+
+a <span class="op">=</span> f(<span class="dv">10</span>)
+b <span class="op">=</span> f(<span class="dv">11</span>)
+a <span class="op">=</span> f(<span class="dv">12</span>)
+a <span class="op">=</span> f(<span class="dv">13</span>)</code></pre></div>
 </section><section id="myndig" class="slide level2">
 <h1>Myndig</h1>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> er_myndig(alder):

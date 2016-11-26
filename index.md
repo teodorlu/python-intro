@@ -260,32 +260,80 @@ Lag et program som
 
 # Funksjoner
 
-## Funksjoner i Python
+## En Python-funksjon
+
+_Den viktigste byggeblokken i programmene vi skriver._
+
+Definér `hei()` i en fil:
 
 ```python
-def hei(): # Definer en funksjon med navnet 'hei'
-    return "Hei" # Funksjonen returnerer teksten "Hei"
+def hei():
+  return "Hei!"
 ```
 
-## Funksjoner i Python
-
+og test den i skallet:
 ```python
+>>> hei
+<function hei at 0x7f8c0f5005f0>
 >>> hei()
-'Hei'
+'Hei!'
 ```
 
-## Parametre
+## En funksjon til
+
+_fordi funksjoner er viktig._
+
+Definerer i fil:
 
 ```python
-def hei(navn):
-    return "Hei " + navn
+def tusen():
+  t = 10 * 1000
+  return t
+```
+Vi bruker variabler i funksjoner for å splitte arbeidet i mindre biter.
+
+... og tester i skallet:
+```
+>>> tusen
+<function tusen at 0x7f8c0f500668>
+>>> tusen()
+1000
 ```
 
-## Parametre
+## Parameter
+
+- En _parameter_ er et navn som "sendes" inn i funksjonen:
+    - Funksjonen `f` i `f(x)` har `x` som parameter
+    - Funksjonen `g` i `g(x,y)` har `x` og `y` som parametre
 
 ```python
->>> hei("Teodor")
-'Hei Teodor'
+def f(x):
+  return x + 1
+
+def g(x,y):
+  return (x + 1) * y
+```
+
+## Parametrisering
+
+- Å _parametrisere_ er å endre kode til å bruke funksjoner og parametre.
+
+```python
+# Ikke parametrisert kode
+a = 3 * (10 + 1) * (10 + 2)
+b = 3 * (11 + 1) * (11 + 2)
+a = 3 * (12 + 1) * (12 + 2)
+a = 3 * (14 + 1) * (14 + 2)
+```
+```python
+# Parametrisert kode
+def f(x):
+  return 3 * (x + 1) * (x + 2)
+
+a = f(10)
+b = f(11)
+a = f(12)
+a = f(13)
 ```
 
 ## Myndig
