@@ -474,27 +474,117 @@ x = randint(0, 6) # gir x = 0, x = 1, ..., eller x = 5
 
 # For
 
-## Hva er for-løkker?
+## Hvor`for`?
 
-* Kjører en kodesnutt et gitt antall ganger
-* Går igjennom (itererer) over en liste med verdier
-
-## For-løkker i Python
+`for` gjør noe med hvert element i en liste:
 
 ```python
-for i in range(100):
-    print(i)
+>>> numbers = [1,2,42]
+>>> for number in numbers: print(number)
+...
+1
+2
+42
+>>> for number in numbers: print(2*number)
+...
+2
+4
+84
 ```
 
-* `range(4)` gir `[0, 1, 2, 3]`
-* `range(10)` gir `[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]`
-* `range(n)` gir *n* elementer!
+## For i skallet
+
+For på én linje er fint i skallet:
+```python
+>>> for number in numbers: print number
+```
+
+## For i kildekode 1
+
+I kildekode legger vi `for` over flere linjer:
+
+```python
+mange_tall = [101,102,103]
+for x in mange_tall:
+  print(x)
+  print("Hei!")
+```
+skriver ut
+```
+101
+Hei!
+102
+Hei!
+103
+Hei!
+```
+
+## For i kildekode 2
+
+```python
+mange_tall = [101,102,103]
+for x in mange_tall:
+  print(x)
+print("Hei!")  # Fjernet indent --> * Ikke del av for
+               #                    * Kjøres én gang, _etter_ at
+               #                      for er ferdig!
+```
+skriver ut
+```
+101
+102
+103
+Hei!
+```
+
+## Gjør noe `n` ganger
+
+```python
+>>> range(4)
+[0, 1, 2, 3]
+>>> range(2,4)
+[2, 3]
+>>> for n in range(4): print n*n
+...
+0
+1
+4
+9
+```
+
+## Oppgave: 7-gangeren
+
+- Bruk en `for`-løkke til å skrive ut 7-gangeren.
+- Ønsket output:
+
+```
+0
+7
+14
+21
+28
+35
+42
+49
+56
+63
+70
+```
+
+## Oppgave: 7-gangeren
+
+Løsningsforslag:
+
+```python
+for n in range(0, 11):
+  print(7*n)
+```
 
 ## Flere for-løkker i Python
 
 ```python
-mangeTall = [1,2,3,4,5,6,7,8,9]
-for tall in mangeTall
+mange_tall = [1,2,3,4,5,6,7,8,9]
+for tall in mange_tall
     print("Sjekker om " + str(tall) + " er et partall")
 
     if tall % 2:

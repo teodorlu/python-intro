@@ -449,25 +449,89 @@ huskeliste <span class="op">=</span> []
 
 x <span class="op">=</span> randint(<span class="dv">0</span>, <span class="dv">6</span>) <span class="co"># gir x = 0, x = 1, ..., eller x = 5</span></code></pre></div>
 </section></section>
-<section><section id="for" class="titleslide slide level1"><h1>For</h1></section><section id="hva-er-for-løkker" class="slide level2">
-<h1>Hva er for-løkker?</h1>
+<section><section id="for" class="titleslide slide level1"><h1>For</h1></section><section id="hvorfor" class="slide level2">
+<h1>Hvor<code>for</code>?</h1>
+<p><code>for</code> gjør noe med hvert element i en liste:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> numbers <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">42</span>]
+<span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> number <span class="kw">in</span> numbers: <span class="bu">print</span>(number)
+...
+<span class="dv">1</span>
+<span class="dv">2</span>
+<span class="dv">42</span>
+<span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> number <span class="kw">in</span> numbers: <span class="bu">print</span>(<span class="dv">2</span><span class="op">*</span>number)
+...
+<span class="dv">2</span>
+<span class="dv">4</span>
+<span class="dv">84</span></code></pre></div>
+</section><section id="for-i-skallet" class="slide level2">
+<h1>For i skallet</h1>
+<p>For på én linje er fint i skallet:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> number <span class="kw">in</span> numbers: <span class="bu">print</span> number</code></pre></div>
+</section><section id="for-i-kildekode-1" class="slide level2">
+<h1>For i kildekode 1</h1>
+<p>I kildekode legger vi <code>for</code> over flere linjer:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">mange_tall <span class="op">=</span> [<span class="dv">101</span>,<span class="dv">102</span>,<span class="dv">103</span>]
+<span class="cf">for</span> x <span class="kw">in</span> mange_tall:
+  <span class="bu">print</span>(x)
+  <span class="bu">print</span>(<span class="st">&quot;Hei!&quot;</span>)</code></pre></div>
+<p>skriver ut</p>
+<pre><code>101
+Hei!
+102
+Hei!
+103
+Hei!</code></pre>
+</section><section id="for-i-kildekode-2" class="slide level2">
+<h1>For i kildekode 2</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">mange_tall <span class="op">=</span> [<span class="dv">101</span>,<span class="dv">102</span>,<span class="dv">103</span>]
+<span class="cf">for</span> x <span class="kw">in</span> mange_tall:
+  <span class="bu">print</span>(x)
+<span class="bu">print</span>(<span class="st">&quot;Hei!&quot;</span>)  <span class="co"># Fjernet indent --&gt; * Ikke del av for</span>
+               <span class="co">#                    * Kjøres én gang, _etter_ at</span>
+               <span class="co">#                      for er ferdig!</span></code></pre></div>
+<p>skriver ut</p>
+<pre><code>101
+102
+103
+Hei!</code></pre>
+</section><section id="gjør-noe-n-ganger" class="slide level2">
+<h1>Gjør noe <code>n</code> ganger</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> <span class="bu">range</span>(<span class="dv">4</span>)
+[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]
+<span class="op">&gt;&gt;&gt;</span> <span class="bu">range</span>(<span class="dv">2</span>,<span class="dv">4</span>)
+[<span class="dv">2</span>, <span class="dv">3</span>]
+<span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>): <span class="bu">print</span> n<span class="op">*</span>n
+...
+<span class="dv">0</span>
+<span class="dv">1</span>
+<span class="dv">4</span>
+<span class="dv">9</span></code></pre></div>
+</section><section id="oppgave-7-gangeren" class="slide level2">
+<h1>Oppgave: 7-gangeren</h1>
 <ul>
-<li>Kjører en kodesnutt et gitt antall ganger</li>
-<li>Går igjennom (itererer) over en liste med verdier</li>
+<li>Bruk en <code>for</code>-løkke til å skrive ut 7-gangeren.</li>
+<li>Ønsket output:</li>
 </ul>
-</section><section id="for-løkker-i-python" class="slide level2">
-<h1>For-løkker i Python</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>):
-    <span class="bu">print</span>(i)</code></pre></div>
-<ul>
-<li><code>range(4)</code> gir <code>[0, 1, 2, 3]</code></li>
-<li><code>range(10)</code> gir <code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</code></li>
-<li><code>range(n)</code> gir <em>n</em> elementer!</li>
-</ul>
+<pre><code>0
+7
+14
+21
+28
+35
+42
+49
+56
+63
+70</code></pre>
+</section><section id="oppgave-7-gangeren-1" class="slide level2">
+<h1>Oppgave: 7-gangeren</h1>
+<p>Løsningsforslag:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">11</span>):
+  <span class="bu">print</span>(<span class="dv">7</span><span class="op">*</span>n)</code></pre></div>
 </section><section id="flere-for-løkker-i-python" class="slide level2">
 <h1>Flere for-løkker i Python</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">mangeTall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]
-<span class="cf">for</span> tall <span class="kw">in</span> mangeTall
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">mange_tall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]
+<span class="cf">for</span> tall <span class="kw">in</span> mange_tall
     <span class="bu">print</span>(<span class="st">&quot;Sjekker om &quot;</span> <span class="op">+</span> <span class="bu">str</span>(tall) <span class="op">+</span> <span class="st">&quot; er et partall&quot;</span>)
 
     <span class="cf">if</span> tall <span class="op">%</span> <span class="dv">2</span>:
