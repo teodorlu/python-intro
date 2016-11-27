@@ -257,7 +257,7 @@ Troll II, 1995
 <h1>Hvis sant, ...</h1>
 <p><em>Hvis <code>x</code>, gjør <code>y</code></em>.</p>
 <p>Følgende i fil:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">aar <span class="op">=</span> <span class="dv">2001</span>  <span class="co"># Bruker ikke norske bokstaver</span>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">aar <span class="op">=</span> <span class="dv">2001</span>
 <span class="bu">print</span>(<span class="st">&quot;Over if&quot;</span>)
 <span class="cf">if</span> aar <span class="op">&gt;</span> <span class="dv">2000</span>:
     <span class="bu">print</span>(<span class="st">&quot;Over 2000!&quot;</span>)
@@ -266,6 +266,7 @@ Troll II, 1995
 <pre><code>Over if
 Over 2000!
 Under if</code></pre>
+<p>Dokumentasjonen til <a href="https://docs.python.org/2/howto/unicode.html">Python 2.7</a> eller <a href="https://docs.python.org/3.5/howto/unicode.html">Python 3.5</a> forklarer hvordan å bruke æøå i fil.</p>
 </section><section id="hvis-usant-..." class="slide level2">
 <h1>Hvis usant, ...</h1>
 <p><em>Hvis ikke <code>x</code>, gjør ingenting</em>.</p>
@@ -755,8 +756,9 @@ high <span class="op">=</span> <span class="dv">100</span>
 <p>Jeg bruker <a href="http://atom.io">Github Atom</a>. Denne er god.</p>
 </section><section id="oppgave-a-abaqus" class="slide level2">
 <h1>Oppgave A: Abaqus</h1>
-<p>Parametrisering av plate:</p>
-<p><strong>Sett inn bilde.</strong></p>
+<figure>
+<img src="assets-no/abaqus-plate.png" />
+</figure>
 </section><section id="oppgave-del-a1" class="slide level2">
 <h1>Oppgave del A1</h1>
 <p><strong>Modeller fritt opplagt plate i Abaqus: <code>plate.cae</code></strong></p>
@@ -770,7 +772,7 @@ high <span class="op">=</span> <span class="dv">100</span>
 <p><strong>Gjør om til script</strong></p>
 <p>Kopier journal (<code>plate.jnl</code>) til <code>generate_single_plate.py</code>. Endre koden til å generere en annen modell:</p>
 <ul>
-<li>Modellnavn <code>plate_4_6_260_20</code></li>
+<li>Modellnavn <code>plate_4_6_0.26_20000</code></li>
 <li>Tykkelse 260 mm</li>
 <li>Last 20 kN/m2</li>
 </ul>
@@ -787,11 +789,11 @@ high <span class="op">=</span> <span class="dv">100</span>
 </ul></li>
 <li>Lag navn fra parametre:</li>
 </ul>
-<pre><code>plate_4_6_160_7
-plate_4_6_160_10
-plate_4_6_160_10
-plate_4_6_200_7
-plate_4_6_200_10
+<pre><code>plate_4_6_160_7000
+plate_4_6_160_10000
+plate_4_6_160_10000
+plate_4_6_200_7000
+plate_4_6_200_10000
 ...</code></pre>
 </section><section id="ferdig-alt" class="slide level2">
 <h1>Ferdig alt?</h1>
@@ -878,16 +880,16 @@ plate_4_6_200_10
 <p>Hva er M(8,30000,3)?</p>
 </section><section id="oppgave-del-d2" class="slide level2">
 <h1>Oppgave del D2</h1>
-<ul>
-<li>Implementer <code>M(L,q,x)</code> i Python:</li>
-</ul>
+<ol type="1">
+<li><p>Implementer <code>M(L,q,x)</code> i en python-fil:</p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> M(L,q,x):
   <span class="co"># Regn ut moment!</span>
   moment <span class="op">=</span> <span class="co"># ... unngår å bruke navnet på funksjonen (M)</span>
-  <span class="cf">return</span> moment</code></pre></div>
-<ul>
-<li>Hva beregner funksjonen din for <code>M(8,30000,3)</code>?</li>
-</ul>
+  <span class="cf">return</span> moment</code></pre></div></li>
+<li>Hva beregner funksjonen din for <code>M(8,30000,3)</code>? Test i IDLE.</li>
+<li>Kopier funksjonen din inn i en <code>Python Script</code>-node i Dynamo.</li>
+<li><p>Deifinér q, L og x med slidere, og koble på. Får du samme svar i IDLE og Dyanmo?</p></li>
+</ol>
 </section><section id="oppgave-del-d3" class="slide level2">
 <h1>Oppgave del D3</h1>
 <p>Tegn momentdiagrammet streker i Dynamo. Velg passe skala. 50 kNm &lt;--&gt; 1 m OK?</p>

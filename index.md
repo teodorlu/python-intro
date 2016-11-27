@@ -219,7 +219,7 @@ _Hvis `x`, gjør `y`_.
 Følgende i fil:
 
 ```python
-aar = 2001  # Bruker ikke norske bokstaver
+aar = 2001
 print("Over if")
 if aar > 2000:
     print("Over 2000!")
@@ -233,6 +233,9 @@ Over if
 Over 2000!
 Under if
 ```
+
+Dokumentasjonen til [Python 2.7](https://docs.python.org/2/howto/unicode.html)
+ eller [Python 3.5](https://docs.python.org/3.5/howto/unicode.html) forklarer hvordan å bruke æøå i fil.
 
 ## Hvis usant, ...
 
@@ -870,9 +873,7 @@ Jeg bruker [Github Atom](http://atom.io). Denne er god.
 
 ## Oppgave A: Abaqus
 
-Parametrisering av plate:
-
-__Sett inn bilde.__
+![](assets-no/abaqus-plate.png)
 
 ## Oppgave del A1
 
@@ -889,7 +890,7 @@ __Gjør om til script__
 Kopier journal (`plate.jnl`) til `generate_single_plate.py`.
 Endre koden til å generere en annen modell:
 
-- Modellnavn `plate_4_6_260_20`
+- Modellnavn `plate_4_6_0.26_20000`
 - Tykkelse 260 mm
 - Last 20 kN/m2
 
@@ -905,11 +906,11 @@ __Parametriser over tykkelse og kraft__
 - Lag navn fra parametre:
 
 ```
-plate_4_6_160_7
-plate_4_6_160_10
-plate_4_6_160_10
-plate_4_6_200_7
-plate_4_6_200_10
+plate_4_6_160_7000
+plate_4_6_160_10000
+plate_4_6_160_10000
+plate_4_6_200_7000
+plate_4_6_200_10000
 ...
 ```
 
@@ -1008,16 +1009,19 @@ Hva er M(8,30000,3)?
 
 ## Oppgave del D2
 
-- Implementer `M(L,q,x)` i Python:
+1. Implementer `M(L,q,x)` i en python-fil:
 
-```python
-def M(L,q,x):
-  # Regn ut moment!
-  moment = # ... unngår å bruke navnet på funksjonen (M)
-  return moment
-```
+    ```python
+    def M(L,q,x):
+      # Regn ut moment!
+      moment = # ... unngår å bruke navnet på funksjonen (M)
+      return moment
+    ```
 
-- Hva beregner funksjonen din for `M(8,30000,3)`?
+1. Hva beregner funksjonen din for `M(8,30000,3)`? Test i IDLE.
+2. Kopier funksjonen din inn i en `Python Script`-node i Dynamo.
+3. Deifinér q, L og x med slidere, og koble på. Får du samme svar i IDLE og Dyanmo?
+
 
 ## Oppgave del D3
 
