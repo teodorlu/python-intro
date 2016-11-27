@@ -325,6 +325,25 @@ Under if</code></pre>
 &lt;function tusen at 0x7f8c0f500668&gt;
 &gt;&gt;&gt; tusen()
 1000</code></pre>
+</section><section id="bruke-funksjoner" class="slide level2">
+<h1>Bruke funksjoner</h1>
+<p><em>Funksjoner må defineres før de brukes</em>.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">message <span class="op">=</span> hei()
+<span class="kw">def</span> hei():
+    <span class="cf">return</span> <span class="st">&quot;Hei!&quot;</span></code></pre></div>
+<p>gir</p>
+<pre><code>Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+  File &quot;func_fail.py&quot;, line 1, in &lt;module&gt;
+    message = hei()
+NameError: name &#39;hei&#39; is not defined</code></pre>
+</section><section id="bruke-funksjoner." class="slide level2">
+<h1>Bruke funksjoner.</h1>
+<p><em>Funksjoner må defineres før de brukes</em>.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> hei():
+    <span class="cf">return</span> <span class="st">&quot;Hei!&quot;</span>
+message <span class="op">=</span> hei()</code></pre></div>
+<p>er OK.</p>
 </section><section id="parameter" class="slide level2">
 <h1>Parameter</h1>
 <ul>
@@ -880,21 +899,49 @@ plate_4_6_200_10000
 <p>Hva er M(8,30000,3)?</p>
 </section><section id="oppgave-del-d2" class="slide level2">
 <h1>Oppgave del D2</h1>
-<ol type="1">
-<li><p>Implementer <code>M(L,q,x)</code> i en python-fil:</p>
+<p><strong>Implementer <code>M(L,q,x)</code> i en python-fil</strong></p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> M(L,q,x):
   <span class="co"># Regn ut moment!</span>
   moment <span class="op">=</span> <span class="co"># ... unngår å bruke navnet på funksjonen (M)</span>
-  <span class="cf">return</span> moment</code></pre></div></li>
+  <span class="cf">return</span> moment</code></pre></div>
+<ol type="1">
 <li>Hva beregner funksjonen din for <code>M(8,30000,3)</code>? Test i IDLE.</li>
 <li>Kopier funksjonen din inn i en <code>Python Script</code>-node i Dynamo.</li>
-<li><p>Deifinér q, L og x med slidere, og koble på. Får du samme svar i IDLE og Dyanmo?</p></li>
+<li>Deifinér q, L og x med slidere, og koble på. Får du samme svar i IDLE og Dyanmo?</li>
 </ol>
 </section><section id="oppgave-del-d3" class="slide level2">
 <h1>Oppgave del D3</h1>
-<p>Tegn momentdiagrammet streker i Dynamo. Velg passe skala. 50 kNm &lt;--&gt; 1 m OK?</p>
+<p><strong>Endre Python-koden til å ta inn en liste av x-verdier</strong></p>
+<p>Oppgaven kan løses med funksjonen <code>map</code>. Gjør først oppgaven i fil, og test i IDLE.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> addone(x): <span class="cf">return</span> x <span class="op">+</span> <span class="dv">1</span>
+...
+<span class="op">&gt;&gt;&gt;</span> addone(<span class="dv">5</span>)
+<span class="dv">6</span>
+<span class="op">&gt;&gt;&gt;</span> addone(<span class="dv">6</span>)
+<span class="dv">7</span>
+<span class="op">&gt;&gt;&gt;</span> addone(<span class="dv">7</span>)
+<span class="dv">8</span>
+<span class="op">&gt;&gt;&gt;</span> <span class="bu">map</span>(addone, [<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>])
+[<span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>]</code></pre></div>
 </section><section id="oppgave-del-d4" class="slide level2">
 <h1>Oppgave del D4</h1>
+<p><strong>Behandle liste av x-verdier i Dynamo</strong></p>
+<ol type="1">
+<li><p>Generer liste av gyldige x-verdier (0 &lt;= x &lt;= L).</p>
+<p>Bruk <code>Number</code> til å definere 0 og steg, og <code>Range</code> til å generere liste.</p></li>
+<li><p>Endre Python-koden til å ta inn en liste av x-verdier i stedet for en enkelt x-verdi.</p></li>
+<li><p>Får du fremdeles samme verdi av <code>M(8,30000,3)</code>?</p></li>
+</ol>
+</section><section id="oppgave-del-d5" class="slide level2">
+<h1>Oppgave del D5</h1>
+<p><strong>Vis momentdiagrammet med streker</strong>.</p>
+<ul>
+<li>Bruk <code>Point.ByCoordinates</code> for å lage punkter</li>
+<li>Bruk <code>PolyCurve.ByPoints</code> for å lage streker</li>
+</ul>
+<p>Velg passe skala. 50 000 meter er litt mye. 50 kNm &lt;--&gt; 1 m OK?</p>
+</section><section id="oppgave-del-d6" class="slide level2">
+<h1>Oppgave del D6</h1>
 <p>Nå skal vi velge høyde på bjelken. Dette gjør vi enkelt:</p>
 <ol type="1">
 <li>Regner ut nødvendig indre momentarm <code>d</code></li>
@@ -909,8 +956,8 @@ plate_4_6_200_10000
 <ul>
 <li>Hva er h(8,30000,3,0.00164)?</li>
 </ul>
-</section><section id="oppgave-del-d5" class="slide level2">
-<h1>Oppgave del D5</h1>
+</section><section id="oppgave-del-d7" class="slide level2">
+<h1>Oppgave del D7</h1>
 <ul>
 <li>Implementer <code>h(L,q,As,x)</code> i Python:</li>
 </ul>
@@ -919,7 +966,14 @@ plate_4_6_200_10000
   height <span class="op">=</span> <span class="co"># ... unngår å bruke navnet på funksjonen (h)</span>
   <span class="cf">return</span> height</code></pre></div>
 <ul>
-<li>Hva beregner funksjonen din for <code>h(8,30000,3,0.00164)</code>?</li>
+<li><p>Hva beregner funksjonen din for <code>h(8,30000,3,0.00164)</code>?</p></li>
+<li><p>Test i IDLE, og implementer i Dynamo.</p></li>
+</ul>
+</section><section id="dynamo-muligheter-videre" class="slide level2">
+<h1>Dynamo: Muligheter videre</h1>
+<ul>
+<li>Tegn faktiske tverrsnitt i stedet for konturer</li>
+<li>Visualiser i Revit i stedet for direkte i Dynamo</li>
 </ul>
 </section><section id="tegn-bjelke" class="slide level2">
 <h1>Tegn bjelke!</h1>

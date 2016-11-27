@@ -330,6 +330,35 @@ Vi bruker variabler i funksjoner for å splitte arbeidet i mindre biter.
 1000
 ```
 
+## Bruke funksjoner
+
+_Funksjoner må defineres før de brukes_.
+
+```python
+message = hei()
+def hei():
+	return "Hei!"
+```
+gir
+```
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "func_fail.py", line 1, in <module>
+    message = hei()
+NameError: name 'hei' is not defined
+```
+## Bruke funksjoner.
+
+_Funksjoner må defineres før de brukes_.
+
+```python
+def hei():
+	return "Hei!"
+message = hei()
+```
+
+er OK.
+
 ## Parameter
 
 - En _parameter_ er et navn som "sendes" inn i funksjonen:
@@ -1009,25 +1038,60 @@ Hva er M(8,30000,3)?
 
 ## Oppgave del D2
 
-1. Implementer `M(L,q,x)` i en python-fil:
+__Implementer `M(L,q,x)` i en python-fil__
 
-    ```python
-    def M(L,q,x):
-      # Regn ut moment!
-      moment = # ... unngår å bruke navnet på funksjonen (M)
-      return moment
-    ```
+```python
+def M(L,q,x):
+  # Regn ut moment!
+  moment = # ... unngår å bruke navnet på funksjonen (M)
+  return moment
+```
 
 1. Hva beregner funksjonen din for `M(8,30000,3)`? Test i IDLE.
 2. Kopier funksjonen din inn i en `Python Script`-node i Dynamo.
 3. Deifinér q, L og x med slidere, og koble på. Får du samme svar i IDLE og Dyanmo?
 
-
 ## Oppgave del D3
 
-Tegn momentdiagrammet streker i Dynamo. Velg passe skala. 50 kNm <--> 1 m OK?
+__Endre Python-koden til å ta inn en liste av x-verdier__
+
+Oppgaven kan løses med funksjonen `map`. Gjør først oppgaven i fil, og test i IDLE.
+
+```python
+>>> def addone(x): return x + 1
+...
+>>> addone(5)
+6
+>>> addone(6)
+7
+>>> addone(7)
+8
+>>> map(addone, [5,6,7])
+[6, 7, 8]
+```
 
 ## Oppgave del D4
+
+__Behandle liste av x-verdier i Dynamo__
+
+1. Generer liste av gyldige x-verdier (0 <= x <= L).
+
+    Bruk `Number` til å definere 0 og steg, og `Range` til å generere liste.
+
+2. Endre Python-koden til å ta inn en liste av x-verdier i stedet for en enkelt x-verdi.
+
+3. Får du fremdeles samme verdi av `M(8,30000,3)`?
+
+## Oppgave del D5
+
+__Vis momentdiagrammet med streker__.
+
+- Bruk `Point.ByCoordinates` for å lage punkter
+- Bruk `PolyCurve.ByPoints` for å lage streker
+
+Velg passe skala. 50 000 meter er litt mye. 50 kNm <--> 1 m OK?
+
+## Oppgave del D6
 
 Nå skal vi velge høyde på bjelken. Dette gjør vi enkelt:
 
@@ -1044,7 +1108,7 @@ h(L,q,As,x) = ...
 
 - Hva er h(8,30000,3,0.00164)?
 
-## Oppgave del D5
+## Oppgave del D7
 
 - Implementer `h(L,q,As,x)` i Python:
 
@@ -1056,6 +1120,13 @@ def h(L,q,As,x):
 ```
 
 - Hva beregner funksjonen din for `h(8,30000,3,0.00164)`?
+
+- Test i IDLE, og implementer i Dynamo.
+
+## Dynamo: Muligheter videre
+
+- Tegn faktiske tverrsnitt i stedet for konturer
+- Visualiser i Revit i stedet for direkte i Dynamo
 
 ## Tegn bjelke!
 
