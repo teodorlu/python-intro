@@ -1022,7 +1022,7 @@ Jeg bruker [Github Atom](http://atom.io). Denne er god.
 
 ## Oppgave D: Dynamo
 
-Betongbjelke med varierende tverrsnitt.
+![](assets-no/dynamo-variable-beam.png)
 
 ## Oppgave del D1
 
