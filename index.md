@@ -886,7 +886,7 @@ __Modeller fritt opplagt plate i Abaqus: `plate.cae`__
 
 __Gjør om til script__
 
-Kopier journal (`plate.jnl`) til `generate-plates.py`.
+Kopier journal (`plate.jnl`) til `generate_single_plate.py`.
 Endre koden til å generere en annen modell:
 
 - Modellnavn `plate_4_6_260_20`
@@ -897,6 +897,7 @@ Endre koden til å generere en annen modell:
 
 __Parametriser over tykkelse og kraft__
 
+- Kopier `generate_single_plate.py` til `generate_multiple_plates.py`
 - Trekk ut tykkelse og kraft som variabler
 - Generer 9 parts i samme modell:
     - Tykkelse 150 mm, 200 mm eller 260 mm
