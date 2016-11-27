@@ -158,15 +158,18 @@ Først lagrer vi filen der vi vil ha den, og kaller den `hello.py` ...
 
 * Lagre alderen til 3 familiemedlemmer i variabler
 
-```python
->>> tim_age = 18
-# ... og så videre
-# Dette er en kommentar. Python ignorerer alt som kommer etter
-# en hash (#)
-```
+    ```python
+    >>> tim_age = 18
+    # ... og så videre
+    # Dette er en kommentar. Python ignorerer
+    # alt som kommer etter en hash (#)
+    ```
 
+    * ... og test at du får tilgang til variablene i skallet.
 * Lagre summen av alderene i en variabel
+    * ... og test at du får tilgang til summen i skallet.
 * Lagre gjenomsnittet av alderene i en variabel
+    * ... og test at du får tilgang til gjennomsnittet i skallet.
 
 ## Tekstmanipulering
 
