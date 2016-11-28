@@ -159,7 +159,8 @@ Først lagrer vi filen der vi vil ha den, og kaller den `hello.py` ...
 * Lagre alderen til 3 familiemedlemmer i variabler
 
     ```python
-    >>> tim_age = 18
+    tim_age = 19
+    teodor_age = # ...
     # ... og så videre
     # Dette er en kommentar. Python ignorerer
     # alt som kommer etter en hash (#)
