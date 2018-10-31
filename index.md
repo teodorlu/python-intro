@@ -1,10 +1,14 @@
+---
+pagetitle: Programmering i Python
+...
+
 # Programmering i Python
 
 ### Norconsult - Sandvika 2016
 
 ## Hva ser jeg nå?
 
-Nettleseren Chromium som viser nettsiden `http://teodorlu.github.io/python-intro/` i fullskjerm.
+Nettleseren Chromium som viser nettsiden `https://teodorlu.github.io/python-intro/` i fullskjerm.
 
 Gå inn her på egen maskin! Da kan du se tidligere lysbilder, og er ikke avhengig av hvor vi er.
 
@@ -28,13 +32,13 @@ Du er på Python-kurs! Kurs med fartstid:
 
 Teodor Heggelund
 
-![](http://www.norconsult.com/Images/Logos/logo_norconsult_200x200.jpg)
+![](https://www.norconsult.com/Images/Logos/logo_norconsult_200x200.jpg)
 
 ---
 
 Alexander Perry
 
-![](http://kampanje.com/contentassets/ef767832064f4b5b853db52dee9ca940/logo_bouvet_222x222px.png)
+![](https://kampanje.com/contentassets/ef767832064f4b5b853db52dee9ca940/logo_bouvet_222x222px.png)
 
 # Hvorfor Python?
 
@@ -57,11 +61,11 @@ Forståelig syntaks med lite støy:
 
 ## Driver New York Times
 
-![](http://www.slate.com/content/dam/slate/articles/life/culturebox/2014/01/140108_CBOX_NYTimesRedesign.jpg.CROP.promo-mediumlarge.jpg)
+![](https://www.slate.com/content/dam/slate/articles/life/culturebox/2014/01/140108_CBOX_NYTimesRedesign.jpg.CROP.promo-mediumlarge.jpg)
 
 ## Brukes av NASA
 
-![](http://www.nasa.gov/sites/default/files/thumbnails/image/ocs_iss_0.jpg)
+![](https://www.nasa.gov/sites/default/files/thumbnails/image/ocs_iss_0.jpg)
 
 ## Brukes av Google
 
@@ -203,11 +207,11 @@ Først lagrer vi filen der vi vil ha den, og kaller den `hello.py` ...
 
 ## Navnet?
 
-![](http://www.anglotopia.net/wp-content/uploads/2015/05/Monty-Python-and-The-Holy-Grail-40th_640.jpg)
+![](https://www.anglotopia.net/wp-content/uploads/2015/05/Monty-Python-and-The-Holy-Grail-40th_640.jpg)
 
 ---
 
-![](http://imgs.xkcd.com/comics/python.png)
+![](https://imgs.xkcd.com/comics/python.png)
 
 Fra [XKCD](http://xkcd.com/353/).
 
@@ -318,8 +322,8 @@ Definerer i fil:
 
 ```python
 def tusen():
-  t = 10 * 1000
-  return t
+    t = 10 * 1000
+    return t
 ```
 Vi bruker variabler i funksjoner for å splitte arbeidet i mindre biter.
 

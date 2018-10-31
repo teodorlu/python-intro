@@ -3,49 +3,78 @@
 <head>
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
-  <title></title>
+  <title>Programmering i Python</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="reveal.js/css/reveal.css">
-  <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; background-color: #303030; color: #cccccc; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; }
-td.sourceCode { padding-left: 5px; }
-pre, code { color: #cccccc; background-color: #303030; }
-code > span.kw { color: #f0dfaf; } /* Keyword */
-code > span.dt { color: #dfdfbf; } /* DataType */
-code > span.dv { color: #dcdccc; } /* DecVal */
-code > span.bn { color: #dca3a3; } /* BaseN */
-code > span.fl { color: #c0bed1; } /* Float */
-code > span.ch { color: #dca3a3; } /* Char */
-code > span.st { color: #cc9393; } /* String */
-code > span.co { color: #7f9f7f; } /* Comment */
-code > span.ot { color: #efef8f; } /* Other */
-code > span.al { color: #ffcfaf; } /* Alert */
-code > span.fu { color: #efef8f; } /* Function */
-code > span.er { color: #c3bf9f; } /* Error */
-code > span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
-code > span.cn { color: #dca3a3; font-weight: bold; } /* Constant */
-code > span.sc { color: #dca3a3; } /* SpecialChar */
-code > span.vs { color: #cc9393; } /* VerbatimString */
-code > span.ss { color: #cc9393; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { } /* Variable */
-code > span.cf { color: #f0dfaf; } /* ControlFlow */
-code > span.op { color: #f0efd0; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #ffcfaf; font-weight: bold; } /* Preprocessor */
-code > span.at { } /* Attribute */
-code > span.do { color: #7f9f7f; } /* Documentation */
-code > span.an { color: #7f9f7f; font-weight: bold; } /* Annotation */
-code > span.cv { color: #7f9f7f; font-weight: bold; } /* CommentVar */
-code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  { color: #cccccc; background-color: #303030; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ffcfaf; } /* Alert */
+code span.an { color: #7f9f7f; font-weight: bold; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #dca3a3; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #f0dfaf; } /* ControlFlow */
+code span.ch { color: #dca3a3; } /* Char */
+code span.cn { color: #dca3a3; font-weight: bold; } /* Constant */
+code span.co { color: #7f9f7f; } /* Comment */
+code span.cv { color: #7f9f7f; font-weight: bold; } /* CommentVar */
+code span.do { color: #7f9f7f; } /* Documentation */
+code span.dt { color: #dfdfbf; } /* DataType */
+code span.dv { color: #dcdccc; } /* DecVal */
+code span.er { color: #c3bf9f; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #c0bed1; } /* Float */
+code span.fu { color: #efef8f; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #7f9f7f; font-weight: bold; } /* Information */
+code span.kw { color: #f0dfaf; } /* Keyword */
+code span.op { color: #f0efd0; } /* Operator */
+code span.ot { color: #efef8f; } /* Other */
+code span.pp { color: #ffcfaf; font-weight: bold; } /* Preprocessor */
+code span.sc { color: #dca3a3; } /* SpecialChar */
+code span.ss { color: #cc9393; } /* SpecialString */
+code span.st { color: #cc9393; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #cc9393; } /* VerbatimString */
+code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
   </style>
   <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
   <!-- Printing and PDF exports -->
@@ -65,12 +94,12 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
     <div class="slides">
 
 
-<section><section id="programmering-i-python" class="titleslide slide level1"><h1>Programmering i Python</h1></section><h3 id="norconsult---sandvika-2016">Norconsult - Sandvika 2016</h3><section id="hva-ser-jeg-nå" class="slide level2">
-<h1>Hva ser jeg nå?</h1>
-<p>Nettleseren Chromium som viser nettsiden <code>http://teodorlu.github.io/python-intro/</code> i fullskjerm.</p>
+<section><section id="programmering-i-python" class="title-slide slide level1"><h1>Programmering i Python</h1></section><h3 id="norconsult---sandvika-2016">Norconsult - Sandvika 2016</h3><section id="hva-ser-jeg-nå" class="slide level2">
+<h2>Hva ser jeg nå?</h2>
+<p>Nettleseren Chromium som viser nettsiden <code>https://teodorlu.github.io/python-intro/</code> i fullskjerm.</p>
 <p>Gå inn her på egen maskin! Da kan du se tidligere lysbilder, og er ikke avhengig av hvor vi er.</p>
 </section><section id="hva-gjør-jeg-nå" class="slide level2">
-<h1>Hva gjør jeg nå?</h1>
+<h2>Hva gjør jeg nå?</h2>
 <p>Du er på Python-kurs! Kurs med fartstid:</p>
 <ul>
 <li><a href="http://kidsakoder.no/konferanser/juni2016/">Lærerkonferanse Teknologihuset, juni 2016</a></li>
@@ -80,61 +109,51 @@ code > span.in { color: #7f9f7f; font-weight: bold; } /* Information */
 <li>Internkurs Norconsult, Sandvika, november 2016</li>
 </ul>
 </section><section id="intensjon-for-presentasjon" class="slide level2">
-<h1>Intensjon for presentasjon</h1>
+<h2>Intensjon for presentasjon</h2>
 <ul>
 <li><p>Ryddig første vei inn i Python-programmering</p></li>
 <li><p>Referanse til videre bruk.</p></li>
 </ul>
 </section><section id="hvem-er-vi" class="slide level2">
-<h1>Hvem er vi?</h1>
+<h2>Hvem er vi?</h2>
 <p>Teodor Heggelund</p>
-<figure>
-<img src="http://www.norconsult.com/Images/Logos/logo_norconsult_200x200.jpg" />
-</figure>
+<p><img data-src="https://www.norconsult.com/Images/Logos/logo_norconsult_200x200.jpg" /></p>
 </section><section class="slide level2">
 
 <p>Alexander Perry</p>
-<figure>
-<img src="http://kampanje.com/contentassets/ef767832064f4b5b853db52dee9ca940/logo_bouvet_222x222px.png" />
-</figure>
+<p><img data-src="https://kampanje.com/contentassets/ef767832064f4b5b853db52dee9ca940/logo_bouvet_222x222px.png" /></p>
 </section></section>
-<section><section id="hvorfor-python" class="titleslide slide level1"><h1>Hvorfor Python?</h1></section><section id="for-begynnere" class="slide level2">
-<h1>For begynnere</h1>
+<section><section id="hvorfor-python" class="title-slide slide level1"><h1>Hvorfor Python?</h1></section><section id="for-begynnere" class="slide level2">
+<h2>For begynnere</h2>
 <p>Forståelig syntaks med lite støy:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> navn <span class="op">=</span> <span class="st">&quot;Teodor&quot;</span>
-<span class="op">&gt;&gt;&gt;</span> navn
-<span class="co">&#39;Teodor&#39;</span>
-<span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;Hei! Jeg heter &quot;</span> <span class="op">+</span> navn
-<span class="co">&#39;Hei! Jeg heter Teodor&#39;</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> navn <span class="op">=</span> <span class="st">&quot;Teodor&quot;</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="op">&gt;&gt;&gt;</span> navn</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co">&#39;Teodor&#39;</span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;Hei! Jeg heter &quot;</span> <span class="op">+</span> navn</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="co">&#39;Hei! Jeg heter Teodor&#39;</span></a></code></pre></div>
 </section><section id="og-viderekommende" class="slide level2">
-<h1><em>og</em> viderekommende</h1>
+<h2><em>og</em> viderekommende</h2>
 <ul>
 <li>Støtter imperativ, objektorientert og funksjonell programmering</li>
 <li>Knallgodt standardbibliotek</li>
 </ul>
 </section><section id="driver-new-york-times" class="slide level2">
-<h1>Driver New York Times</h1>
-<figure>
-<img src="http://www.slate.com/content/dam/slate/articles/life/culturebox/2014/01/140108_CBOX_NYTimesRedesign.jpg.CROP.promo-mediumlarge.jpg" />
-</figure>
+<h2>Driver New York Times</h2>
+<p><img data-src="https://www.slate.com/content/dam/slate/articles/life/culturebox/2014/01/140108_CBOX_NYTimesRedesign.jpg.CROP.promo-mediumlarge.jpg" /></p>
 </section><section id="brukes-av-nasa" class="slide level2">
-<h1>Brukes av NASA</h1>
-<figure>
-<img src="http://www.nasa.gov/sites/default/files/thumbnails/image/ocs_iss_0.jpg" />
-</figure>
+<h2>Brukes av NASA</h2>
+<p><img data-src="https://www.nasa.gov/sites/default/files/thumbnails/image/ocs_iss_0.jpg" /></p>
 </section><section id="brukes-av-google" class="slide level2">
-<h1>Brukes av Google</h1>
-<figure>
-<img src="https://www.google.com/selfdrivingcar/images/home-where.jpg" />
-</figure>
+<h2>Brukes av Google</h2>
+<p><img data-src="https://www.google.com/selfdrivingcar/images/home-where.jpg" /></p>
 <!-- ## Driver beregninger
 
 Troll II, 1995
 
 ![](http://www.norskpetroleum.no/wp-content/uploads/Troll-A-platform-Photo-%C3%98yvind-Hagen-Statoil.jpg) -->
 </section></section>
-<section><section id="verktøy" class="titleslide slide level1"><h1>Verktøy</h1></section><section id="hva-trenger-vi" class="slide level2">
-<h1>Hva trenger vi?</h1>
+<section><section id="verktøy" class="title-slide slide level1"><h1>Verktøy</h1></section><section id="hva-trenger-vi" class="slide level2">
+<h2>Hva trenger vi?</h2>
 <p>Når vi utvikler Python, trenger vi to verktøy:</p>
 <ul>
 <li>Et skall</li>
@@ -142,196 +161,180 @@ Troll II, 1995
 </ul>
 <p>Når vi installerer programmeringsspråket Python, følger miljøet IDLE med. IDLE gir oss et skall og en teksteditor.</p>
 </section><section id="last-ned-python" class="slide level2">
-<h1>Last ned Python</h1>
+<h2>Last ned Python</h2>
 <ol type="1">
 <li>Gå til <a href="https://www.python.org/downloads/">python.org/downloads</a></li>
 <li>Last ned og installer nyeste Python (<code>3.x.x</code>)</li>
 </ol>
 </section><section id="python-skallet-i-idle" class="slide level2">
-<h1>Python-skallet i IDLE</h1>
+<h2>Python-skallet i IDLE</h2>
 <p>Et skall lar oss skrive en linje og tolke den.</p>
-<figure>
-<img src="assets/idle-shell.png" />
-</figure>
+<p><img data-src="assets/idle-shell.png" /></p>
 </section><section id="python-skallet-i-idle-1" class="slide level2">
-<h1>Python-skallet i IDLE</h1>
+<h2>Python-skallet i IDLE</h2>
 <p>Tre piler (<code>&gt;&gt;&gt;</code>) dukker automatisk opp i skallet. Når vi skriver tre piler her:</p>
 <pre><code>&gt;&gt;&gt; 4 + 4
 8</code></pre>
 <p>skal du skrive <code>4 + 4</code> og trykke enter.</p>
 </section><section id="teksteditoren-i-idle" class="slide level2">
-<h1>Teksteditoren i IDLE</h1>
-<figure>
-<img src="assets/idle-new-file.png" />
-</figure>
+<h2>Teksteditoren i IDLE</h2>
+<p><img data-src="assets/idle-new-file.png" /></p>
 </section><section id="teksteditoren-i-idle-1" class="slide level2">
-<h1>Teksteditoren i IDLE</h1>
+<h2>Teksteditoren i IDLE</h2>
 <p>Vi åpner teksteditoren ved å lage en ny fil fra Python-skallet:</p>
-<p><code>File</code> --&gt; <code>New file</code> (<code>Ctrl+N</code>) gir oss en tom fil:</p>
-<figure>
-<img src="assets/idle-empty-file.png" />
-</figure>
+<p><code>File</code> –&gt; <code>New file</code> (<code>Ctrl+N</code>) gir oss en tom fil:</p>
+<p><img data-src="assets/idle-empty-file.png" /></p>
 </section><section id="teksteditoren-i-idle-2" class="slide level2">
-<h1>Teksteditoren i IDLE</h1>
-<p>Først lagrer vi filen der vi vil ha den, og kaller den <code>hello.py</code> ...</p>
-<figure>
-<img src="assets/idle-save-as.png" />
-</figure>
+<h2>Teksteditoren i IDLE</h2>
+<p>Først lagrer vi filen der vi vil ha den, og kaller den <code>hello.py</code> …</p>
+<p><img data-src="assets/idle-save-as.png" /></p>
 </section><section id="teksteditoren-i-idle-3" class="slide level2">
-<h1>Teksteditoren i IDLE</h1>
-<p>... så kjører vi den for å se at alt er i orden ...</p>
-<figure>
-<img src="assets/idle-run-module.png" />
-</figure>
+<h2>Teksteditoren i IDLE</h2>
+<p>… så kjører vi den for å se at alt er i orden …</p>
+<p><img data-src="assets/idle-run-module.png" /></p>
 </section><section id="teksteditoren-i-idle-4" class="slide level2">
-<h1>Teksteditoren i IDLE</h1>
-<p>... og en tom fil gjør ... ingenting.</p>
-<figure>
-<img src="assets/idle-nothing-happened.png" />
-</figure>
+<h2>Teksteditoren i IDLE</h2>
+<p>… og en tom fil gjør … ingenting.</p>
+<p><img data-src="assets/idle-nothing-happened.png" /></p>
 </section></section>
-<section><section id="variabler" class="titleslide slide level1"><h1>Variabler</h1></section><section id="hva-er-en-variabel" class="slide level2">
-<h1>Hva er en variabel?</h1>
+<section><section id="variabler" class="title-slide slide level1"><h1>Variabler</h1></section><section id="hva-er-en-variabel" class="slide level2">
+<h2>Hva er en variabel?</h2>
 <ul>
 <li>Tilordner verdier til navn, for gjenbruk</li>
 </ul>
 </section><section id="variabler-i-python" class="slide level2">
-<h1>Variabler i Python</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> navn <span class="op">=</span> <span class="st">&quot;Alexander Perry&quot;</span>
-<span class="op">&gt;&gt;&gt;</span> navn
-<span class="co">&#39;Alexander Perry&#39;</span>
-<span class="op">&gt;&gt;&gt;</span> alder <span class="op">=</span> <span class="dv">27</span>
-<span class="op">&gt;&gt;&gt;</span> alder
-<span class="dv">27</span></code></pre></div>
+<h2>Variabler i Python</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> navn <span class="op">=</span> <span class="st">&quot;Alexander Perry&quot;</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="op">&gt;&gt;&gt;</span> navn</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co">&#39;Alexander Perry&#39;</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="op">&gt;&gt;&gt;</span> alder <span class="op">=</span> <span class="dv">27</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="op">&gt;&gt;&gt;</span> alder</a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="dv">27</span></a></code></pre></div>
 </section><section id="oppgave-familiens-alder" class="slide level2">
-<h1>Oppgave: familiens alder</h1>
+<h2>Oppgave: familiens alder</h2>
 <ul>
 <li><p>Lagre alderen til 3 familiemedlemmer i variabler</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">tim_age <span class="op">=</span> <span class="dv">19</span>
-teodor_age <span class="op">=</span> <span class="co"># ...</span>
-<span class="co"># ... og så videre</span>
-<span class="co"># Dette er en kommentar. Python ignorerer</span>
-<span class="co"># alt som kommer etter en hash (#)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb4-1" data-line-number="1">tim_age <span class="op">=</span> <span class="dv">19</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2">teodor_age <span class="op">=</span> <span class="co"># ...</span></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co"># ... og så videre</span></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="co"># Dette er en kommentar. Python ignorerer</span></a>
+<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="co"># alt som kommer etter en hash (#)</span></a></code></pre></div>
 <ul>
-<li>... og test at du får tilgang til variablene i skallet.</li>
+<li>… og test at du får tilgang til variablene i skallet.</li>
 </ul></li>
 <li>Lagre summen av alderene i en variabel
 <ul>
-<li>... og test at du får tilgang til summen i skallet.</li>
+<li>… og test at du får tilgang til summen i skallet.</li>
 </ul></li>
 <li>Lagre gjenomsnittet av alderene i en variabel
 <ul>
-<li>... og test at du får tilgang til gjennomsnittet i skallet.</li>
+<li>… og test at du får tilgang til gjennomsnittet i skallet.</li>
 </ul></li>
 </ul>
 </section><section id="tekstmanipulering" class="slide level2">
-<h1>Tekstmanipulering</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> navn1 <span class="op">=</span> <span class="st">&quot;Alexander&quot;</span>
-<span class="op">&gt;&gt;&gt;</span> navn2 <span class="op">=</span> <span class="st">&quot;Teodor&quot;</span>
-<span class="op">&gt;&gt;&gt;</span> navn1 <span class="op">+</span> navn2</code></pre></div>
+<h2>Tekstmanipulering</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> navn1 <span class="op">=</span> <span class="st">&quot;Alexander&quot;</span></a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="op">&gt;&gt;&gt;</span> navn2 <span class="op">=</span> <span class="st">&quot;Teodor&quot;</span></a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="op">&gt;&gt;&gt;</span> navn1 <span class="op">+</span> navn2</a></code></pre></div>
 </section><section id="tekstmanipulering-1" class="slide level2">
-<h1>Tekstmanipulering</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> navn1 <span class="op">=</span> <span class="st">&quot;Alexander&quot;</span>
-<span class="op">&gt;&gt;&gt;</span> navn2 <span class="op">=</span> <span class="st">&quot;Teodor&quot;</span>
-<span class="op">&gt;&gt;&gt;</span> navn1 <span class="op">+</span> navn2
-<span class="co">&#39;AlexanderTeodor&#39;</span></code></pre></div>
+<h2>Tekstmanipulering</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> navn1 <span class="op">=</span> <span class="st">&quot;Alexander&quot;</span></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="op">&gt;&gt;&gt;</span> navn2 <span class="op">=</span> <span class="st">&quot;Teodor&quot;</span></a>
+<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="op">&gt;&gt;&gt;</span> navn1 <span class="op">+</span> navn2</a>
+<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="co">&#39;AlexanderTeodor&#39;</span></a></code></pre></div>
 </section><section id="tekstmanipulering-2" class="slide level2">
-<h1>Tekstmanipulering</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> navn1 <span class="op">=</span> <span class="st">&quot;Alexander&quot;</span>
-<span class="op">&gt;&gt;&gt;</span> navn2 <span class="op">=</span> <span class="st">&quot;Teodor&quot;</span>
-<span class="op">&gt;&gt;&gt;</span> navn1 <span class="op">+</span> <span class="st">&quot; &quot;</span> <span class="op">+</span> navn2
-<span class="co">&#39;Alexander Teodor&#39;</span></code></pre></div>
+<h2>Tekstmanipulering</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> navn1 <span class="op">=</span> <span class="st">&quot;Alexander&quot;</span></a>
+<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="op">&gt;&gt;&gt;</span> navn2 <span class="op">=</span> <span class="st">&quot;Teodor&quot;</span></a>
+<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="op">&gt;&gt;&gt;</span> navn1 <span class="op">+</span> <span class="st">&quot; &quot;</span> <span class="op">+</span> navn2</a>
+<a class="sourceLine" id="cb7-4" data-line-number="4"><span class="co">&#39;Alexander Teodor&#39;</span></a></code></pre></div>
 </section></section>
-<section><section id="stemningen-i-python" class="titleslide slide level1"><h1>Stemningen i Python</h1></section><section id="navnet" class="slide level2">
-<h1>Navnet?</h1>
-<figure>
-<img src="http://www.anglotopia.net/wp-content/uploads/2015/05/Monty-Python-and-The-Holy-Grail-40th_640.jpg" />
-</figure>
+<section><section id="stemningen-i-python" class="title-slide slide level1"><h1>Stemningen i Python</h1></section><section id="navnet" class="slide level2">
+<h2>Navnet?</h2>
+<p><img data-src="https://www.anglotopia.net/wp-content/uploads/2015/05/Monty-Python-and-The-Holy-Grail-40th_640.jpg" /></p>
 </section><section class="slide level2">
 
-<figure>
-<img src="http://imgs.xkcd.com/comics/python.png" />
-</figure>
+<p><img data-src="https://imgs.xkcd.com/comics/python.png" /></p>
 <p>Fra <a href="http://xkcd.com/353/">XKCD</a>.</p>
 </section></section>
-<section><section id="if" class="titleslide slide level1"><h1>If</h1></section><section id="hvis-sant-..." class="slide level2">
-<h1>Hvis sant, ...</h1>
+<section><section id="if" class="title-slide slide level1"><h1>If</h1></section><section id="hvis-sant" class="slide level2">
+<h2>Hvis sant, …</h2>
 <p><em>Hvis <code>x</code>, gjør <code>y</code></em>.</p>
 <p>Følgende i fil:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">aar <span class="op">=</span> <span class="dv">2001</span>
-<span class="bu">print</span>(<span class="st">&quot;Over if&quot;</span>)
-<span class="cf">if</span> aar <span class="op">&gt;</span> <span class="dv">2000</span>:
-    <span class="bu">print</span>(<span class="st">&quot;Over 2000!&quot;</span>)
-<span class="bu">print</span>(<span class="st">&quot;Under if&quot;</span>)</code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb8-1" data-line-number="1">aar <span class="op">=</span> <span class="dv">2001</span></a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="bu">print</span>(<span class="st">&quot;Over if&quot;</span>)</a>
+<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="cf">if</span> aar <span class="op">&gt;</span> <span class="dv">2000</span>:</a>
+<a class="sourceLine" id="cb8-4" data-line-number="4">    <span class="bu">print</span>(<span class="st">&quot;Over 2000!&quot;</span>)</a>
+<a class="sourceLine" id="cb8-5" data-line-number="5"><span class="bu">print</span>(<span class="st">&quot;Under if&quot;</span>)</a></code></pre></div>
 <p>gir følgende ut:</p>
 <pre><code>Over if
 Over 2000!
 Under if</code></pre>
 <p>Dokumentasjonen til <a href="https://docs.python.org/2/howto/unicode.html">Python 2.7</a> eller <a href="https://docs.python.org/3.5/howto/unicode.html">Python 3.5</a> forklarer hvordan å bruke æøå i fil.</p>
-</section><section id="hvis-usant-..." class="slide level2">
-<h1>Hvis usant, ...</h1>
+</section><section id="hvis-usant" class="slide level2">
+<h2>Hvis usant, …</h2>
 <p><em>Hvis ikke <code>x</code>, gjør ingenting</em>.</p>
 <p>Følgende i fil:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">aar <span class="op">=</span> <span class="dv">1999</span>  <span class="co"># Bruker ikke norske bokstaver</span>
-<span class="bu">print</span>(<span class="st">&quot;Over if&quot;</span>)
-<span class="cf">if</span> aar <span class="op">&gt;</span> <span class="dv">2000</span>:
-    <span class="bu">print</span>(<span class="st">&quot;Over 2000!&quot;</span>)
-<span class="bu">print</span>(<span class="st">&quot;Under if&quot;</span>)</code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb10-1" data-line-number="1">aar <span class="op">=</span> <span class="dv">1999</span>  <span class="co"># Bruker ikke norske bokstaver</span></a>
+<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="bu">print</span>(<span class="st">&quot;Over if&quot;</span>)</a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="cf">if</span> aar <span class="op">&gt;</span> <span class="dv">2000</span>:</a>
+<a class="sourceLine" id="cb10-4" data-line-number="4">    <span class="bu">print</span>(<span class="st">&quot;Over 2000!&quot;</span>)</a>
+<a class="sourceLine" id="cb10-5" data-line-number="5"><span class="bu">print</span>(<span class="st">&quot;Under if&quot;</span>)</a></code></pre></div>
 <p>gir følgende ut:</p>
 <pre><code>Over if
 Under if</code></pre>
 </section><section id="ellers" class="slide level2">
-<h1>... ellers</h1>
+<h2>… ellers</h2>
 <p>Følgende i fil:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">aar <span class="op">=</span> <span class="dv">1999</span>  <span class="co"># Bruker ikke norske bokstaver</span>
-<span class="bu">print</span>(<span class="st">&quot;Over if&quot;</span>)
-<span class="cf">if</span> aar <span class="op">&gt;</span> <span class="dv">2000</span>:
-  <span class="bu">print</span>(<span class="st">&quot;Over 2000!&quot;</span>)
-<span class="cf">else</span>:
-  <span class="bu">print</span>(<span class="st">&quot;Under 2000!&quot;</span>)
-<span class="bu">print</span>(<span class="st">&quot;Under if&quot;</span>)</code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb12-1" data-line-number="1">aar <span class="op">=</span> <span class="dv">1999</span>  <span class="co"># Bruker ikke norske bokstaver</span></a>
+<a class="sourceLine" id="cb12-2" data-line-number="2"><span class="bu">print</span>(<span class="st">&quot;Over if&quot;</span>)</a>
+<a class="sourceLine" id="cb12-3" data-line-number="3"><span class="cf">if</span> aar <span class="op">&gt;</span> <span class="dv">2000</span>:</a>
+<a class="sourceLine" id="cb12-4" data-line-number="4">  <span class="bu">print</span>(<span class="st">&quot;Over 2000!&quot;</span>)</a>
+<a class="sourceLine" id="cb12-5" data-line-number="5"><span class="cf">else</span>:</a>
+<a class="sourceLine" id="cb12-6" data-line-number="6">  <span class="bu">print</span>(<span class="st">&quot;Under 2000!&quot;</span>)</a>
+<a class="sourceLine" id="cb12-7" data-line-number="7"><span class="bu">print</span>(<span class="st">&quot;Under if&quot;</span>)</a></code></pre></div>
 <p>gir følgende ut:</p>
 <pre><code>Over if
 Under 2000
 Under if</code></pre>
 </section><section id="oppgave-gammel-nok" class="slide level2">
-<h1>Oppgave: Gammel nok?</h1>
+<h2>Oppgave: Gammel nok?</h2>
 <p>Lag et program som</p>
 <ul>
 <li>Lagrer en alder i en variabel</li>
-<li>Skriver ut &quot;Du er ikke gammel nok&quot; dersom alderen er under 18 år</li>
+<li>Skriver ut “Du er ikke gammel nok” dersom alderen er under 18 år</li>
 </ul>
 </section></section>
-<section><section id="funksjoner" class="titleslide slide level1"><h1>Funksjoner</h1></section><section id="en-python-funksjon" class="slide level2">
-<h1>En Python-funksjon</h1>
+<section><section id="funksjoner" class="title-slide slide level1"><h1>Funksjoner</h1></section><section id="en-python-funksjon" class="slide level2">
+<h2>En Python-funksjon</h2>
 <p><em>Den viktigste byggeblokken i programmene vi skriver.</em></p>
 <p>Definér <code>hei()</code> i en fil:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> hei():
-  <span class="cf">return</span> <span class="st">&quot;Hei!&quot;</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="kw">def</span> hei():</a>
+<a class="sourceLine" id="cb14-2" data-line-number="2">  <span class="cf">return</span> <span class="st">&quot;Hei!&quot;</span></a></code></pre></div>
 <p>og test den i skallet:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> hei
-<span class="op">&lt;</span>function hei at <span class="bn">0x7f8c0f5005f0</span><span class="op">&gt;</span>
-<span class="op">&gt;&gt;&gt;</span> hei()
-<span class="co">&#39;Hei!&#39;</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb15-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> hei</a>
+<a class="sourceLine" id="cb15-2" data-line-number="2"><span class="op">&lt;</span>function hei at <span class="bn">0x7f8c0f5005f0</span><span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb15-3" data-line-number="3"><span class="op">&gt;&gt;&gt;</span> hei()</a>
+<a class="sourceLine" id="cb15-4" data-line-number="4"><span class="co">&#39;Hei!&#39;</span></a></code></pre></div>
 </section><section id="en-funksjon-til" class="slide level2">
-<h1>En funksjon til</h1>
+<h2>En funksjon til</h2>
 <p><em>fordi funksjoner er viktig.</em></p>
 <p>Definerer i fil:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> tusen():
-  t <span class="op">=</span> <span class="dv">10</span> <span class="op">*</span> <span class="dv">1000</span>
-  <span class="cf">return</span> t</code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb16-1" data-line-number="1"><span class="kw">def</span> tusen():</a>
+<a class="sourceLine" id="cb16-2" data-line-number="2">    t <span class="op">=</span> <span class="dv">10</span> <span class="op">*</span> <span class="dv">1000</span></a>
+<a class="sourceLine" id="cb16-3" data-line-number="3">    <span class="cf">return</span> t</a></code></pre></div>
 <p>Vi bruker variabler i funksjoner for å splitte arbeidet i mindre biter.</p>
-<p>... og tester i skallet:</p>
+<p>… og tester i skallet:</p>
 <pre><code>&gt;&gt;&gt; tusen
 &lt;function tusen at 0x7f8c0f500668&gt;
 &gt;&gt;&gt; tusen()
 1000</code></pre>
 </section><section id="bruke-funksjoner" class="slide level2">
-<h1>Bruke funksjoner</h1>
+<h2>Bruke funksjoner</h2>
 <p><em>Funksjoner må defineres før de brukes</em>.</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">message <span class="op">=</span> hei()
-<span class="kw">def</span> hei():
-    <span class="cf">return</span> <span class="st">&quot;Hei!&quot;</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb18-1" data-line-number="1">message <span class="op">=</span> hei()</a>
+<a class="sourceLine" id="cb18-2" data-line-number="2"><span class="kw">def</span> hei():</a>
+<a class="sourceLine" id="cb18-3" data-line-number="3">    <span class="cf">return</span> <span class="st">&quot;Hei!&quot;</span></a></code></pre></div>
 <p>gir</p>
 <pre><code>Traceback (most recent call last):
   File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
@@ -339,152 +342,152 @@ Under if</code></pre>
     message = hei()
 NameError: name &#39;hei&#39; is not defined</code></pre>
 </section><section id="bruke-funksjoner." class="slide level2">
-<h1>Bruke funksjoner.</h1>
+<h2>Bruke funksjoner.</h2>
 <p><em>Funksjoner må defineres før de brukes</em>.</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> hei():
-    <span class="cf">return</span> <span class="st">&quot;Hei!&quot;</span>
-message <span class="op">=</span> hei()</code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb20-1" data-line-number="1"><span class="kw">def</span> hei():</a>
+<a class="sourceLine" id="cb20-2" data-line-number="2">    <span class="cf">return</span> <span class="st">&quot;Hei!&quot;</span></a>
+<a class="sourceLine" id="cb20-3" data-line-number="3">message <span class="op">=</span> hei()</a></code></pre></div>
 <p>er OK.</p>
 </section><section id="parameter" class="slide level2">
-<h1>Parameter</h1>
+<h2>Parameter</h2>
 <ul>
-<li>En <em>parameter</em> er et navn som &quot;sendes&quot; inn i funksjonen:
+<li>En <em>parameter</em> er et navn som “sendes” inn i funksjonen:
 <ul>
 <li>Funksjonen <code>f</code> i <code>f(x)</code> har <code>x</code> som parameter</li>
 <li>Funksjonen <code>g</code> i <code>g(x,y)</code> har <code>x</code> og <code>y</code> som parametre</li>
 </ul></li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> f(x):
-  <span class="cf">return</span> x <span class="op">+</span> <span class="dv">1</span>
-
-<span class="kw">def</span> g(x,y):
-  <span class="cf">return</span> (x <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> y</code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb21-1" data-line-number="1"><span class="kw">def</span> f(x):</a>
+<a class="sourceLine" id="cb21-2" data-line-number="2">  <span class="cf">return</span> x <span class="op">+</span> <span class="dv">1</span></a>
+<a class="sourceLine" id="cb21-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb21-4" data-line-number="4"><span class="kw">def</span> g(x,y):</a>
+<a class="sourceLine" id="cb21-5" data-line-number="5">  <span class="cf">return</span> (x <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> y</a></code></pre></div>
 </section><section id="parametrisering" class="slide level2">
-<h1>Parametrisering</h1>
+<h2>Parametrisering</h2>
 <ul>
 <li>Å <em>parametrisere</em> er å endre kode til å bruke funksjoner og parametre.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># Ikke parametrisert kode</span>
-a <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> (<span class="dv">10</span> <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> (<span class="dv">10</span> <span class="op">+</span> <span class="dv">2</span>)
-b <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> (<span class="dv">11</span> <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> (<span class="dv">11</span> <span class="op">+</span> <span class="dv">2</span>)
-a <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> (<span class="dv">12</span> <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> (<span class="dv">12</span> <span class="op">+</span> <span class="dv">2</span>)
-a <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> (<span class="dv">14</span> <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> (<span class="dv">14</span> <span class="op">+</span> <span class="dv">2</span>)</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># Parametrisert kode</span>
-<span class="kw">def</span> f(x):
-  <span class="cf">return</span> <span class="dv">3</span> <span class="op">*</span> (x <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> (x <span class="op">+</span> <span class="dv">2</span>)
-
-a <span class="op">=</span> f(<span class="dv">10</span>)
-b <span class="op">=</span> f(<span class="dv">11</span>)
-a <span class="op">=</span> f(<span class="dv">12</span>)
-a <span class="op">=</span> f(<span class="dv">13</span>)</code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb22-1" data-line-number="1"><span class="co"># Ikke parametrisert kode</span></a>
+<a class="sourceLine" id="cb22-2" data-line-number="2">a <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> (<span class="dv">10</span> <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> (<span class="dv">10</span> <span class="op">+</span> <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb22-3" data-line-number="3">b <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> (<span class="dv">11</span> <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> (<span class="dv">11</span> <span class="op">+</span> <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb22-4" data-line-number="4">a <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> (<span class="dv">12</span> <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> (<span class="dv">12</span> <span class="op">+</span> <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb22-5" data-line-number="5">a <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> (<span class="dv">14</span> <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> (<span class="dv">14</span> <span class="op">+</span> <span class="dv">2</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb23-1" data-line-number="1"><span class="co"># Parametrisert kode</span></a>
+<a class="sourceLine" id="cb23-2" data-line-number="2"><span class="kw">def</span> f(x):</a>
+<a class="sourceLine" id="cb23-3" data-line-number="3">  <span class="cf">return</span> <span class="dv">3</span> <span class="op">*</span> (x <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> (x <span class="op">+</span> <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb23-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb23-5" data-line-number="5">a <span class="op">=</span> f(<span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb23-6" data-line-number="6">b <span class="op">=</span> f(<span class="dv">11</span>)</a>
+<a class="sourceLine" id="cb23-7" data-line-number="7">a <span class="op">=</span> f(<span class="dv">12</span>)</a>
+<a class="sourceLine" id="cb23-8" data-line-number="8">a <span class="op">=</span> f(<span class="dv">13</span>)</a></code></pre></div>
 </section><section id="myndig" class="slide level2">
-<h1>Myndig</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> er_myndig(alder):
-    <span class="cf">if</span> alder <span class="op">&gt;</span> <span class="dv">17</span>:
-        <span class="cf">return</span> <span class="st">&quot;Du er myndig!&quot;</span>
-    <span class="cf">else</span>:
-        <span class="cf">return</span> <span class="st">&quot;Du er ikke myndig :(&quot;</span></code></pre></div>
+<h2>Myndig</h2>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb24-1" data-line-number="1"><span class="kw">def</span> er_myndig(alder):</a>
+<a class="sourceLine" id="cb24-2" data-line-number="2">    <span class="cf">if</span> alder <span class="op">&gt;</span> <span class="dv">17</span>:</a>
+<a class="sourceLine" id="cb24-3" data-line-number="3">        <span class="cf">return</span> <span class="st">&quot;Du er myndig!&quot;</span></a>
+<a class="sourceLine" id="cb24-4" data-line-number="4">    <span class="cf">else</span>:</a>
+<a class="sourceLine" id="cb24-5" data-line-number="5">        <span class="cf">return</span> <span class="st">&quot;Du er ikke myndig :(&quot;</span></a></code></pre></div>
 </section><section id="myndig-1" class="slide level2">
-<h1>Myndig</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> er_myndig(<span class="dv">18</span>)
-<span class="co">&#39;Du er myndig!&#39;</span></code></pre></div>
+<h2>Myndig</h2>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb25-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> er_myndig(<span class="dv">18</span>)</a>
+<a class="sourceLine" id="cb25-2" data-line-number="2"><span class="co">&#39;Du er myndig!&#39;</span></a></code></pre></div>
 </section><section id="kalkulator" class="slide level2">
-<h1>Kalkulator</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> addition(tall1, tall2):
-    <span class="cf">return</span> tall1 <span class="op">+</span> tall2</code></pre></div>
+<h2>Kalkulator</h2>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb26-1" data-line-number="1"><span class="kw">def</span> addition(tall1, tall2):</a>
+<a class="sourceLine" id="cb26-2" data-line-number="2">    <span class="cf">return</span> tall1 <span class="op">+</span> tall2</a></code></pre></div>
 </section><section id="kalkulator-1" class="slide level2">
-<h1>Kalkulator</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> addition(<span class="dv">2</span>, <span class="dv">3</span>)
-<span class="dv">5</span></code></pre></div>
+<h2>Kalkulator</h2>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb27-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> addition(<span class="dv">2</span>, <span class="dv">3</span>)</a>
+<a class="sourceLine" id="cb27-2" data-line-number="2"><span class="dv">5</span></a></code></pre></div>
 </section><section id="oppgave" class="slide level2">
-<h1>Oppgave</h1>
+<h2>Oppgave</h2>
 <ul>
 <li>Lag en kalkulator som tar inn to tall og en operator, og som returnerer svaret</li>
 <li>Prøv med operatorene +, -, * og \</li>
 </ul>
 <p>Tips: Bruk if-setninger!</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> kalkulator(<span class="st">&quot;*&quot;</span>, <span class="dv">3</span>, <span class="dv">4</span>)
-<span class="dv">12</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb28-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> kalkulator(<span class="st">&quot;*&quot;</span>, <span class="dv">3</span>, <span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb28-2" data-line-number="2"><span class="dv">12</span></a></code></pre></div>
 </section></section>
-<section><section id="input-output" class="titleslide slide level1"><h1>Input / output</h1></section><section id="hva-er-input-output" class="slide level2">
-<h1>Hva er input / output?</h1>
+<section><section id="input-output" class="title-slide slide level1"><h1>Input / output</h1></section><section id="hva-er-input-output" class="slide level2">
+<h2>Hva er input / output?</h2>
 <ul>
 <li>Kommunikasjon med verden uten å bruke IDLE</li>
-<li>... Når andre enn du skal bruke programmet ditt!</li>
+<li>… Når andre enn du skal bruke programmet ditt!</li>
 </ul>
 </section><section id="input-output-i-python" class="slide level2">
-<h1>Input / output i Python</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">navn <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Hva heter du?&quot;</span>)
-<span class="bu">print</span>(navn)</code></pre></div>
+<h2>Input / output i Python</h2>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb29-1" data-line-number="1">navn <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Hva heter du?&quot;</span>)</a>
+<a class="sourceLine" id="cb29-2" data-line-number="2"><span class="bu">print</span>(navn)</a></code></pre></div>
 </section><section id="å-lese-inn-tall" class="slide level2">
-<h1>Å lese inn tall</h1>
+<h2>Å lese inn tall</h2>
 <ul>
 <li>Funksjonen <code>input()</code> gir ut <em>tekst</em></li>
 <li>Funksjonen <code>int()</code> konverterer tekst til tall</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">age_text <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;How old are you? &quot;</span>)
-age <span class="op">=</span> <span class="bu">int</span>(age_text)</code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb30-1" data-line-number="1">age_text <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;How old are you? &quot;</span>)</a>
+<a class="sourceLine" id="cb30-2" data-line-number="2">age <span class="op">=</span> <span class="bu">int</span>(age_text)</a></code></pre></div>
 </section><section id="å-skrive-ut-tall" class="slide level2">
-<h1>Å skrive ut tall</h1>
+<h2>Å skrive ut tall</h2>
 <ul>
 <li>Funksjonen <code>str()</code> konverterer tall til tekst</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">age_text <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;How old are you? &quot;</span>)
-age <span class="op">=</span> <span class="bu">int</span>(age_text)
-<span class="co"># Obs: &quot;in five &quot; + &quot;years&quot; blir &quot;in five years&quot;!</span>
-<span class="bu">print</span>(<span class="st">&quot;In five years, you are &quot;</span> <span class="op">+</span> <span class="bu">str</span>(age <span class="op">+</span> <span class="dv">5</span>) <span class="op">+</span> <span class="st">&quot; years old!&quot;</span>)</code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb31-1" data-line-number="1">age_text <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;How old are you? &quot;</span>)</a>
+<a class="sourceLine" id="cb31-2" data-line-number="2">age <span class="op">=</span> <span class="bu">int</span>(age_text)</a>
+<a class="sourceLine" id="cb31-3" data-line-number="3"><span class="co"># Obs: &quot;in five &quot; + &quot;years&quot; blir &quot;in five years&quot;!</span></a>
+<a class="sourceLine" id="cb31-4" data-line-number="4"><span class="bu">print</span>(<span class="st">&quot;In five years, you are &quot;</span> <span class="op">+</span> <span class="bu">str</span>(age <span class="op">+</span> <span class="dv">5</span>) <span class="op">+</span> <span class="st">&quot; years old!&quot;</span>)</a></code></pre></div>
 </section><section id="oppgave-familiens-alder-2" class="slide level2">
-<h1>Oppgave: familiens alder 2</h1>
+<h2>Oppgave: familiens alder 2</h2>
 <p>Nå skal vi utvide oppgaven fra tidligere. I stedet for å lagre alderen til familiemedlemmer i programmet, spør brukeren! Skriv så ut gjennomsnitt og total alder.</p>
 <p>Funksjoner vi har brukt:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">input</span>() <span class="co"># Spør brukeren</span>
-<span class="bu">int</span>()   <span class="co"># Konverterer fra tekst til tall</span>
-<span class="bu">str</span>()   <span class="co"># Konverterer fra tall til tekst</span>
-<span class="bu">print</span>() <span class="co"># Forteller brukeren noe</span></code></pre></div>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">navn <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Hva heter du?&quot;</span>)
-<span class="bu">print</span>(navn)</code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb32-1" data-line-number="1"><span class="bu">input</span>() <span class="co"># Spør brukeren</span></a>
+<a class="sourceLine" id="cb32-2" data-line-number="2"><span class="bu">int</span>()   <span class="co"># Konverterer fra tekst til tall</span></a>
+<a class="sourceLine" id="cb32-3" data-line-number="3"><span class="bu">str</span>()   <span class="co"># Konverterer fra tall til tekst</span></a>
+<a class="sourceLine" id="cb32-4" data-line-number="4"><span class="bu">print</span>() <span class="co"># Forteller brukeren noe</span></a></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb33-1" data-line-number="1">navn <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Hva heter du?&quot;</span>)</a>
+<a class="sourceLine" id="cb33-2" data-line-number="2"><span class="bu">print</span>(navn)</a></code></pre></div>
 </section></section>
-<section><section id="lister" class="titleslide slide level1"><h1>Lister</h1></section><section id="hva-er-lister" class="slide level2">
-<h1>Hva er lister?</h1>
+<section><section id="lister" class="title-slide slide level1"><h1>Lister</h1></section><section id="hva-er-lister" class="slide level2">
+<h2>Hva er lister?</h2>
 <ul>
 <li>Lister lar oss samle mange verdier</li>
 <li>Google gir oss en liste av søkeresultater</li>
 <li>Facebook har lister over e-postadresser</li>
 </ul>
 </section><section id="lister-i-python" class="slide level2">
-<h1>Lister i Python</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> mine_tall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">42</span>,<span class="dv">1337</span>,<span class="op">-</span><span class="dv">55</span>]
-<span class="op">&gt;&gt;&gt;</span> mine_tall
-[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">42</span>, <span class="dv">1337</span>, <span class="op">-</span><span class="dv">55</span>]
-<span class="op">&gt;&gt;&gt;</span> mine_tall[<span class="dv">0</span>]
-<span class="dv">1</span>
-<span class="op">&gt;&gt;&gt;</span> mine_tall[<span class="op">-</span><span class="dv">1</span>]
-<span class="op">-</span><span class="dv">55</span>
-<span class="op">&gt;&gt;&gt;</span> mine_tall[<span class="op">-</span><span class="dv">3</span>]
-<span class="dv">42</span>
-<span class="op">&gt;&gt;&gt;</span> <span class="bu">len</span>(mine_tall)
-<span class="dv">6</span>
-<span class="op">&gt;&gt;&gt;</span> mine_tall[<span class="dv">6-1</span>]
-<span class="op">-</span><span class="dv">55</span></code></pre></div>
+<h2>Lister i Python</h2>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb34-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> mine_tall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">42</span>,<span class="dv">1337</span>,<span class="op">-</span><span class="dv">55</span>]</a>
+<a class="sourceLine" id="cb34-2" data-line-number="2"><span class="op">&gt;&gt;&gt;</span> mine_tall</a>
+<a class="sourceLine" id="cb34-3" data-line-number="3">[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">42</span>, <span class="dv">1337</span>, <span class="dv">-55</span>]</a>
+<a class="sourceLine" id="cb34-4" data-line-number="4"><span class="op">&gt;&gt;&gt;</span> mine_tall[<span class="dv">0</span>]</a>
+<a class="sourceLine" id="cb34-5" data-line-number="5"><span class="dv">1</span></a>
+<a class="sourceLine" id="cb34-6" data-line-number="6"><span class="op">&gt;&gt;&gt;</span> mine_tall[<span class="op">-</span><span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb34-7" data-line-number="7"><span class="dv">-55</span></a>
+<a class="sourceLine" id="cb34-8" data-line-number="8"><span class="op">&gt;&gt;&gt;</span> mine_tall[<span class="op">-</span><span class="dv">3</span>]</a>
+<a class="sourceLine" id="cb34-9" data-line-number="9"><span class="dv">42</span></a>
+<a class="sourceLine" id="cb34-10" data-line-number="10"><span class="op">&gt;&gt;&gt;</span> <span class="bu">len</span>(mine_tall)</a>
+<a class="sourceLine" id="cb34-11" data-line-number="11"><span class="dv">6</span></a>
+<a class="sourceLine" id="cb34-12" data-line-number="12"><span class="op">&gt;&gt;&gt;</span> mine_tall[<span class="dv">6-1</span>]</a>
+<a class="sourceLine" id="cb34-13" data-line-number="13"><span class="dv">-55</span></a></code></pre></div>
 </section><section id="lister-i-python-2" class="slide level2">
-<h1>Lister i Python 2</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> mine_tall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">42</span>,<span class="dv">1337</span>,<span class="op">-</span><span class="dv">55</span>]  <span class="co"># Samme som før</span>
-<span class="op">&gt;&gt;&gt;</span> mine_tall[<span class="dv">6</span>]
-Traceback (most recent call last):
-  File <span class="st">&quot;&lt;stdin&gt;&quot;</span>, line <span class="dv">1</span>, <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span>
-<span class="pp">IndexError</span>: <span class="bu">list</span> index out of <span class="bu">range</span>
-<span class="op">&gt;&gt;&gt;</span> mine_tall
-[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">42</span>, <span class="dv">1337</span>, <span class="op">-</span><span class="dv">55</span>]
-<span class="op">&gt;&gt;&gt;</span> mine_tall[<span class="dv">2</span>:]
-[<span class="dv">3</span>, <span class="dv">42</span>, <span class="dv">1337</span>, <span class="op">-</span><span class="dv">55</span>]
-<span class="op">&gt;&gt;&gt;</span> mine_tall[:<span class="dv">2</span>]
-[<span class="dv">1</span>, <span class="dv">2</span>]
-<span class="op">&gt;&gt;&gt;</span> mine_tall[<span class="dv">2</span>]
-<span class="dv">3</span>
-<span class="op">&gt;&gt;&gt;</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>] <span class="op">+</span> [<span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>]
-[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>]</code></pre></div>
+<h2>Lister i Python 2</h2>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb35-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> mine_tall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">42</span>,<span class="dv">1337</span>,<span class="op">-</span><span class="dv">55</span>]  <span class="co"># Samme som før</span></a>
+<a class="sourceLine" id="cb35-2" data-line-number="2"><span class="op">&gt;&gt;&gt;</span> mine_tall[<span class="dv">6</span>]</a>
+<a class="sourceLine" id="cb35-3" data-line-number="3">Traceback (most recent call last):</a>
+<a class="sourceLine" id="cb35-4" data-line-number="4">  File <span class="st">&quot;&lt;stdin&gt;&quot;</span>, line <span class="dv">1</span>, <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb35-5" data-line-number="5"><span class="pp">IndexError</span>: <span class="bu">list</span> index out of <span class="bu">range</span></a>
+<a class="sourceLine" id="cb35-6" data-line-number="6"><span class="op">&gt;&gt;&gt;</span> mine_tall</a>
+<a class="sourceLine" id="cb35-7" data-line-number="7">[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">42</span>, <span class="dv">1337</span>, <span class="dv">-55</span>]</a>
+<a class="sourceLine" id="cb35-8" data-line-number="8"><span class="op">&gt;&gt;&gt;</span> mine_tall[<span class="dv">2</span>:]</a>
+<a class="sourceLine" id="cb35-9" data-line-number="9">[<span class="dv">3</span>, <span class="dv">42</span>, <span class="dv">1337</span>, <span class="dv">-55</span>]</a>
+<a class="sourceLine" id="cb35-10" data-line-number="10"><span class="op">&gt;&gt;&gt;</span> mine_tall[:<span class="dv">2</span>]</a>
+<a class="sourceLine" id="cb35-11" data-line-number="11">[<span class="dv">1</span>, <span class="dv">2</span>]</a>
+<a class="sourceLine" id="cb35-12" data-line-number="12"><span class="op">&gt;&gt;&gt;</span> mine_tall[<span class="dv">2</span>]</a>
+<a class="sourceLine" id="cb35-13" data-line-number="13"><span class="dv">3</span></a>
+<a class="sourceLine" id="cb35-14" data-line-number="14"><span class="op">&gt;&gt;&gt;</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>] <span class="op">+</span> [<span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>]</a>
+<a class="sourceLine" id="cb35-15" data-line-number="15">[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>]</a></code></pre></div>
 </section><section id="oppgave-elementer-fra-liste" class="slide level2">
-<h1>Oppgave: elementer fra liste</h1>
+<h2>Oppgave: elementer fra liste</h2>
 <p>Gjør følgende i Python-skallet:</p>
 <ul>
 <li>Lag en liste som inneholder 5 tall</li>
@@ -493,59 +496,59 @@ Traceback (most recent call last):
 </ul>
 <p>Tips: <code>list[-3]</code> henter element 3 <em>bakfra</em>!</p>
 </section></section>
-<section><section id="while" class="titleslide slide level1"><h1>While</h1></section><section id="hva-er-while-løkker" class="slide level2">
-<h1>Hva er while-løkker?</h1>
+<section><section id="while" class="title-slide slide level1"><h1>While</h1></section><section id="hva-er-while-løkker" class="slide level2">
+<h2>Hva er while-løkker?</h2>
 <ul>
 <li>Kjører en kodesnutt så lenge et gitt uttrykk er sant</li>
 <li>Kan kjøre evig, og avbrytes med break</li>
 </ul>
 </section><section id="while-løkker-i-python" class="slide level2">
-<h1>While-løkker i Python</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">print</span>(<span class="st">&quot;Dette er en huskeliste-app&quot;</span>)
-huskeliste <span class="op">=</span> []
-
-<span class="cf">while</span> <span class="va">True</span>:
-    svar <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Legg til noe på huskelisten: &quot;</span>)
-    huskeliste.append(svar)
-    <span class="bu">print</span>(huskeliste)</code></pre></div>
+<h2>While-løkker i Python</h2>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb36-1" data-line-number="1"><span class="bu">print</span>(<span class="st">&quot;Dette er en huskeliste-app&quot;</span>)</a>
+<a class="sourceLine" id="cb36-2" data-line-number="2">huskeliste <span class="op">=</span> []</a>
+<a class="sourceLine" id="cb36-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb36-4" data-line-number="4"><span class="cf">while</span> <span class="va">True</span>:</a>
+<a class="sourceLine" id="cb36-5" data-line-number="5">    svar <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Legg til noe på huskelisten: &quot;</span>)</a>
+<a class="sourceLine" id="cb36-6" data-line-number="6">    huskeliste.append(svar)</a>
+<a class="sourceLine" id="cb36-7" data-line-number="7">    <span class="bu">print</span>(huskeliste)</a></code></pre></div>
 </section><section id="oppgave-mattespill" class="slide level2">
-<h1>Oppgave: mattespill!</h1>
+<h2>Oppgave: mattespill!</h2>
 <p>Lag et multiplikasjonsspill!</p>
 <ol type="1">
 <li>Be brukeren gange to tall</li>
 <li>Sjekk svaret!</li>
-<li>Gjør dette mange ganger ... <code>while</code>?</li>
+<li>Gjør dette mange ganger … <code>while</code>?</li>
 </ol>
 <p>Tilfeldige tall:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> random <span class="im">import</span> randint
-
-x <span class="op">=</span> randint(<span class="dv">0</span>, <span class="dv">6</span>) <span class="co"># gir x = 0, x = 1, ..., eller x = 5</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb37-1" data-line-number="1"><span class="im">from</span> random <span class="im">import</span> randint</a>
+<a class="sourceLine" id="cb37-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb37-3" data-line-number="3">x <span class="op">=</span> randint(<span class="dv">0</span>, <span class="dv">6</span>) <span class="co"># gir x = 0, x = 1, ..., eller x = 5</span></a></code></pre></div>
 </section></section>
-<section><section id="for" class="titleslide slide level1"><h1>For</h1></section><section id="hvorfor" class="slide level2">
-<h1>Hvor<code>for</code>?</h1>
+<section><section id="for" class="title-slide slide level1"><h1>For</h1></section><section id="hvorfor" class="slide level2">
+<h2>Hvor<code>for</code>?</h2>
 <p><code>for</code> gjør noe med hvert element i en liste:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> numbers <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">42</span>]
-<span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> number <span class="kw">in</span> numbers: <span class="bu">print</span>(number)
-...
-<span class="dv">1</span>
-<span class="dv">2</span>
-<span class="dv">42</span>
-<span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> number <span class="kw">in</span> numbers: <span class="bu">print</span>(<span class="dv">2</span><span class="op">*</span>number)
-...
-<span class="dv">2</span>
-<span class="dv">4</span>
-<span class="dv">84</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb38-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> numbers <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">42</span>]</a>
+<a class="sourceLine" id="cb38-2" data-line-number="2"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> number <span class="kw">in</span> numbers: <span class="bu">print</span>(number)</a>
+<a class="sourceLine" id="cb38-3" data-line-number="3">...</a>
+<a class="sourceLine" id="cb38-4" data-line-number="4"><span class="dv">1</span></a>
+<a class="sourceLine" id="cb38-5" data-line-number="5"><span class="dv">2</span></a>
+<a class="sourceLine" id="cb38-6" data-line-number="6"><span class="dv">42</span></a>
+<a class="sourceLine" id="cb38-7" data-line-number="7"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> number <span class="kw">in</span> numbers: <span class="bu">print</span>(<span class="dv">2</span><span class="op">*</span>number)</a>
+<a class="sourceLine" id="cb38-8" data-line-number="8">...</a>
+<a class="sourceLine" id="cb38-9" data-line-number="9"><span class="dv">2</span></a>
+<a class="sourceLine" id="cb38-10" data-line-number="10"><span class="dv">4</span></a>
+<a class="sourceLine" id="cb38-11" data-line-number="11"><span class="dv">84</span></a></code></pre></div>
 </section><section id="for-i-skallet" class="slide level2">
-<h1>For i skallet</h1>
+<h2>For i skallet</h2>
 <p>For på én linje er fint i skallet:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> number <span class="kw">in</span> numbers: <span class="bu">print</span> number</code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb39-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> number <span class="kw">in</span> numbers: <span class="bu">print</span> number</a></code></pre></div>
 </section><section id="for-i-kildekode-1" class="slide level2">
-<h1>For i kildekode 1</h1>
+<h2>For i kildekode 1</h2>
 <p>I kildekode legger vi <code>for</code> over flere linjer:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">mange_tall <span class="op">=</span> [<span class="dv">101</span>,<span class="dv">102</span>,<span class="dv">103</span>]
-<span class="cf">for</span> x <span class="kw">in</span> mange_tall:
-  <span class="bu">print</span>(x)
-  <span class="bu">print</span>(<span class="st">&quot;Hei!&quot;</span>)</code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb40-1" data-line-number="1">mange_tall <span class="op">=</span> [<span class="dv">101</span>,<span class="dv">102</span>,<span class="dv">103</span>]</a>
+<a class="sourceLine" id="cb40-2" data-line-number="2"><span class="cf">for</span> x <span class="kw">in</span> mange_tall:</a>
+<a class="sourceLine" id="cb40-3" data-line-number="3">  <span class="bu">print</span>(x)</a>
+<a class="sourceLine" id="cb40-4" data-line-number="4">  <span class="bu">print</span>(<span class="st">&quot;Hei!&quot;</span>)</a></code></pre></div>
 <p>skriver ut</p>
 <pre><code>101
 Hei!
@@ -554,32 +557,32 @@ Hei!
 103
 Hei!</code></pre>
 </section><section id="for-i-kildekode-2" class="slide level2">
-<h1>For i kildekode 2</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">mange_tall <span class="op">=</span> [<span class="dv">101</span>,<span class="dv">102</span>,<span class="dv">103</span>]
-<span class="cf">for</span> x <span class="kw">in</span> mange_tall:
-  <span class="bu">print</span>(x)
-<span class="bu">print</span>(<span class="st">&quot;Hei!&quot;</span>)  <span class="co"># Fjernet indent --&gt; * Ikke del av for</span>
-               <span class="co">#                    * Kjøres én gang, _etter_ at</span>
-               <span class="co">#                      for er ferdig!</span></code></pre></div>
+<h2>For i kildekode 2</h2>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb42-1" data-line-number="1">mange_tall <span class="op">=</span> [<span class="dv">101</span>,<span class="dv">102</span>,<span class="dv">103</span>]</a>
+<a class="sourceLine" id="cb42-2" data-line-number="2"><span class="cf">for</span> x <span class="kw">in</span> mange_tall:</a>
+<a class="sourceLine" id="cb42-3" data-line-number="3">  <span class="bu">print</span>(x)</a>
+<a class="sourceLine" id="cb42-4" data-line-number="4"><span class="bu">print</span>(<span class="st">&quot;Hei!&quot;</span>)  <span class="co"># Fjernet indent --&gt; * Ikke del av for</span></a>
+<a class="sourceLine" id="cb42-5" data-line-number="5">               <span class="co">#                    * Kjøres én gang, _etter_ at</span></a>
+<a class="sourceLine" id="cb42-6" data-line-number="6">               <span class="co">#                      for er ferdig!</span></a></code></pre></div>
 <p>skriver ut</p>
 <pre><code>101
 102
 103
 Hei!</code></pre>
 </section><section id="gjør-noe-n-ganger" class="slide level2">
-<h1>Gjør noe <code>n</code> ganger</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> <span class="bu">range</span>(<span class="dv">4</span>)
-[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]
-<span class="op">&gt;&gt;&gt;</span> <span class="bu">range</span>(<span class="dv">2</span>,<span class="dv">4</span>)
-[<span class="dv">2</span>, <span class="dv">3</span>]
-<span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>): <span class="bu">print</span> n<span class="op">*</span>n
-...
-<span class="dv">0</span>
-<span class="dv">1</span>
-<span class="dv">4</span>
-<span class="dv">9</span></code></pre></div>
+<h2>Gjør noe <code>n</code> ganger</h2>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb44-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> <span class="bu">range</span>(<span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb44-2" data-line-number="2">[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</a>
+<a class="sourceLine" id="cb44-3" data-line-number="3"><span class="op">&gt;&gt;&gt;</span> <span class="bu">range</span>(<span class="dv">2</span>,<span class="dv">4</span>)</a>
+<a class="sourceLine" id="cb44-4" data-line-number="4">[<span class="dv">2</span>, <span class="dv">3</span>]</a>
+<a class="sourceLine" id="cb44-5" data-line-number="5"><span class="op">&gt;&gt;&gt;</span> <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>): <span class="bu">print</span> n<span class="op">*</span>n</a>
+<a class="sourceLine" id="cb44-6" data-line-number="6">...</a>
+<a class="sourceLine" id="cb44-7" data-line-number="7"><span class="dv">0</span></a>
+<a class="sourceLine" id="cb44-8" data-line-number="8"><span class="dv">1</span></a>
+<a class="sourceLine" id="cb44-9" data-line-number="9"><span class="dv">4</span></a>
+<a class="sourceLine" id="cb44-10" data-line-number="10"><span class="dv">9</span></a></code></pre></div>
 </section><section id="oppgave-7-gangeren" class="slide level2">
-<h1>Oppgave: 7-gangeren</h1>
+<h2>Oppgave: 7-gangeren</h2>
 <ul>
 <li>Bruk en <code>for</code>-løkke til å skrive ut 7-gangeren.</li>
 <li>Ønsket output:</li>
@@ -596,191 +599,171 @@ Hei!</code></pre>
 63
 70</code></pre>
 </section><section id="oppgave-7-gangeren-1" class="slide level2">
-<h1>Oppgave: 7-gangeren</h1>
+<h2>Oppgave: 7-gangeren</h2>
 <p>Løsningsforslag:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">11</span>):
-  <span class="bu">print</span>(<span class="dv">7</span><span class="op">*</span>n)</code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb46-1" data-line-number="1"><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">11</span>):</a>
+<a class="sourceLine" id="cb46-2" data-line-number="2">  <span class="bu">print</span>(<span class="dv">7</span><span class="op">*</span>n)</a></code></pre></div>
 </section><section id="flere-for-løkker-i-python" class="slide level2">
-<h1>Flere for-løkker i Python</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">mange_tall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]
-<span class="cf">for</span> tall <span class="kw">in</span> mange_tall
-    <span class="bu">print</span>(<span class="st">&quot;Sjekker om &quot;</span> <span class="op">+</span> <span class="bu">str</span>(tall) <span class="op">+</span> <span class="st">&quot; er et partall&quot;</span>)
-
-    <span class="cf">if</span> tall <span class="op">%</span> <span class="dv">2</span>:
-        <span class="bu">print</span>(<span class="bu">str</span>(tall) <span class="op">+</span> <span class="st">&quot; er et oddetall&quot;</span>)
-    <span class="cf">else</span>:
-        <span class="bu">print</span>(<span class="bu">str</span>(tall) <span class="op">+</span> <span class="st">&quot; er et partall&quot;</span>)</code></pre></div>
+<h2>Flere for-løkker i Python</h2>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb47-1" data-line-number="1">mange_tall <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]</a>
+<a class="sourceLine" id="cb47-2" data-line-number="2"><span class="cf">for</span> tall <span class="kw">in</span> mange_tall</a>
+<a class="sourceLine" id="cb47-3" data-line-number="3">    <span class="bu">print</span>(<span class="st">&quot;Sjekker om &quot;</span> <span class="op">+</span> <span class="bu">str</span>(tall) <span class="op">+</span> <span class="st">&quot; er et partall&quot;</span>)</a>
+<a class="sourceLine" id="cb47-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb47-5" data-line-number="5">    <span class="cf">if</span> tall <span class="op">%</span> <span class="dv">2</span>:</a>
+<a class="sourceLine" id="cb47-6" data-line-number="6">        <span class="bu">print</span>(<span class="bu">str</span>(tall) <span class="op">+</span> <span class="st">&quot; er et oddetall&quot;</span>)</a>
+<a class="sourceLine" id="cb47-7" data-line-number="7">    <span class="cf">else</span>:</a>
+<a class="sourceLine" id="cb47-8" data-line-number="8">        <span class="bu">print</span>(<span class="bu">str</span>(tall) <span class="op">+</span> <span class="st">&quot; er et partall&quot;</span>)</a></code></pre></div>
 </section><section id="oppgave-mattespill-2" class="slide level2">
-<h1>Oppgave: mattespill 2!</h1>
+<h2>Oppgave: mattespill 2!</h2>
 <ul>
 <li>Bruk mattespillet du allerede har laget</li>
 <li>I stedet for <em>uendelig</em> mange oppgaver, gi brukeren 5 oppgaver!</li>
 </ul>
 </section></section>
-<section><section id="programmer-ditt-eget-gjettespill" class="titleslide slide level1"><h1>Programmer ditt eget gjettespill!</h1></section><section id="hø" class="slide level2">
-<h1>Hø?</h1>
-<figure>
-<img src="assets/guess_my_number_illustration.png" />
-</figure>
+<section><section id="programmer-ditt-eget-gjettespill" class="title-slide slide level1"><h1>Programmer ditt eget gjettespill!</h1></section><section id="hø" class="slide level2">
+<h2>Hø?</h2>
+<p><img data-src="assets/guess_my_number_illustration.png" /></p>
 </section><section id="takk-til-barski" class="slide level2">
-<h1>Takk til Barski</h1>
-<p>Spill og illustrasjon er hentet fra den strålende boka &quot;Land of Lisp&quot; av Conrad Barski, og tilpasset Python.</p>
+<h2>Takk til Barski</h2>
+<p>Spill og illustrasjon er hentet fra den strålende boka “Land of Lisp” av Conrad Barski, og tilpasset Python.</p>
 <p>Musikkvideo:</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HM1Zb3xmvMc" frameborder="0" allowfullscreen>
 </iframe>
 </section><section id="demo" class="slide level2">
-<h1>Demo</h1>
-<p>Slik kan det fungere ...</p>
+<h2>Demo</h2>
+<p>Slik kan det fungere …</p>
 <p>Sider under beskriver hvordan gjettespillet kan implementeres. Prøv først selv, og gå videre nedover om du trenger et tips!</p>
 </section><section id="gjettefunksjon" class="slide level2">
-<h1>Gjettefunksjon</h1>
+<h2>Gjettefunksjon</h2>
 <p>Gitt at vi har en øvre og nedre grense, kan vi gjette at tallet ligger midt i mellom:</p>
 <!-- ![](assets/guess_my_number_1.png) -->
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># Gjettespill!</span>
-
-low <span class="op">=</span> <span class="dv">0</span>
-high <span class="op">=</span> <span class="dv">100</span>
-
-<span class="kw">def</span> guess():
-    total <span class="op">=</span> high <span class="op">+</span> low          <span class="co"># f.eks 75 + 50 = 125</span>
-    average <span class="op">=</span> total <span class="op">/</span> <span class="dv">2</span>         <span class="co"># 125/2 = 62.5</span>
-    next_guess <span class="op">=</span> <span class="bu">int</span>(average)   <span class="co"># int(62.5) = 62</span>
-    <span class="cf">return</span> next_guess</code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb48-1" data-line-number="1"><span class="co"># Gjettespill!</span></a>
+<a class="sourceLine" id="cb48-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb48-3" data-line-number="3">low <span class="op">=</span> <span class="dv">0</span></a>
+<a class="sourceLine" id="cb48-4" data-line-number="4">high <span class="op">=</span> <span class="dv">100</span></a>
+<a class="sourceLine" id="cb48-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb48-6" data-line-number="6"><span class="kw">def</span> guess():</a>
+<a class="sourceLine" id="cb48-7" data-line-number="7">    total <span class="op">=</span> high <span class="op">+</span> low          <span class="co"># f.eks 75 + 50 = 125</span></a>
+<a class="sourceLine" id="cb48-8" data-line-number="8">    average <span class="op">=</span> total <span class="op">/</span> <span class="dv">2</span>         <span class="co"># 125/2 = 62.5</span></a>
+<a class="sourceLine" id="cb48-9" data-line-number="9">    next_guess <span class="op">=</span> <span class="bu">int</span>(average)   <span class="co"># int(62.5) = 62</span></a>
+<a class="sourceLine" id="cb48-10" data-line-number="10">    <span class="cf">return</span> next_guess</a></code></pre></div>
 </section><section id="prøve-gjettefunksjon" class="slide level2">
-<h1>Prøve gjettefunksjon</h1>
+<h2>Prøve gjettefunksjon</h2>
 <p>Hvordan fungerer denne? Vi kjører modulen i IDLE, så vi kan leke med verdiene.</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> guess
-<span class="op">&lt;</span>function guess at <span class="bn">0x7fee85ff9840</span><span class="op">&gt;</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb49-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> guess</a>
+<a class="sourceLine" id="cb49-2" data-line-number="2"><span class="op">&lt;</span>function guess at <span class="bn">0x7fee85ff9840</span><span class="op">&gt;</span></a></code></pre></div>
 <p>Wops, guess var en funksjon. Vi trenger paranterser for å <em>kalle</em> en funksjon:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> guess()
-<span class="dv">50</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb50-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> guess()</a>
+<a class="sourceLine" id="cb50-2" data-line-number="2"><span class="dv">50</span></a></code></pre></div>
 </section><section id="prøve-gjettefunksjon-1" class="slide level2">
-<h1>Prøve gjettefunksjon</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> high
-<span class="dv">100</span>
-<span class="op">&gt;&gt;&gt;</span> low
-<span class="dv">0</span></code></pre></div>
-<p>... så low starter på 0, og high på 100. Hva om vi endrer på dette?</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> low <span class="op">=</span> <span class="dv">75</span>
-<span class="op">&gt;&gt;&gt;</span> guess()
-<span class="dv">87</span></code></pre></div>
+<h2>Prøve gjettefunksjon</h2>
+<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb51-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> high</a>
+<a class="sourceLine" id="cb51-2" data-line-number="2"><span class="dv">100</span></a>
+<a class="sourceLine" id="cb51-3" data-line-number="3"><span class="op">&gt;&gt;&gt;</span> low</a>
+<a class="sourceLine" id="cb51-4" data-line-number="4"><span class="dv">0</span></a></code></pre></div>
+<p>… så low starter på 0, og high på 100. Hva om vi endrer på dette?</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb52-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> low <span class="op">=</span> <span class="dv">75</span></a>
+<a class="sourceLine" id="cb52-2" data-line-number="2"><span class="op">&gt;&gt;&gt;</span> guess()</a>
+<a class="sourceLine" id="cb52-3" data-line-number="3"><span class="dv">87</span></a></code></pre></div>
 </section><section id="lavere-høyere" class="slide level2">
-<h1>Lavere? Høyere?</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> <span class="co"># Hemmelig tall er 42!</span>
-<span class="op">&gt;&gt;&gt;</span> guess()
-<span class="dv">50</span>
-<span class="op">&gt;&gt;&gt;</span> lower()
-<span class="dv">24</span>
-<span class="op">&gt;&gt;&gt;</span> higher()
-<span class="dv">37</span>
-<span class="op">&gt;&gt;&gt;</span> higher()
-<span class="dv">43</span>
-<span class="op">&gt;&gt;&gt;</span> lower()
-<span class="dv">40</span>
-<span class="op">&gt;&gt;&gt;</span> higher()
-<span class="dv">41</span>
-<span class="op">&gt;&gt;&gt;</span> higher()
-<span class="dv">42</span></code></pre></div>
+<h2>Lavere? Høyere?</h2>
+<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb53-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> <span class="co"># Hemmelig tall er 42!</span></a>
+<a class="sourceLine" id="cb53-2" data-line-number="2"><span class="op">&gt;&gt;&gt;</span> guess()</a>
+<a class="sourceLine" id="cb53-3" data-line-number="3"><span class="dv">50</span></a>
+<a class="sourceLine" id="cb53-4" data-line-number="4"><span class="op">&gt;&gt;&gt;</span> lower()</a>
+<a class="sourceLine" id="cb53-5" data-line-number="5"><span class="dv">24</span></a>
+<a class="sourceLine" id="cb53-6" data-line-number="6"><span class="op">&gt;&gt;&gt;</span> higher()</a>
+<a class="sourceLine" id="cb53-7" data-line-number="7"><span class="dv">37</span></a>
+<a class="sourceLine" id="cb53-8" data-line-number="8"><span class="op">&gt;&gt;&gt;</span> higher()</a>
+<a class="sourceLine" id="cb53-9" data-line-number="9"><span class="dv">43</span></a>
+<a class="sourceLine" id="cb53-10" data-line-number="10"><span class="op">&gt;&gt;&gt;</span> lower()</a>
+<a class="sourceLine" id="cb53-11" data-line-number="11"><span class="dv">40</span></a>
+<a class="sourceLine" id="cb53-12" data-line-number="12"><span class="op">&gt;&gt;&gt;</span> higher()</a>
+<a class="sourceLine" id="cb53-13" data-line-number="13"><span class="dv">41</span></a>
+<a class="sourceLine" id="cb53-14" data-line-number="14"><span class="op">&gt;&gt;&gt;</span> higher()</a>
+<a class="sourceLine" id="cb53-15" data-line-number="15"><span class="dv">42</span></a></code></pre></div>
 </section><section id="lavere-høyere-1" class="slide level2">
-<h1>Lavere? Høyere?</h1>
+<h2>Lavere? Høyere?</h2>
 <p>Vi svarer datamaskinen ved å kalle funksjonen <code>lower()</code> eller <code>higher()</code>:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> lower():
-    <span class="co"># global lar oss endre en global variabel</span>
-    <span class="co"># inne i en funksjon</span>
-    <span class="kw">global</span> high
-    high <span class="op">=</span> guess() <span class="op">-</span> <span class="dv">1</span>
-    <span class="cf">return</span> guess()
-
-<span class="kw">def</span> bigger():
-    <span class="kw">global</span> low
-    low <span class="op">=</span> guess() <span class="op">+</span> <span class="dv">1</span>
-    <span class="cf">return</span> guess()</code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb54-1" data-line-number="1"><span class="kw">def</span> lower():</a>
+<a class="sourceLine" id="cb54-2" data-line-number="2">    <span class="co"># global lar oss endre en global variabel</span></a>
+<a class="sourceLine" id="cb54-3" data-line-number="3">    <span class="co"># inne i en funksjon</span></a>
+<a class="sourceLine" id="cb54-4" data-line-number="4">    <span class="kw">global</span> high</a>
+<a class="sourceLine" id="cb54-5" data-line-number="5">    high <span class="op">=</span> guess() <span class="op">-</span> <span class="dv">1</span></a>
+<a class="sourceLine" id="cb54-6" data-line-number="6">    <span class="cf">return</span> guess()</a>
+<a class="sourceLine" id="cb54-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb54-8" data-line-number="8"><span class="kw">def</span> bigger():</a>
+<a class="sourceLine" id="cb54-9" data-line-number="9">    <span class="kw">global</span> low</a>
+<a class="sourceLine" id="cb54-10" data-line-number="10">    low <span class="op">=</span> guess() <span class="op">+</span> <span class="dv">1</span></a>
+<a class="sourceLine" id="cb54-11" data-line-number="11">    <span class="cf">return</span> guess()</a></code></pre></div>
 </section><section id="hva-når-vi-vinner" class="slide level2">
-<h1>Hva når vi vinner?</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> <span class="co"># Guessing 77</span>
-<span class="op">&gt;&gt;&gt;</span> guess()
-<span class="dv">50</span>
-<span class="op">&gt;&gt;&gt;</span> higher()
-<span class="dv">75</span>
-<span class="op">&gt;&gt;&gt;</span> higher()
-<span class="dv">88</span>
-<span class="op">&gt;&gt;&gt;</span> lower()
-<span class="dv">81</span>
-<span class="op">&gt;&gt;&gt;</span> lower()
-<span class="dv">78</span>
-<span class="op">&gt;&gt;&gt;</span> lower()
-<span class="dv">76</span>
-<span class="op">&gt;&gt;&gt;</span> higher()
-<span class="dv">77</span>
-<span class="op">&gt;&gt;&gt;</span> correct()
-<span class="co">&#39;Yippie!!!&#39;</span></code></pre></div>
+<h2>Hva når vi vinner?</h2>
+<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb55-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> <span class="co"># Guessing 77</span></a>
+<a class="sourceLine" id="cb55-2" data-line-number="2"><span class="op">&gt;&gt;&gt;</span> guess()</a>
+<a class="sourceLine" id="cb55-3" data-line-number="3"><span class="dv">50</span></a>
+<a class="sourceLine" id="cb55-4" data-line-number="4"><span class="op">&gt;&gt;&gt;</span> higher()</a>
+<a class="sourceLine" id="cb55-5" data-line-number="5"><span class="dv">75</span></a>
+<a class="sourceLine" id="cb55-6" data-line-number="6"><span class="op">&gt;&gt;&gt;</span> higher()</a>
+<a class="sourceLine" id="cb55-7" data-line-number="7"><span class="dv">88</span></a>
+<a class="sourceLine" id="cb55-8" data-line-number="8"><span class="op">&gt;&gt;&gt;</span> lower()</a>
+<a class="sourceLine" id="cb55-9" data-line-number="9"><span class="dv">81</span></a>
+<a class="sourceLine" id="cb55-10" data-line-number="10"><span class="op">&gt;&gt;&gt;</span> lower()</a>
+<a class="sourceLine" id="cb55-11" data-line-number="11"><span class="dv">78</span></a>
+<a class="sourceLine" id="cb55-12" data-line-number="12"><span class="op">&gt;&gt;&gt;</span> lower()</a>
+<a class="sourceLine" id="cb55-13" data-line-number="13"><span class="dv">76</span></a>
+<a class="sourceLine" id="cb55-14" data-line-number="14"><span class="op">&gt;&gt;&gt;</span> higher()</a>
+<a class="sourceLine" id="cb55-15" data-line-number="15"><span class="dv">77</span></a>
+<a class="sourceLine" id="cb55-16" data-line-number="16"><span class="op">&gt;&gt;&gt;</span> correct()</a>
+<a class="sourceLine" id="cb55-17" data-line-number="17"><span class="co">&#39;Yippie!!!&#39;</span></a></code></pre></div>
 </section><section id="binærsøk" class="slide level2">
-<h1>&quot;Binærsøk&quot;</h1>
+<h2>“Binærsøk”</h2>
 <p>Gratulerer, dere har nå implementert et binærsøk! Binærsøk er en av grunnene til at Google-søk er raske.</p>
 </section></section>
-<section><section id="python-og-abaqus" class="titleslide slide level1"><h1>Python og Abaqus</h1></section><section id="arkitektur-1" class="slide level2">
-<h1>Arkitektur 1</h1>
-<figure>
-<img src="assets-no/abaqus-python-how-it-works.png" />
-</figure>
+<section><section id="python-og-abaqus" class="title-slide slide level1"><h1>Python og Abaqus</h1></section><section id="arkitektur-1" class="slide level2">
+<h2>Arkitektur 1</h2>
+<p><img data-src="assets-no/abaqus-python-how-it-works.png" /></p>
 </section><section id="arkitektur-2" class="slide level2">
-<h1>Arkitektur 2</h1>
+<h2>Arkitektur 2</h2>
 <ul>
-<li><p>På min maskin ligger Abaqus' Python på <code>C:\SIMULIA\CAE\2016\win_b64</code> <code>\code\bin\python.exe</code></p></li>
+<li><p>På min maskin ligger Abaqus’ Python på <code>C:\SIMULIA\CAE\2016\win_b64</code> <code>\code\bin\python.exe</code></p></li>
 <li><p>Store deler av Abaqus CAE er skrevet i Python, og kjører på en tilpasset Python-plattform.</p></li>
-<li><p>Når vi kjører kode på Abaqus' Python-plattform, får vi tilgang til å lage bokser, endre en CAE-modell og hente ut data fra ODB-er.</p></li>
+<li><p>Når vi kjører kode på Abaqus’ Python-plattform, får vi tilgang til å lage bokser, endre en CAE-modell og hente ut data fra ODB-er.</p></li>
 </ul>
 </section><section id="abaqus-python-i-cae" class="slide level2">
-<h1>Abaqus Python i CAE</h1>
+<h2>Abaqus Python i CAE</h2>
 <p>Du har allerede en Python-tolker! <code>&gt;&gt;&gt;</code> tyder på at du kan skrive Python.</p>
-<figure>
-<img src="assets-no/abaqus-python-cae.png" />
-</figure>
+<p><img data-src="assets-no/abaqus-python-cae.png" /></p>
 </section><section id="abaqus-python-i-cmd" class="slide level2">
-<h1>Abaqus Python i CMD</h1>
-<figure>
-<img src="assets-no/abaqus-python-cmd.png" />
-</figure>
+<h2>Abaqus Python i CMD</h2>
+<p><img data-src="assets-no/abaqus-python-cmd.png" /></p>
 </section><section id="kjøre-filer-i-abaqus-1" class="slide level2">
-<h1>Kjøre filer i Abaqus 1</h1>
+<h2>Kjøre filer i Abaqus 1</h2>
 <p>Lag en ny Python-fil på valgfri måte</p>
-<figure>
-<img src="assets-no/abaqus_defining_gx_in.png" />
-</figure>
+<p><img data-src="assets-no/abaqus_defining_gx_in.png" /></p>
 </section><section id="kjøre-filer-i-abaqus-2" class="slide level2">
-<h1>Kjøre filer i Abaqus 2</h1>
+<h2>Kjøre filer i Abaqus 2</h2>
 <p>Trykk <code>Run Script</code></p>
-<figure>
-<img src="assets-no/abaqus-cae-run-script.png" />
-</figure>
+<p><img data-src="assets-no/abaqus-cae-run-script.png" /></p>
 </section><section id="kjøre-filer-i-abaqus-3" class="slide level2">
-<h1>Kjøre filer i Abaqus 3</h1>
+<h2>Kjøre filer i Abaqus 3</h2>
 <p>og og velg scriptet ditt:</p>
-<figure>
-<img src="assets-no/abaqus-cae-choose-my_function.png" />
-</figure>
+<p><img data-src="assets-no/abaqus-cae-choose-my_function.png" /></p>
 </section><section id="kjøre-filer-i-abaqus-4" class="slide level2">
-<h1>Kjøre filer i Abaqus 4</h1>
+<h2>Kjøre filer i Abaqus 4</h2>
 <p>Hva du skriver ut med <code>print</code> dukker opp her:</p>
-<figure>
-<img src="assets-no/abaqus-cae-print-goes-here.png" />
-</figure>
+<p><img data-src="assets-no/abaqus-cae-print-goes-here.png" /></p>
 </section><section id="kjøre-filer-i-abaqus-5" class="slide level2">
-<h1>Kjøre filer i Abaqus 5</h1>
+<h2>Kjøre filer i Abaqus 5</h2>
 <p>og ting du definerer i filen blir tilgjengelig fra skallet:</p>
-<figure>
-<img src="assets-no/abaqus-cae-use-functions-here.png" />
-</figure>
+<p><img data-src="assets-no/abaqus-cae-use-functions-here.png" /></p>
 </section><section id="alternativ-python-editor" class="slide level2">
-<h1>Alternativ Python-editor</h1>
+<h2>Alternativ Python-editor</h2>
 <p>Jeg bruker <a href="http://atom.io">Github Atom</a>. Denne er god.</p>
 </section><section id="oppgave-a-abaqus" class="slide level2">
-<h1>Oppgave A: Abaqus</h1>
-<figure>
-<img src="assets-no/abaqus-plate.png" />
-</figure>
+<h2>Oppgave A: Abaqus</h2>
+<p><img data-src="assets-no/abaqus-plate.png" /></p>
 </section><section id="oppgave-del-a1" class="slide level2">
-<h1>Oppgave del A1</h1>
+<h2>Oppgave del A1</h2>
 <p><strong>Modeller fritt opplagt plate i Abaqus: <code>plate.cae</code></strong></p>
 <ul>
 <li>Størrelse: 4m x 6m x 200 mm.</li>
@@ -788,7 +771,7 @@ high <span class="op">=</span> <span class="dv">100</span>
 <li>Dimensjonerende last: 10 kN/m2</li>
 </ul>
 </section><section id="oppgave-del-a2" class="slide level2">
-<h1>Oppgave del A2</h1>
+<h2>Oppgave del A2</h2>
 <p><strong>Gjør om til script</strong></p>
 <p>Kopier journal (<code>plate.jnl</code>) til <code>generate_single_plate.py</code>. Endre koden til å generere en annen modell:</p>
 <ul>
@@ -797,7 +780,7 @@ high <span class="op">=</span> <span class="dv">100</span>
 <li>Last 20 kN/m2</li>
 </ul>
 </section><section id="oppgave-del-a3" class="slide level2">
-<h1>Oppgave del A3</h1>
+<h2>Oppgave del A3</h2>
 <p><strong>Parametriser over tykkelse og kraft</strong></p>
 <ul>
 <li>Kopier <code>generate_single_plate.py</code> til <code>generate_multiple_plates.py</code></li>
@@ -816,7 +799,7 @@ plate_4_6_200_7000
 plate_4_6_200_10000
 ...</code></pre>
 </section><section id="ferdig-alt" class="slide level2">
-<h1>Ferdig alt?</h1>
+<h2>Ferdig alt?</h2>
 <p><strong>Len deg tilbake og nyt hva du har fått til.</strong></p>
 <p>Muligheter videre:</p>
 <ul>
@@ -825,109 +808,95 @@ plate_4_6_200_10000
 <li>Åpne ODB og sammenlikne!</li>
 </ul>
 </section><section id="ressurser-for-python-og-abaqus" class="slide level2">
-<h1>Ressurser for Python og Abaqus</h1>
-<figure>
-<img src="assets/abaqus-documentation.png" />
-</figure>
+<h2>Ressurser for Python og Abaqus</h2>
+<p><img data-src="assets/abaqus-documentation.png" /></p>
 </section><section id="ressurser-for-python-og-abaqus-1" class="slide level2">
-<h1>Ressurser for Python og Abaqus</h1>
-<p>&quot;Scripting&quot; er grunnleggende funksjonalitet. Nyttig til små og store prosjekter.</p>
+<h2>Ressurser for Python og Abaqus</h2>
+<p>“Scripting” er grunnleggende funksjonalitet. Nyttig til små og store prosjekter.</p>
 <ul>
-<li><a href="http://50.16.225.63/v2016/books/cmd/default.htm">Abaqus Scripting User's Guide</a> går gjennom hvordan hvordan du gjør ting som å generere CAE-modeller og manipulere view i en ODB</li>
+<li><a href="http://50.16.225.63/v2016/books/cmd/default.htm">Abaqus Scripting User’s Guide</a> går gjennom hvordan hvordan du gjør ting som å generere CAE-modeller og manipulere view i en ODB</li>
 <li><a href="http://50.16.225.63/v2016/books/ker/default.htm">Abaqus Scripting Reference Guide</a> lister opp alle funksjoner og klasser for programmering av CAE og ODB-modulene og definerer hva de gjør</li>
 </ul>
 </section><section id="ressurser-for-python-og-abaqus-2" class="slide level2">
-<h1>Ressurser for Python og Abaqus</h1>
-<p>&quot;GUI&quot; er grafikk til større programmer.</p>
+<h2>Ressurser for Python og Abaqus</h2>
+<p>“GUI” er grafikk til større programmer.</p>
 <ul>
-<li><a href="http://50.16.225.63/v2016/books/cus/default.htm">Abaqus GUI Toolkit User's Guide</a> går gjennom hvordan hvordan du kan lage grafiske grensesnitt som ANDIM og PROCESS-PLUGIN</li>
+<li><a href="http://50.16.225.63/v2016/books/cus/default.htm">Abaqus GUI Toolkit User’s Guide</a> går gjennom hvordan hvordan du kan lage grafiske grensesnitt som ANDIM og PROCESS-PLUGIN</li>
 <li><a href="http://50.16.225.63/v2016/books/gui/default.htm">Abaqus GUI Toolkit Reference Guide</a> lister opp alle funksjoner og klasser for programmering av grafikk</li>
 </ul>
 </section></section>
-<section><section id="python-og-dynamo" class="titleslide slide level1"><h1>Python og Dynamo</h1></section><section id="arkitektur" class="slide level2">
-<h1>Arkitektur</h1>
+<section><section id="python-og-dynamo" class="title-slide slide level1"><h1>Python og Dynamo</h1></section><section id="arkitektur" class="slide level2">
+<h2>Arkitektur</h2>
 <p>Dynamo bruker et bibliotek som heter <strong>IronPython</strong>. IronPython er en python-implementasjon som kjører på .NET. Det vil typisk si at Dynamo inneholder en fil som heter <code>python.dll</code>, som kan tolke Python-script.</p>
 <p>Script du skriver kjøres i et modifisert miljø, der variabelen <code>IN</code> automagisk inneholder hva du kobler til scriptet ditt på venstre side og variabelen <code>OUT</code> hva du vil sende ut på høyre side.</p>
 <p>Python-script lagres inne i Dynamo-filer (<code>.dyn</code>).</p>
 </section><section id="starte-dynamo" class="slide level2">
-<h1>Starte Dynamo</h1>
-<p><img src="assets-no/dynamo-run-with-revit-from-here.png" /> <img src="assets-no/dynamo-run-without-revit-from-here.png" /></p>
+<h2>Starte Dynamo</h2>
+<p><img data-src="assets-no/dynamo-run-with-revit-from-here.png" /> <img data-src="assets-no/dynamo-run-without-revit-from-here.png" /></p>
 </section><section id="python-noden" class="slide level2">
-<h1>Python-noden</h1>
+<h2>Python-noden</h2>
 <p>Fra høyreklikk:</p>
-<figure>
-<img src="assets-no/dynamo-python-1.png" />
-</figure>
+<p><img data-src="assets-no/dynamo-python-1.png" /></p>
 </section><section id="python-noden-1" class="slide level2">
-<h1>Python-noden</h1>
+<h2>Python-noden</h2>
 <p>Fra funksjonslisten:</p>
-<figure>
-<img src="assets-no/dynamo-python-2.png" />
-</figure>
+<p><img data-src="assets-no/dynamo-python-2.png" /></p>
 </section><section id="redigere-script" class="slide level2">
-<h1>Redigere script</h1>
-<p>Dobbeltklikk &quot;nede&quot; i boksen:</p>
-<figure>
-<img src="assets-no/dynamo-python-edit.png" />
-</figure>
+<h2>Redigere script</h2>
+<p>Dobbeltklikk “nede” i boksen:</p>
+<p><img data-src="assets-no/dynamo-python-edit.png" /></p>
 </section><section id="in-og-out" class="slide level2">
-<h1><code>IN</code> og <code>OUT</code></h1>
+<h2><code>IN</code> og <code>OUT</code></h2>
 <p>Hva kommer inn, hva går ut?</p>
-<figure>
-<img src="assets-no/dynamo-python-script-def.png" />
-</figure>
+<p><img data-src="assets-no/dynamo-python-script-def.png" /></p>
 </section><section id="teste-script" class="slide level2">
-<h1>Teste script</h1>
+<h2>Teste script</h2>
 <p>Kobler på en <code>Number Slider</code>:</p>
-<figure>
-<img src="assets-no/dynamo-python-testing-inputs.gif" />
-</figure>
+<p><img data-src="assets-no/dynamo-python-testing-inputs.gif" /></p>
 </section><section id="alternativ-python-editor-1" class="slide level2">
-<h1>Alternativ Python-editor</h1>
+<h2>Alternativ Python-editor</h2>
 <p>Jeg bruker <a href="http://atom.io">Github Atom</a>. Denne er god.</p>
 </section><section id="oppgave-d-dynamo" class="slide level2">
-<h1>Oppgave D: Dynamo</h1>
-<figure>
-<img src="assets-no/dynamo-variable-beam.png" />
-</figure>
+<h2>Oppgave D: Dynamo</h2>
+<p><img data-src="assets-no/dynamo-variable-beam.png" /></p>
 </section><section id="oppgave-del-d1" class="slide level2">
-<h1>Oppgave del D1</h1>
+<h2>Oppgave del D1</h2>
 <p>Definer en momentdiagrammet matematisk for en fritt opplagt bjelke med jevnt fordelt last.</p>
 <ul>
 <li>Bjelkelengde: L [m]</li>
 <li>Linjelast: q [N/m]</li>
 <li>Avstand fra venstre opplegg: x [m]</li>
 </ul>
-<p>M(L,q,x) = ...</p>
+<p>M(L,q,x) = …</p>
 <p>Hva er M(8,30000,3)?</p>
 </section><section id="oppgave-del-d2" class="slide level2">
-<h1>Oppgave del D2</h1>
+<h2>Oppgave del D2</h2>
 <p><strong>Implementer <code>M(L,q,x)</code> i en python-fil</strong></p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> M(L,q,x):
-  <span class="co"># Regn ut moment!</span>
-  moment <span class="op">=</span> <span class="co"># ... unngår å bruke navnet på funksjonen (M)</span>
-  <span class="cf">return</span> moment</code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb57-1" data-line-number="1"><span class="kw">def</span> M(L,q,x):</a>
+<a class="sourceLine" id="cb57-2" data-line-number="2">  <span class="co"># Regn ut moment!</span></a>
+<a class="sourceLine" id="cb57-3" data-line-number="3">  moment <span class="op">=</span> <span class="co"># ... unngår å bruke navnet på funksjonen (M)</span></a>
+<a class="sourceLine" id="cb57-4" data-line-number="4">  <span class="cf">return</span> moment</a></code></pre></div>
 <ol type="1">
 <li>Hva beregner funksjonen din for <code>M(8,30000,3)</code>? Test i IDLE.</li>
 <li>Kopier funksjonen din inn i en <code>Python Script</code>-node i Dynamo.</li>
 <li>Deifinér q, L og x med slidere, og koble på. Får du samme svar i IDLE og Dyanmo?</li>
 </ol>
 </section><section id="oppgave-del-d3" class="slide level2">
-<h1>Oppgave del D3</h1>
+<h2>Oppgave del D3</h2>
 <p><strong>Endre Python-koden til å ta inn en liste av x-verdier</strong></p>
 <p>Oppgaven kan løses med funksjonen <code>map</code>. Gjør først oppgaven i fil, og test i IDLE.</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> addone(x): <span class="cf">return</span> x <span class="op">+</span> <span class="dv">1</span>
-...
-<span class="op">&gt;&gt;&gt;</span> addone(<span class="dv">5</span>)
-<span class="dv">6</span>
-<span class="op">&gt;&gt;&gt;</span> addone(<span class="dv">6</span>)
-<span class="dv">7</span>
-<span class="op">&gt;&gt;&gt;</span> addone(<span class="dv">7</span>)
-<span class="dv">8</span>
-<span class="op">&gt;&gt;&gt;</span> <span class="bu">map</span>(addone, [<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>])
-[<span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>]</code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb58-1" data-line-number="1"><span class="op">&gt;&gt;&gt;</span> <span class="kw">def</span> addone(x): <span class="cf">return</span> x <span class="op">+</span> <span class="dv">1</span></a>
+<a class="sourceLine" id="cb58-2" data-line-number="2">...</a>
+<a class="sourceLine" id="cb58-3" data-line-number="3"><span class="op">&gt;&gt;&gt;</span> addone(<span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb58-4" data-line-number="4"><span class="dv">6</span></a>
+<a class="sourceLine" id="cb58-5" data-line-number="5"><span class="op">&gt;&gt;&gt;</span> addone(<span class="dv">6</span>)</a>
+<a class="sourceLine" id="cb58-6" data-line-number="6"><span class="dv">7</span></a>
+<a class="sourceLine" id="cb58-7" data-line-number="7"><span class="op">&gt;&gt;&gt;</span> addone(<span class="dv">7</span>)</a>
+<a class="sourceLine" id="cb58-8" data-line-number="8"><span class="dv">8</span></a>
+<a class="sourceLine" id="cb58-9" data-line-number="9"><span class="op">&gt;&gt;&gt;</span> <span class="bu">map</span>(addone, [<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">7</span>])</a>
+<a class="sourceLine" id="cb58-10" data-line-number="10">[<span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>]</a></code></pre></div>
 </section><section id="oppgave-del-d4" class="slide level2">
-<h1>Oppgave del D4</h1>
+<h2>Oppgave del D4</h2>
 <p><strong>Behandle liste av x-verdier i Dynamo</strong></p>
 <ol type="1">
 <li><p>Generer liste av gyldige x-verdier (0 &lt;= x &lt;= L).</p>
@@ -936,15 +905,15 @@ plate_4_6_200_10000
 <li><p>Får du fremdeles samme verdi av <code>M(8,30000,3)</code>?</p></li>
 </ol>
 </section><section id="oppgave-del-d5" class="slide level2">
-<h1>Oppgave del D5</h1>
+<h2>Oppgave del D5</h2>
 <p><strong>Vis momentdiagrammet med streker</strong>.</p>
 <ul>
 <li>Bruk <code>Point.ByCoordinates</code> for å lage punkter</li>
 <li>Bruk <code>PolyCurve.ByPoints</code> for å lage streker</li>
 </ul>
-<p>Velg passe skala. 50 000 meter er litt mye. 50 kNm &lt;--&gt; 1 m OK?</p>
+<p>Velg passe skala. 50 000 meter er litt mye. 50 kNm &lt;–&gt; 1 m OK?</p>
 </section><section id="oppgave-del-d6" class="slide level2">
-<h1>Oppgave del D6</h1>
+<h2>Oppgave del D6</h2>
 <p>Nå skal vi velge høyde på bjelken. Dette gjør vi enkelt:</p>
 <ol type="1">
 <li>Regner ut nødvendig indre momentarm <code>d</code></li>
@@ -955,40 +924,40 @@ plate_4_6_200_10000
 <ul>
 <li>Armeringsmengde As [m2]</li>
 </ul>
-<p>h(L,q,As,x) = ...</p>
+<p>h(L,q,As,x) = …</p>
 <ul>
 <li>Hva er h(8,30000,3,0.00164)?</li>
 </ul>
 </section><section id="oppgave-del-d7" class="slide level2">
-<h1>Oppgave del D7</h1>
+<h2>Oppgave del D7</h2>
 <ul>
 <li>Implementer <code>h(L,q,As,x)</code> i Python:</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> h(L,q,As,x):
-  moment <span class="op">=</span> M(L,q,x)
-  height <span class="op">=</span> <span class="co"># ... unngår å bruke navnet på funksjonen (h)</span>
-  <span class="cf">return</span> height</code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb59-1" data-line-number="1"><span class="kw">def</span> h(L,q,As,x):</a>
+<a class="sourceLine" id="cb59-2" data-line-number="2">  moment <span class="op">=</span> M(L,q,x)</a>
+<a class="sourceLine" id="cb59-3" data-line-number="3">  height <span class="op">=</span> <span class="co"># ... unngår å bruke navnet på funksjonen (h)</span></a>
+<a class="sourceLine" id="cb59-4" data-line-number="4">  <span class="cf">return</span> height</a></code></pre></div>
 <ul>
 <li><p>Hva beregner funksjonen din for <code>h(8,30000,3,0.00164)</code>?</p></li>
 <li><p>Test i IDLE, og implementer i Dynamo.</p></li>
 </ul>
 </section><section id="dynamo-muligheter-videre" class="slide level2">
-<h1>Dynamo: Muligheter videre</h1>
+<h2>Dynamo: Muligheter videre</h2>
 <ul>
 <li>Tegn faktiske tverrsnitt i stedet for konturer</li>
 <li>Visualiser i Revit i stedet for direkte i Dynamo</li>
 </ul>
 </section><section id="tegn-bjelke" class="slide level2">
-<h1>Tegn bjelke!</h1>
+<h2>Tegn bjelke!</h2>
 </section></section>
-<section><section id="veien-videre" class="titleslide slide level1"><h1>Veien videre</h1></section><section id="lykke-til" class="slide level2">
-<h1>Lykke til!</h1>
+<section><section id="veien-videre" class="title-slide slide level1"><h1>Veien videre</h1></section><section id="lykke-til" class="slide level2">
+<h2>Lykke til!</h2>
 <ul>
 <li>Spis elefanten én bit av gangen</li>
 <li>Du må selv skrive kode om du skal lære programmering</li>
 </ul>
 </section><section id="videre-ressursser" class="slide level2">
-<h1>Videre ressursser</h1>
+<h2>Videre ressursser</h2>
 <ul>
 <li>Disse sidene ligger på <code>http://teodorlu.github.io/python-intro/</code>, og blir her.</li>
 <li><a href="http://kodeklubben.github.io/python/">Kodeklubbens nettsider</a> har mange gode oppgaver på norsk. To spennende spill:
@@ -999,7 +968,7 @@ plate_4_6_200_10000
 <li><a href="https://learnpythonthehardway.org/book/">Learn Python the Hard Way</a> er dyptgående, grundig og lærerik.</li>
 </ul>
 </section><section id="videre-verktøy" class="slide level2">
-<h1>Videre verktøy</h1>
+<h2>Videre verktøy</h2>
 <ul>
 <li><p><a href="https://atom.io/">Github Atom</a> er en meget god teksteditor til Python.</p>
 <p>En teksteditor er et godt valg for å redigere én fil. Jeg bruker Atom til nesten alt jeg skriver av Python-kode.</p></li>
@@ -1018,6 +987,8 @@ plate_4_6_200_10000
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
 
         // Optional reveal.js plugins
         dependencies: [
